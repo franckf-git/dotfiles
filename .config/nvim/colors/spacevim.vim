@@ -184,7 +184,7 @@ hi Search       guifg=#292b2e guibg=#86dc2f
 hi MatchParen   guifg=#00ff00 guibg=NONE
 
 call s:hi('ModeMsg'  , 229 , '' , 'None' , 'None')
-hi ModeMsg guifg=#FFF06A
+hi ModeMsg         ctermfg=white ctermbg=darkred
 
 " Popup menu
 call s:hi('Pmenu'      , 141 , s:bg1 , 'None' , 'None')
