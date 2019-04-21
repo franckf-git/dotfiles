@@ -1,0 +1,67 @@
+general {
+        colors = true
+        color_good      = '#d1d1d1'
+        color_degraded  = '#f92672'
+        color_bad       = '#e6db74'
+        interval = 5
+}
+
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "disk /home"
+order += "cpu_usage"
+order += "volume 0"
+order += "tztime local"
+order += "tztime hour"
+order += "tztime notifications"
+
+wireless _first_ {
+        format_up = "  %quality"
+        format_down = "  wlo1 "
+}
+
+ethernet _first_ {
+        format_up = "   %ip "
+        format_down = "   enp0 "
+}
+
+battery all {
+        format = "  %status %percentage "
+        last_full_capacity = true
+        integer_battery_capacity = true
+        format_down = "  "
+        status_chr = " "
+        status_bat = " "
+        status_unk = " "
+        status_full = " "
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 20
+}
+
+disk "/home" {
+        format = "   %avail "
+        low_threshold = 30
+}
+
+cpu_usage {
+        format = "   %usage "
+}
+
+volume 0 {
+        format = "   %volume "
+        format_muted = "   %volume "
+        device = "sysdefault"
+}
+
+tztime local {
+        format = "   %A %d %B "
+}
+
+tztime hour {
+        format = "   %H:%M "
+}
+
+tztime notifications {
+        format = ""
+}

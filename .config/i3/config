@@ -1,0 +1,317 @@
+######################################################
+# i3 config file (v4)
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+######################################################
+
+######################################################
+# Generals
+######################################################
+
+# set modifier key Mod1 is Alt key for Applications and Mod4 is Win key for Windows and Workspaces
+set $win Mod4
+set $alt Mod1
+
+# font for window titles, will also be used by the bar
+font pango:monospace 10
+
+# launch rofi for system
+bindsym $win+Shift+Delete exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh system
+bindsym $win+Escape       exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh system
+
+# volume controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%     # && notify-send " volume up"
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%     # && notify-send --urgency=low " volume down"
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle           && notify-send --urgency=critical " volume mute"
+
+# screenshot
+bindsym Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Downloads' && notify-send " screenshot taken in downloads"
+
+# set mouse touchpad tap for clic (xinput list-props DEVICE)
+#exec --no-startup-id xinput set-prop 13 303 1
+
+######################################################
+# Organize Workspace
+######################################################
+
+# set workspaces titles and icons, see https://fontawesome.com/cheatsheet
+set $ws1 "1:          "
+set $ws2 "2:          "
+set $ws3 "3:          "
+set $ws4 "4:          "
+set $ws5 "5:          "
+set $ws6 "6:          "
+set $ws7 "7:          "
+set $ws8 "8:          "
+set $ws9 "9:          "
+set $ws0 "0:          "
+
+# switch to workspace
+bindsym $win+ampersand workspace $ws1
+bindsym $win+eacute workspace $ws2
+bindsym $win+quotedbl workspace $ws3
+bindsym $win+apostrophe workspace $ws4
+bindsym $win+parenleft workspace $ws5
+bindsym $win+minus workspace $ws6
+bindsym $win+egrave workspace $ws7
+bindsym $win+underscore workspace $ws8
+bindsym $win+ccedilla workspace $ws9
+bindsym $win+agrave workspace $ws0
+bindsym $win+parenright exec --no-startup-id i3-msg workspace "$RANDOM:          "
+
+# switch between workspaces
+bindsym $win+Tab workspace next
+bindsym $win+Shift+Tab workspace prev
+bindsym $win+Ctrl+Right workspace next
+bindsym $win+Ctrl+Left workspace prev
+bindsym $win+Prior workspace next
+bindsym $win+Next workspace prev
+
+# pressing workspace key again toggles back
+workspace_auto_back_and_forth yes
+
+# move focused container to workspace and switch to it
+bindsym $win+Shift+ampersand move container to workspace $ws1 ; workspace $ws1
+bindsym $win+Shift+eacute move container to workspace $ws2 ; workspace $ws2
+bindsym $win+Shift+quotedbl move container to workspace $ws3 ; workspace $ws3
+bindsym $win+Shift+apostrophe move container to workspace $ws4 ; workspace $ws4
+bindsym $win+Shift+parenleft move container to workspace $ws5 ; workspace $ws5
+bindsym $win+Shift+minus move container to workspace $ws6 ; workspace $ws6
+bindsym $win+Shift+egrave move container to workspace $ws7 ; workspace $ws7
+bindsym $win+Shift+underscore move container to workspace $ws8 ; workspace $ws8
+bindsym $win+Shift+ccedilla move container to workspace $ws9 ; workspace $ws9
+bindsym $win+Shift+agrave move container to workspace $ws0 ; workspace $ws0
+
+######################################################
+# Organize Windows
+######################################################
+
+# disable mouse focus
+focus_follows_mouse no
+
+# disable the mouse follow the change of screen
+mouse_warping none
+
+# kill focused window
+bindsym $win+BackSpace kill
+bindsym $win+c kill
+
+# enter fullscreen mode for the focused container
+bindsym $win+f fullscreen toggle
+
+# change focus
+bindsym $win+Left focus left
+bindsym $win+Down focus down
+bindsym $win+Up focus up
+bindsym $win+Right focus right
+
+# move focused window
+bindsym $win+Shift+Left move left
+bindsym $win+Shift+Down move down
+bindsym $win+Shift+Up move up
+bindsym $win+Shift+Right move right
+
+# switch to workspace with urgent window automatically
+for_window [urgent=latest] focus
+
+# default layout
+workspace_layout tabbed
+
+# split in horizontal and vertical orientation
+bindsym $win+h split toggle
+
+# focus the parent container
+bindsym $win+q focus parent
+
+# focus the child container
+bindsym $win+d focus child
+
+# change container layout
+bindsym $win+s layout toggle all
+bindsym $win+x layout toggle splith tabbed
+
+# toggle tiling / floating
+bindsym $win+Shift+space floating toggle
+
+# use mouse+$win to move floating windows
+floating_modifier $win
+
+# change focus between tiling / floating windows
+bindsym $win+space focus mode_toggle
+
+######################################################
+# Rotate Screen and Multiscreen
+######################################################
+
+# define screens
+set $screen0 HDMI-1
+set $screen1 HDMI-3
+#small laptop
+#set $screen0 eDP-1
+#set $screen1 HDMI-1
+
+# resize window, you can use the mouse
+set $resize "resize windows"
+
+mode $resize {
+        # these bindings trigger as soon as you enter the resize mode
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # echap for back to normal
+        bindsym Escape mode "default"
+}
+
+bindsym $win+Shift+r mode $resize
+bindsym $win+r exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh rotate
+
+# define the ouputs secondary to the right
+exec --no-startup-id xrandr --output $screen0 --primary
+exec --no-startup-id xrandr --output $screen1 --auto --right-of $screen0
+
+# assign workspaces to secondary output
+workspace $ws1 output $screen0
+workspace $ws2 output $screen0
+workspace $ws3 output $screen0
+workspace $ws4 output $screen0
+workspace $ws5 output $screen0
+workspace $ws6 output $screen1
+workspace $ws7 output $screen1
+workspace $ws8 output $screen1
+workspace $ws9 output $screen1
+workspace $ws0 output $screen1
+
+# move the current workspace to the next screen
+bindsym $win+p move workspace to output right
+bindsym $win+a move workspace to output left
+
+######################################################
+# Programs
+######################################################
+
+# auto-startup
+# decos
+exec --no-startup-id sleep 5s ; conky --config=/home/$USER/.config/conky/conkyrc
+exec --no-startup-id feh --bg-center /home/$USER/.config/themes/wallpaper.png
+exec --no-startup-id unclutter -idle 1
+# apps home
+exec --no-startup-id urxvt -e sh -ic "bash /home/$USER/.config/scripts/check_repository.sh"
+exec --no-startup-id urxvt -e sh -ic "sleep 10s ; firefox --private-window &"
+exec --no-startup-id xfce4-terminal -T rss -e 'sleep 10s ; newsboat'
+exec --no-startup-id urxvt -e 'ranger'
+# apps work
+# exec --no-startup-id chromium-browser
+# exec --no-startup-id flatpak run com.mattermost.Desktop
+# exec --no-startup-id keepassxc
+# exec --no-startup-id flatpak run org.nextcloud.Nextcloud
+# exec --no-startup-id claws-mail
+# exec --no-startup-id xfce4-terminal -e 'sh -ic "ssh-add"'
+# systemtray
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id nm-applet --sm-disable
+
+# start a terminal
+bindsym $win+Return exec --no-startup-id xfce4-terminal -e zsh
+bindsym $win+Shift+Return exec --no-startup-id urxvt
+
+# start rofi program launcher (shift+arrow to move between modules)
+bindsym $alt+twosuperior    exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh perso
+bindsym $win+asterisk       exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh rofi
+bindsym $win+twosuperior    exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh rofi
+bindsym $win+t              exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh work
+
+# start some apps with floating
+for_window [class="Galculator"] floating enable ; move position center
+for_window [title="Network Connections"] floating enable ; move position center
+for_window [title="radio"] floating enable ; move position center
+
+# assign program windows to workspace
+assign [title="KeePassXC"] $ws2
+assign [title="*Team"] move to workspace $ws3
+assign [class="Claws"] $ws4
+assign [title="Thunar|ranger"] $ws5
+assign [class="Chromium|Chrome"] $ws6
+assign [class="Firefox"] $ws7
+assign [class="Sublime"] $ws8
+assign [class="mpv"] $ws9
+assign [class="surf"] $ws0
+
+# launch apps with function keys who match assign workspaces
+bindsym $mod+F1 exec --no-startup-id xfce4-terminal -e zsh
+bindsym $mod+F2 exec --no-startup-id keepassxc
+bindsym $mod+F3 exec --no-startup-id flatpak run com.mattermost.Desktop
+bindsym $mod+F4 exec --no-startup-id claws-mail
+bindsym $mod+F5 exec --no-startup-id xfce4-terminal -T ranger -e 'ranger'
+bindsym $mod+F6 exec --no-startup-id chromium-browser --incognito
+bindsym $mod+F7 exec --no-startup-id firefox --private-window
+bindsym $mod+F8 exec --no-startup-id /home/$USER/.sublime_text_3/sublime_text ; flatpak run com.sublimetext.three
+bindsym $mod+F9 exec --no-startup-id mpv
+bindsym $mod+F10 exec --no-startup-id surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a file:///home/$USER/.config/bookmarks/home.html
+
+######################################################
+# Decorations
+######################################################
+
+# set the colors
+set $background  #272822
+set $text        #d1d1d1
+set $urgent      #e6db74
+
+# assign color to the title and border of the windows
+# class                 border       background   text        indicator    child_border
+client.focused          $text        $text        $background $text        $text
+client.focused_inactive $background  $background  $text       $background  $background
+client.unfocused        $background  $background  $text       $background  $background
+client.urgent           $urgent      $urgent      $text       $urgent      $urgent
+client.placeholder      $background  $background  $text       $background  $background
+
+client.background       $text
+
+# for every windows set the title and border, no title, small border
+for_window [class=".*"] border pixel 3
+
+# no border if only one windows
+hide_edge_borders smart
+
+######################################################
+# Bar
+######################################################
+
+# toggle between hide state and show state
+bindsym $win+b bar mode toggle
+
+# start i3bar to display a workspace bar
+bar {
+        status_command i3status --config /home/$USER/.config/i3status/config
+
+        strip_workspace_numbers yes
+
+        tray_output $screen0
+        tray_output $screen1
+        tray_padding 0
+
+        # show the bar if hidden
+        modifier $win
+
+        output $screen0
+        output $screen1
+        position top
+
+        # take a screenshot by middle clicking on the bar
+        bindsym button2 exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Downloads' && notify-send " screenshot taken in downloads"
+        # mute audio by right clicking on the bar
+        bindsym --release button3 exec --no-startup-id pactl set-sink-mute 0 toggle
+
+    colors {
+        background $background
+        statusline $text
+        separator  $focus
+
+#       class              text        background
+        focused_workspace  $urgent     $background
+        active_workspace   $text       $background
+        inactive_workspace $text       $background
+        urgent_workspace   $background $urgent
+    }
+}
