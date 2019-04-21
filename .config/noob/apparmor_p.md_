@@ -1,0 +1,24 @@
+# apparmor
+
+apt install apparmor apparmor-profiles apparmor-utils apparmor-profiles-extra
+perl -pi -e 's,GRUB_CMDLINE_LINUX="(.*)"$,GRUB_CMDLINE_LINUX="$1 apparmor=1 security=apparmor",' /etc/default/grub
+update-grub
+reboot
+
+aa-status
+cat /etc/apparmor.d/PROFILES
+
+> mode stric, relaché, désactivé ou loggué
+
+aa-enforce /CHEMIN/VERS/EXECUTABLE_OU_CONF
+aa-complain /CHEMIN/VERS/EXECUTABLE_OU_CONF
+aa-disable /CHEMIN/VERS/EXECUTABLE_OU_CONF
+aa-audit /CHEMIN/VERS/EXECUTABLE_OU_CONF
+
+> créer un nouveau profil depuis zéro
+
+aa-genprof /CHEMIN/VERS/EXECUTABLE_OU_CONF
+
+> programmes qui ont au moins une connexion réseau ouverte
+
+aa-unconfined --paranoid
