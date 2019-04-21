@@ -16,12 +16,13 @@ fi
 # display prompt
 PS1="\[\e[1;31m\]| > | \A | \W | \\$\[\e[m\] "
 
+# Get the environnement variables
+. /home/$USER/.config/scripts/profile
+
 # Get the aliases and functions for the work
-if [ -f ~/.bashrcwork ]; then
-  . ~/.bashrcwork
+if [ -f /home/$USER/.config/scripts/bashrcwork ]; then
+  . /home/$USER/.config/scripts/bashrcwork
 fi
 
 # Get the parsonnal aliases and functions
-if [ -f ~/.aliasrc ]; then
-  . ~/.aliasrc
-fi
+. /home/$USER/.config/scripts/aliasrc
