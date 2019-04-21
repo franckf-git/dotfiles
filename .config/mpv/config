@@ -1,0 +1,5 @@
+save-position-on-quit
+sub-auto=fuzzy
+ytdl-format=best
+ytdl-raw-options=sub-format=en
+ytdl-format=1900
