@@ -230,6 +230,7 @@ for_window [title="radio"] floating enable ; move position center
 assign [title="KeePassXC"] $ws2
 assign [title="*Team"] move to workspace $ws3
 assign [class="Claws"] $ws4
+assign [title="rss"] $ws4
 assign [title="Thunar|ranger"] $ws5
 assign [class="Chromium|Chrome"] $ws6
 assign [class="Firefox"] $ws7
@@ -238,16 +239,16 @@ assign [class="mpv"] $ws9
 assign [class="surf"] $ws0
 
 # launch apps with function keys who match assign workspaces
-bindsym $mod+F1 exec --no-startup-id xfce4-terminal -e zsh
-bindsym $mod+F2 exec --no-startup-id keepassxc
-bindsym $mod+F3 exec --no-startup-id flatpak run com.mattermost.Desktop
-bindsym $mod+F4 exec --no-startup-id claws-mail
-bindsym $mod+F5 exec --no-startup-id xfce4-terminal -T ranger -e 'ranger'
-bindsym $mod+F6 exec --no-startup-id chromium-browser --incognito
-bindsym $mod+F7 exec --no-startup-id firefox --private-window
-bindsym $mod+F8 exec --no-startup-id /home/$USER/.sublime_text_3/sublime_text ; flatpak run com.sublimetext.three
-bindsym $mod+F9 exec --no-startup-id mpv
-bindsym $mod+F10 exec --no-startup-id surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a file:///home/$USER/.config/bookmarks/home.html
+bindsym $win+F1 exec --no-startup-id xfce4-terminal -e zsh
+bindsym $win+F2 exec --no-startup-id keepassxc
+bindsym $win+F3 exec --no-startup-id flatpak run com.mattermost.Desktop
+bindsym $win+F4 exec --no-startup-id claws-mail
+bindsym $win+F5 exec --no-startup-id xfce4-terminal -T ranger -e 'ranger'
+bindsym $win+F6 exec --no-startup-id chromium-browser --incognito
+bindsym $win+F7 exec --no-startup-id firefox --private-window
+bindsym $win+F8 exec --no-startup-id flatpak run com.sublimetext.three
+bindsym $win+F9 exec --no-startup-id mpv
+bindsym $win+F10 exec --no-startup-id surf -dgNpis -a a file:///home/$USER/.config/bookmarks/home.html
 
 ######################################################
 # Decorations
