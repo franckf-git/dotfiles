@@ -1,0 +1,23 @@
+#refresh-on-startup              yes
+#cleanup-on-quit                 yes
+#delete-read-articles-on-quit    yes
+max-items                       50
+keep-articles-days              30
+auto-reload                     yes
+download-path                   "/home/$USER/Downloads/%h/%n"
+browser                         "firefox --private-window %u"
+player                          "mpv"
+
+# see all urls [u]
+external-url-viewer "urlscan -dc"
+
+# see video in mpv [, + v]
+macro v set browser "i3 exec mpv"; open-in-browser ; set browser $BROWSER
+# download video [, + t]
+macro t set browser "youtube-dl --add-metadata -ic"; open-in-browser ; set browser linkhandler
+
+color listfocus           white  black   bold
+color listnormal_unread   red    default
+color listfocus_unread    red    black   bold
+color info                white  black   bold
+color article             white  default
