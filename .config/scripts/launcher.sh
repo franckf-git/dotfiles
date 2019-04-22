@@ -95,6 +95,6 @@ case "$1" in
     "system"    ) system ;;
     "rotate"    ) rotate ;;
     "work"      ) work ;;
-    "rofi"      ) rofi -modi run,drun,window,combi,ssh -show window -sidebar-mode -show-icons -drun-icon-theme ;;
+    "rofi"      ) rofi -modi combi,drun,ssh -show drun -sidebar-mode -show-icons -drun-icon-theme ;;
 esac
 
