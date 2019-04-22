@@ -18,7 +18,7 @@ export TERM=xterm-256color
 export TERMINAL="st"
 
 # Applications
-export BROWSER="surf -u 'Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0' -dgNpis -a a"
+#export BROWSER="surf -u 'Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0' -dgNpis -a a"
 export READER="mupdf"
 export FILE="ranger"
 
