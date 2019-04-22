@@ -48,7 +48,7 @@ CHOIX=$(echo -e "\
  restart i3\n\
   touchpad on\n\
   touchpad off\
-" | rofi -dmenu -l 7)
+" | rofi -dmenu -l 5)
     case "$CHOIX" in
         " shutdown"        ) systemctl poweroff --ignore-inhibitors ;;
         " reboot"          ) systemctl reboot --ignore-inhibitors ;;

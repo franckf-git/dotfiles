@@ -1,0 +1,10 @@
+rofi.theme: /usr/share/rofi/themes/Monokai.rasi
+rofi.font: monospace 14
+rofi.width: 96
+rofi.columns: 3
+rofi.bw: 0
+rofi.hide-scrollbar: true
+rofi.window-format: {w} {c} {t} {n} {r}
+rofi.padding: 5
+#rofi.fake-transparency: true
+#rofi.fake-background: screenshot

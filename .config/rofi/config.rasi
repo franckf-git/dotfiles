@@ -28,11 +28,13 @@
     alternate-active-foreground: @active-foreground;
     active-background:           rgba ( 39, 40, 34, 0 % );
     selected-active-background:  rgba ( 20, 20, 17, 100 % );
+    font:                        "monospace 14";
 }
 #window {
     background-color: @background;
-    border:           1;
+    border:           0;
     padding:          5;
+    width:            96%;
 }
 #mainbox {
     border:  0;
