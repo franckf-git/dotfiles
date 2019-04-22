@@ -11,13 +11,19 @@ player                          "mpv"
 # see all urls [u]
 external-url-viewer "urlscan -dc"
 
+# open with small web browser [, + s]
+macro s set browser "surf -u 'Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0' -dgNpis -a a"; open-in-browser ; set browser $BROWSER
+# open with terminal web browser [, + l]
+macro l set browser "lynx"; open-in-browser ; set browser linkhandler
+
 # see video in mpv [, + v]
 macro v set browser "i3 exec mpv"; open-in-browser ; set browser $BROWSER
 # download video [, + t]
-macro t set browser "youtube-dl --add-metadata -ic"; open-in-browser ; set browser linkhandler
+macro t set browser "youtube-dl --write-auto-sub --add-metadata -ic"; open-in-browser ; set browser linkhandler
 
 color listfocus           white  black   bold
-color listnormal_unread   red    default
-color listfocus_unread    red    black   bold
+color listnormal          white  default dim
+color listnormal_unread   white  default bold
+color listfocus_unread    white  black   bold
 color info                white  black   bold
 color article             white  default
