@@ -80,6 +80,8 @@ bindsym $win+Shift+egrave move container to workspace $ws7 ; workspace $ws7
 bindsym $win+Shift+underscore move container to workspace $ws8 ; workspace $ws8
 bindsym $win+Shift+ccedilla move container to workspace $ws9 ; workspace $ws9
 bindsym $win+Shift+agrave move container to workspace $ws0 ; workspace $ws0
+bindsym $win+Shift+parenright move container to workspace "          "
+bindsym $win+Shift+equal move container to workspace "          "
 
 ######################################################
 # Organize Windows
