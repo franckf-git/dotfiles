@@ -24,6 +24,6 @@ macro t set browser "youtube-dl --write-auto-sub --add-metadata -ic"; open-in-br
 color listfocus           white  black   bold
 color listnormal          white  default dim
 color listnormal_unread   white  default bold
-color listfocus_unread    white  black   bold
+color listfocus_unread    red    black   bold
 color info                white  black   bold
 color article             white  default
