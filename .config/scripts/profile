@@ -15,7 +15,7 @@ export PAGER="less --quit-if-one-screen --RAW-CONTROL-CHARS --LINE-NUMBERS --LON
 
 # Terminals
 export TERM=xterm-256color
-export TERMINAL="st"
+export TERMINAL="xfce4-terminal"
 
 # Applications
 #export BROWSER="surf -u 'Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0' -dgNpis -a a"
