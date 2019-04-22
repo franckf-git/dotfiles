@@ -20,22 +20,22 @@ CHOIX=$(echo -e "\
  wikipedia\
 " | rofi -dmenu -l 16)
     case "$CHOIX" in
-        " brave"             ) brave-browser-stable ;;
-        " check repo"         ) xfce4-terminal 'bash /home/$USER/.config/scripts/check_repository.sh' ;;
-        " chromium"          ) chromium-browser --incognito ;;
-        " google chrome"     ) google-chrome ;;
-        " duckduckgo"        ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a https://duckduckgo.com/ ;;
-        " firefox"           ) firefox --private-window ;;
-        " meteo"             ) urxvt -e sh -ic 'curl --header "Accept-Language: fr" wttr.in/poitiers && bash' ;;
-        " neovim"            ) xfce4-terminal -T neovim -e 'nvim' ;;
-        " newsboat"          ) xfce4-terminal -T rss -e 'newsboat --config-file=/home/$USER/.config/newsboat/config --url-file=/home/$USER/.config/newsboat/urls --cache-file=/home/$USER/.config/newsboat/cache.db' ;;
-        " radio"             ) urxvt -title radio -e sh -ic 'mpv --no-video https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance' ;;
+        " sublime"           ) /home/$USER/.sublime_text_3/sublime_text ; flatpak run com.sublimetext.three ;;
         " ranger"            ) xfce4-terminal -T ranger -e 'ranger' ;;
         " read me"           ) xfce4-terminal -T readme -e 'nvim -p /home/$USER/Unclear/readme.md /home/$USER/Unclear/path /home/$USER/Files/InProgress' ;;
-        " gitlab"            ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpiS -a a https://framagit.org/efydd ;;
-        " sublime"           ) /home/$USER/.sublime_text_3/sublime_text ; flatpak run com.sublimetext.three ;;
+        " neovim"            ) xfce4-terminal -T neovim -e 'nvim' ;;
+        " newsboat"          ) xfce4-terminal -T rss -e "newsboat --config-file=/home/$USER/.config/newsboat/config --url-file=/home/$USER/.config/newsboat/urls --cache-file=/home/$USER/.config/newsboat/cache.db" ;;
+        " radio"             ) urxvt -title radio -e sh -ic 'mpv --no-video https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance' ;;
+        " meteo"             ) urxvt -e sh -ic 'curl --header "Accept-Language: fr" wttr.in/poitiers && bash' ;;
+        " check repo"         ) urxvt -e sh -ic 'bash /home/$USER/.config/scripts/check_repository.sh' ;;
+        " brave"             ) brave-browser-stable ;;
+        " chromium"          ) chromium-browser --incognito ;;
+        " google chrome"     ) google-chrome ;;
+        " firefox"           ) firefox --private-window ;;
         " surf"              ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a file:///home/$USER/.config/bookmarks/home.html ;;
+        " gitlab"            ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpiS -a a https://framagit.org/efydd ;;
         " wikipedia"        ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpIs -a a https://fr.wikipedia.org ;;
+        " duckduckgo"        ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a https://duckduckgo.com/ ;;
     esac
 }
 
