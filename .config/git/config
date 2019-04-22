@@ -1,0 +1,14 @@
+[user]
+    name = efydd
+    email = efydd.artio@tuta.io
+[core]
+    editor = "nvim"
+[color]
+    ui = auto
+[format]
+    pretty = oneline
+[alias]
+    lp = log --pretty=medium
+    difw = diff --color-words
+    st = status
+    ll = log --graph --decorate --oneline
