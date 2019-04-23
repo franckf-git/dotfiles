@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Weather
+GenericName=Display weather in the terminal
+Exec=urxvt -e sh -ic 'curl --header "Accept-Language: fr" wttr.in/poitiers && bash'
+Terminal=false
+Icon=emoji-nature-symbolic
+Type=Application
+Categories=Utility;

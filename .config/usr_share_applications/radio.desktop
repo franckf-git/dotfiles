@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Radio
+GenericName=Listen the radio
+Exec=urxvt -title radio -e sh -ic 'mpv --no-video https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance'
+Terminal=false
+Icon=audio-headphones
+Type=Application
+Categories=Application;

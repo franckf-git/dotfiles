@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Restart i3
+GenericName=Restart i3 and reload config
+Exec=i3-msg restart
+Terminal=false
+Icon=system-reboot
+Type=Application
+Categories=System;

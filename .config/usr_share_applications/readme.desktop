@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=ReadMe
+GenericName=Edit text files
+Exec=xfce4-terminal -T readme -e 'nvim -p /home/$USER/Unclear/readme.md /home/$USER/Unclear/path /home/$USER/Files/InProgress'
+Terminal=false
+Icon=nvim
+Type=Application
+Categories=Utility;TextEditor;

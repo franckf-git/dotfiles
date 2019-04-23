@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=surf home page
+GenericName=small and simple browser
+Exec=surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a file:///home/$USER/.config/bookmarks/home.html
+Terminal=false
+Icon=surf
+Type=Application
+Categories=Network;GTK;WebBrowser;

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Rotate screen left
+GenericName=Rotate screen left
+Exec=xrandr --output HDMI-1 --rotate left
+Terminal=false
+Icon=computer
+Type=Application
+Categories=Utility;

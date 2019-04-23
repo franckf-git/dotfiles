@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Private Firefox
+GenericName=Web Browser
+Exec=firefox --new-window %u
+Terminal=false
+Icon=firefox
+Type=Application
+Categories=Network;WebBrowser;

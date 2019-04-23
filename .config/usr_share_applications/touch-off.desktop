@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Touchpad off
+GenericName=Disable the touchpad
+Exec=xinput disable 11 && notify-send " the touchpad is disable"
+Terminal=false
+Icon=input-touchpad
+Type=Application
+Categories=Utility;

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Rotate screen normal
+GenericName=Rotate screen normal
+Exec=xrandr --output HDMI-1 --rotate normal
+Terminal=false
+Icon=computer
+Type=Application
+Categories=Utility;

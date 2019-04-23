@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Wikipédia
+GenericName=Wikipédia with surf
+Exec=surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpIs -a a https://fr.wikipedia.org
+Terminal=false
+Icon=surf
+Type=Application
+Categories=Network;GTK;WebBrowser;

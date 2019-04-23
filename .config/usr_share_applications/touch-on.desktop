@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Touchpad on
+GenericName=Enable the touchpad
+Exec=xinput enable 11 && notify-send " the touchpad is enable"
+Terminal=false
+Icon=input-touchpad
+Type=Application
+Categories=Utility;
