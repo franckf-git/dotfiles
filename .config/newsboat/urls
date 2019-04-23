@@ -1,27 +1,22 @@
-----------------------------daily
-https://fr.wikinews.org/w/index.php?title=Sp%C3%A9cial:Nouvelles_pages&feed=atom    "~wikinews"         news daily
+#https://framagit.org/efydd.atom                                                "~efydd-activity"        outcast
 https://www.lemonde.fr/rss/une.xml                                             "~le-monde"              news daily
 https://motherboard.vice.com/en_us/rss                                         "~motherboard/us"        news daily
-https://motherboard.vice.com/fr/rss                                            "~motherboard/fr"        news daily
 https://www.zdnet.fr/feeds/rss/actualites/                                     "~zdnet-fr"              news daily
 https://www.cert.ssi.gouv.fr/feed/                                             "~cert-fr"               security daily
 https://www.journalduhacker.net/rss                                            "~journal-du-hacker"     technews daily
 https://www.minimachines.net/feed                                              "~mini-machines"         technews daily
-https://flathub.org/api/v1/apps/collection/recently-updated/feed               "~flathub"               technews daily
 https://scantrad.fr/rss                                                        "~scantrad"              manga daily
 https://www.viedemerde.fr/rss                                                  "~vdm"                   fun daily
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ   "~linuxtricks"           youtube technews daily
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ   "~level1techs"           youtube technews daily
-----------------------------sunday
+----------------------------fun
 https://lel.koneko-scantrad.fr/feeds/rss/                                      "~koneko-scantrad"       manga
 http://ajianoscantrad.fr/reader/rss.xml                                        "~ajia-no-scantrad"      manga
-http://www.scan-manga.com/rss/BD.xml                                           "~scan-manga"            manga
+#http://www.scan-manga.com/rss/BD.xml                                           "~scan-manga"            manga
 https://www.brothers-brick.com/feed/                                           "~brothers-brick"        outcast
 https://www.commitstrip.com/fr/feed/                                           "~commitstrip"           fun
 https://www.xkcd.com/rss.xml                                                   "~xkcd"                  fun
-https://lesjoiesducode.fr/feed                                                 "~les-joies-du-code"     fun
 https://clientsfromhell.net/feed/                                              "~clients-from-hell"     fun
-https://www.reddit.com/r/techsupportgore.rss                                   "~r/techsupportgore"     board fun
 https://www.reddit.com/r/linuxmemes.rss                                        "~r/linuxmemes"          board fun
 https://www.reddit.com/r/linuxmasterrace.rss                                   "~r/linuxmasterrace"     board fun
 https://www.reddit.com/r/unixporn.rss                                          "~r/unixporn"            board fun
@@ -30,7 +25,6 @@ http://twitrss.me/twitter_user_to_rss/?user=iamdevloper                        "
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCMxHHciWRBBouzk-PGzmtQ   "~bazard-du-grenier"     youtube fun
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_yP2DpIgs5Y1uWC0T03Chw   "~joueur-du-grenier"     youtube fun
 ----------------------------tech
-http://feeds.feedburner.com/fossbytes                                          "~fossbytes"             technews
 http://lxer.com/module/newswire/headlines.rss                                  "~lxer"                  technews
 http://www.tuxmachines.org/node/feed                                           "~tux-machines"          technews
 https://blog.adafruit.com/feed/                                                "~adafruit"              technews hardware
@@ -38,36 +32,23 @@ https://hackaday.com/feed/                                                     "
 https://fedoramagazine.org/feed/                                               "~fedora-magazine"       technews
 https://itsfoss.com/feed/                                                      "~its-foss"              technews
 https://krebsonsecurity.com/feed/                                              "~krebs-on-security"     security
-https://opensource.com/feed                                                    "~opensource.com"        technews
-https://www.gamingonlinux.com/article_rss.php                                  "~gaming-on-linux"       technews
-https://www.linuxjournal.com/news/feed                                         "~linux-journal"         technews
 https://www.raspberrypi.org/magpi/feed/                                        "~magpi"                 technews
 https://boards.4channel.org/g/index.rss                                        "~g/technology"          board
 https://www.reddit.com/r/ansible.rss                                           "~r/ansible"             board
 https://www.reddit.com/r/commandline.rss                                       "~r/commandline"         board
-https://www.reddit.com/r/homelab.rss                                           "~r/homelab"             board
 https://www.reddit.com/r/i3wm.rss                                              "~r/i3wm"                board
 https://www.reddit.com/r/linux.rss                                             "~r/linux"               board
-https://www.reddit.com/r/linuxquestions.rss                                    "~r/linuxquestions"      board
-https://www.reddit.com/r/pcmasterrace.rss                                      "~r/pcmasterrace"        board
-https://www.reddit.com/r/selfhosted.rss                                        "~r/selfhosted"          board
 https://www.reddit.com/r/sysadmin.rss                                          "~r/sysadmin"            board
 https://www.reddit.com/r/vim.rss                                               "~r/vim"                 board
-----------------------------youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg   "~distrotube"            youtube
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHugE6eRhqB9_AZQh4DDbIw   "~jupiter-broadcasting-TEST"  youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA   "~bryan-lunduke"         youtube
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA   "~luke-smith"            youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w   "~level1linux"           youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UChIs72whgZI9w6d6FhwGGHA   "~gamers-nexus-TEST"          youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw   "~linus-tech-tips"       youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCj_iGliGCkLcHSZ8eqVNPDQ   "~grafikart"             youtube
-https://www.youtube.com/feeds/videos.xml?channel_id=UC4xKdmAXFh4ACyhpiQ_3qBw   "~techlead-TEST"              youtube
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ   "~eevblog-TEST"               youtube
 ----------------------------work
 https://cyrille-borne.com/feed/                                                "~cyrille-borne"         outcast
 https://www.nolimitsecu.fr/feed/                                               "~no-limit-secu"         podcast
 https://www.comptoirsecu.fr/feed/all.xml                                       "~comptoir-secu"         podcast
 http://feeds.feedburner.com/Cpu-Programmes                                     "~cpu"                   podcast
 http://frenchspin.fr/feed/                                                     "~frenchspin"            podcast
-https://framagit.org/efydd.atom                                                "~efydd-activity"        outcast
