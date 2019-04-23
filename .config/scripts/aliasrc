@@ -110,6 +110,11 @@ prename 's/\[//g' *
 prename 's/[^a-z0-9-.]/-/g' *
 prename 's/ryozanpaku-//g' *
 prename 's/ajia-no-scantrad-//' *
+prename 's/ajia-rs--//' *
+prename 's/mns-tnt--//' *
+prename 's/mns-rs--//' *
+prename 's/rs--//' *
+prename 's/mns--//' *
 prename 's/monster-no-scantrad-//' *
 }
 
@@ -167,7 +172,7 @@ alias ecp='rsync --archive --human-readable --relative --progress'
 
 # manage periphericals
 alias connect='for i in {b..f} ; do udisksctl mount --block-device /dev/sd"$i"1; done && notify-send " usb mounted."'
-alias disconnect='umount /run/media/$USER/* && for i in {b,} ; do udisksctl power-off --block-device /dev/sd$i; done && notify-send " it is safe to eject."'
+alias disconnect='umount /run/media/$USER/* && for i in {b..f} ; do udisksctl power-off --block-device /dev/sd$i; done && notify-send " it is safe to eject."'
 alias connectsec='sudo cryptsetup luksOpen /dev/sdb1 Backup && sudo mount /dev/mapper/Backup /mnt && notify-send " usb mounted."'
 
 # music
