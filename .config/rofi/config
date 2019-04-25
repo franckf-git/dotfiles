@@ -8,3 +8,4 @@ rofi.window-format: {w} {c} {t} {n} {r}
 rofi.padding: 5
 #rofi.fake-transparency: true
 #rofi.fake-background: screenshot
+rofi.auto-select: true
