@@ -20,7 +20,7 @@ CHOIX=$(echo -e "\
  (M)eteo\n\
 -\n\
 -\
-" | rofi -dmenu -l 6)
+" | rofi -dmenu -l 6 -p "apps > ")
     case "$CHOIX" in
         " (S)ublime"           ) /home/$USER/.sublime_text_3/sublime_text ; flatpak run com.sublimetext.three ;;
         " (R)anger"            ) xfce4-terminal -T ranger -e 'ranger' ;;
@@ -50,7 +50,7 @@ CHOIX=$(echo -e "\
  restart (I)3\n\
   touchpad on\n\
   touchpad off\
-" | rofi -dmenu -l 5)
+" | rofi -dmenu -l 5 -p "system > ")
     case "$CHOIX" in
         " (S)hutdown"        ) systemctl poweroff --ignore-inhibitors ;;
         " (R)eboot"          ) systemctl reboot --ignore-inhibitors ;;
@@ -68,7 +68,7 @@ CHOIX=$(echo -e "\
  (L)eft\n\
  (R)ight\n\
  (I)nverted\
-" | rofi -dmenu -l 2)
+" | rofi -dmenu -l 2 -p "rotate > ")
     case "$CHOIX" in
         " (N)ormal"      ) xrandr --output $screen0 --rotate normal ;;
         " (L)eft"        ) xrandr --output $screen0 --rotate left ;;
@@ -83,7 +83,7 @@ CHOIX=$(echo -e "\
 \n\
 \n\
 \
-" | rofi -dmenu -l 4)
+" | rofi -dmenu -l 4 -p "work > ")
     case "$CHOIX" in
         ""    )  ;;
         ""    )  ;;
