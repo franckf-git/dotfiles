@@ -12,7 +12,7 @@ set $win Mod4
 set $alt Mod1
 
 # font for window titles, will also be used by the bar
-font pango:monospace 10
+font pango:monospace 0
 
 # launch rofi for system
 bindsym $win+Shift+Delete exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh system
@@ -229,7 +229,7 @@ for_window [title="radio"] floating enable ; move position center
 
 # assign program windows to workspace
 assign [title="KeePassXC"] $ws2
-assign [title="*Team"] move to workspace $ws3
+assign [class="Mattermost"] $ws3
 assign [class="Claws"] $ws4
 assign [title="rss"] $ws4
 assign [title="Thunar|ranger"] $ws5
@@ -271,7 +271,7 @@ client.placeholder      $background  $background  $text       $background  $back
 client.background       $text
 
 # for every windows set the title and border, no title, small border
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 1
 
 # no border if only one windows
 hide_edge_borders smart
@@ -280,40 +280,40 @@ hide_edge_borders smart
 # Bar
 ######################################################
 
-# toggle between hide state and show state
-bindsym $win+b bar mode toggle
+# # toggle between hide state and show state
+# bindsym $win+b bar mode toggle
 
-# start i3bar to display a workspace bar
-bar {
-        status_command i3status --config /home/$USER/.config/i3status/config
+# # start i3bar to display a workspace bar
+# bar {
+#         status_command i3status --config /home/$USER/.config/i3status/config
 
-        strip_workspace_numbers yes
+#         strip_workspace_numbers yes
 
-        tray_output $screen0
-        tray_output $screen1
-        tray_padding 0
+#         tray_output $screen0
+#         tray_output $screen1
+#         tray_padding 0
 
-        # show the bar if hidden
-        modifier $win
+#         # show the bar if hidden
+#         modifier $win
 
-        output $screen0
-        output $screen1
-        position top
+#         output $screen0
+#         output $screen1
+#         position top
 
-        # take a screenshot by middle clicking on the bar
-        bindsym button2 exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Downloads' && notify-send " screenshot taken in downloads"
-        # mute audio by right clicking on the bar
-        bindsym --release button3 exec --no-startup-id pactl set-sink-mute 0 toggle
+#         # take a screenshot by middle clicking on the bar
+#         bindsym button2 exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Downloads' && notify-send " screenshot taken in downloads"
+#         # mute audio by right clicking on the bar
+#         bindsym --release button3 exec --no-startup-id pactl set-sink-mute 0 toggle
 
-    colors {
-        background $background
-        statusline $text
-        separator  $focus
+#     colors {
+#         background $background
+#         statusline $text
+#         separator  $focus
 
-#       class              text        background
-        focused_workspace  $urgent     $background
-        active_workspace   $text       $background
-        inactive_workspace $text       $background
-        urgent_workspace   $background $urgent
-    }
-}
+# #       class              text        background
+#         focused_workspace  $urgent     $background
+#         active_workspace   $text       $background
+#         inactive_workspace $text       $background
+#         urgent_workspace   $background $urgent
+#     }
+# }
