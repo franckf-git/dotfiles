@@ -31,6 +31,20 @@ TEXT
 
 ${color2}${font Monospace:size=52}${time %H:%M}${font Monospace}
 ${offset 300}${color1}${font Monospace:size=20}${time %d/%m/%Y}${font Monospace}
+${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${battery_percent}% ${color2}(${acpiacadapter ACAD}) #path = "/sys/class/power_supply/BAT%d/uevent"
+${color2}${font FontAwesome:solid:pixelsize=14} ${font Monospace} ${color3}${execi 30 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6}
+# ${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${execi 9 rfkill -no type-desc,soft | head -n 1 | cut -d" " -f3}
+# ${if_existing /proc/net/route wlan0}${color grey}wireless\
+# ${else}\
+# ${if_existing /proc/net/route enp2s0}${color grey}wired\
+# ${else}\
+# ${color grey}no network\
+# ${endif}\
+# ${endif}
+# Signal: ${wireless_link_qual eth0}% ${alignr}${wireless_link_bar 8,60 eth0}
+# ${voffset 4}${font PizzaDude Bullets:size=14}a${font}
+# ${color grey}Rate:$color ${wireless_bitrate wlp1s0}
+# ${color white}Wireless signal: $color${wireless_link_qual wlp1s0}% ${hr 1}
 
 ${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${fs_used_perc /home}%${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${execi 30000 dnf check-update | grep update | wc -l}
 ${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${fs_used_perc /}%${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${tcp_portmon 1 65535 count}
