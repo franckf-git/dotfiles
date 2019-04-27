@@ -32,22 +32,13 @@ COMPLETION_WAITING_DOTS="true"
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-battery
 catimg
 colored-man-pages
-colorize
-command-not-found
-dnf
 git
 git-extras
-man
-sublime
 systemadmin
-systemd
-themes
 web-search
 zsh-autosuggestions
-zsh-navigation-tools
 zsh-syntax-highlighting
 )
 
