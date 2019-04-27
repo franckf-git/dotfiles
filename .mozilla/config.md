@@ -10,3 +10,4 @@
     privacy.resistFingerprinting=true
     webgl.disabled=true
     browser.display.use_document_fonts=0
+    media.peerconnection.enabled=false
