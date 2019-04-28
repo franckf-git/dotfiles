@@ -234,3 +234,29 @@ for_window [class=".*"] border pixel 1
 
 # no border if only one windows
 hide_edge_borders smart
+
+######################################################
+# Bar
+######################################################
+
+# show the bar for ten secondes
+bindsym $win+b exec i3-msg "bar mode dock" && sleep 10s && exec i3-msg "bar mode invisible"
+
+# start i3bar to display a workspace bar but invisible
+bar {
+         status_command i3status --config /home/$USER/.config/i3status/config
+         strip_workspace_numbers yes
+         position top
+         mode invisible
+
+     colors {
+         background $background
+         statusline $text
+         separator  $focus
+#        class              text        background
+         focused_workspace  $urgent     $background
+         active_workspace   $text       $background
+         inactive_workspace $text       $background
+         urgent_workspace   $background $urgent
+     }
+}
