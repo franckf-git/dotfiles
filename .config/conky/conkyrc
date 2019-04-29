@@ -2,7 +2,7 @@
 background no
 use_xft yes
 xftalpha 1
-update_interval 5.0
+update_interval 60.0
 total_run_times 0
 no_buffers yes
 uppercase no
@@ -31,7 +31,7 @@ TEXT
 
 ${color2}${font Monospace:size=52}${time %H:%M}${font Monospace}
 ${offset 300}${color1}${font Monospace:size=20}${time %d/%m/%Y}${font Monospace}
-${color2}${font FontAwesome:solid:pixelsize=14} ${font Monospace} ${color3}${execi 30 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6} $color1(${execi 30 pactl list sinks | grep "Mute" | sed 'y/M/m/' | sed 's/\:\ /-/' | sed 's/\t//' })
+${color2}${font FontAwesome:solid:pixelsize=14} ${font Monospace} ${color3}${execi 60 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6} $color1(${execi 60 pactl list sinks | grep "Mute" | sed 'y/M/m/' | sed 's/\:\ /-/' | sed 's/\t//' })
 ${if_existing /proc/acpi/battery/BAT0/state }${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${battery_percent}% ${color1}(${acpiacadapter ACAD})
 ${else}\
 ${endif}
