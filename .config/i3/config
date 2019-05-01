@@ -165,7 +165,7 @@ exec --no-startup-id feh --bg-center /home/$USER/.config/themes/wallpaper.png
 exec --no-startup-id unclutter -idle 1
 # apps
 exec --no-startup-id urxvt -e sh -ic 'bash /home/$USER/.config/scripts/check_repository.sh'
-exec --no-startup-id firefox --private-window
+exec --no-startup-id firefox --private-window file:///home/$USER/.config/bookmarks/home.html
 exec --no-startup-id xfce4-terminal -T rss -e "newsboat --config-file=/home/$USER/.config/newsboat/config --url-file=/home/$USER/.config/newsboat/urls --cache-file=/home/$USER/.config/newsboat/cache.db"
 exec --no-startup-id xfce4-terminal -T ranger -e 'ranger'
 # systemtray
@@ -241,6 +241,7 @@ hide_edge_borders smart
 
 # show the bar for ten secondes
 bindsym $win+b exec i3-msg "bar mode dock" && sleep 10s && exec i3-msg "bar mode invisible"
+bindsym $win+Shift+b exec i3-msg "bar mode dock"
 
 # start i3bar to display a workspace bar but invisible
 bar {
