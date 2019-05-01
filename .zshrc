@@ -8,7 +8,7 @@
 export ZSH="/home/$USER/.config/oh-my-zsh"
 
 # Set name of the theme to load
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME_RANDOM_CANDIDATES=(
 "agnoster"
 "bira"
@@ -18,6 +18,17 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 "gnzh"
 "wezm"
 )
+
+# powerlevel9k config for prompt
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir time vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='deepskyblue4'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='deepskyblue3'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_TIME_BACKGROUND='deepskyblue2'
+POWERLEVEL9K_TIME_FOREGROUND='black'
+POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
