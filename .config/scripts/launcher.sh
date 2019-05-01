@@ -34,7 +34,7 @@ CHOIX=$(echo -e "\
         " (C)hromium"          ) chromium-browser --incognito ;;
         " (G)oogle chrome"     ) google-chrome ;;
         " (F)irefox"           ) firefox --private-window ;;
-        " s(U)rf"              ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a file:///home/$USER/.config/bookmarks/home.html ;;
+        " s(U)rf"              ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpiS -a a file:///home/$USER/.config/bookmarks/home.html ;;
         " git(L)ab"            ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpiS -a a https://framagit.org/efydd ;;
         " (W)ikipedia"        ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpIs -a a https://fr.wikipedia.org ;;
         " (D)uckduckgo"        ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a https://duckduckgo.com/ ;;
