@@ -9,16 +9,27 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
+
 <body>
+
+    <button onclick="topFunction()" <a class="nav-link h3"  id="backtotop" href="#" data-toggle="tooltip" data-placement="bottom" title="Back to top page">up</a></button>
 
     <div class="container-fluid">
 
         <br><br>
         <div class="text-center mx-5">
-            <a href="https://duckduckgo.com/" class="btn btn-lg w-75 btn-outline-light" role="button">search</a><br>
+            <div id="clock"></div>
+            <br><br>
+            <form method="get" action="https://duckduckgo.com/?"> 
+                <div class="form-group">
+                    <input name='q' type='text' class="form-control" placeholder='search duckduckgo'/>
+                </div>
+            </form>
+<!--             <iframe src="https://duckduckgo.com/search.html?duck=yes&prefill=search duckduckgo&bgcolor=272822&focus=yes&kh=1&kae=d&kj=p&kt=monospace&ka=monospace&k1=-1" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe> -->
         </div>
-        <br><hr><br>
+<br><hr><br>
 
         <div class="row content mx-5">
             <div class="col-sm-4">
