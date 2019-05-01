@@ -5,6 +5,10 @@
 body {
     color: #d1d1d1 !important;
     background-color: #272822 !important;
+    background-image: url("../themes/webbrowser.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 hr {
