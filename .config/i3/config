@@ -185,6 +185,7 @@ bindsym $win+t               exec --no-startup-id bash /home/$USER/.config/scrip
 for_window [class="Galculator"] floating enable          ; move position center
 for_window [title="Network Connections"] floating enable ; move position center
 for_window [title="radio"] floating enable               ; move position center
+for_window [title="sticky"] sticky enable
 
 # assign program windows to workspace
 assign [title="KeePassXC"]          $ws2
