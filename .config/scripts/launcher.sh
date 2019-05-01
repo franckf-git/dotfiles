@@ -72,10 +72,10 @@ CHOIX=$(echo -e "\
 " | rofi -dmenu -l 5 -p "rotate and layout > ")
     case "$CHOIX" in
         " la(Y)out for workspace"      ) i3-msg "layout splitv; move left; resize grow right 20 px or 20 ppt" ;;
-        " (N)ormal"      ) xrandr --output $screen0 --rotate normal ;;
-        " (L)eft"        ) xrandr --output $screen0 --rotate left ;;
-        " (R)ight"       ) xrandr --output $screen0 --rotate right ;;
-        " (I)nverted"    ) xrandr --output $screen0 --rotate inverted ;;
+        " (N)ormal"      ) xrandr --output HDMI-1 --rotate normal ;;
+        " (L)eft"        ) xrandr --output HDMI-1 --rotate left ;;
+        " (R)ight"       ) xrandr --output HDMI-1 --rotate right ;;
+        " (I)nverted"    ) xrandr --output HDMI-1 --rotate inverted ;;
     esac
 }
 
