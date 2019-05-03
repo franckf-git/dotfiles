@@ -18,7 +18,7 @@ CHOIX=$(echo -e "\
  radi(O)\n\
  (R)anger\n\
  (M)eteo\n\
--\n\
+ stick(Y) terminal\n\
 -\
 " | rofi -dmenu -l 6 -p "apps > ")
     case "$CHOIX" in
@@ -26,6 +26,7 @@ CHOIX=$(echo -e "\
         " (R)anger"            ) xfce4-terminal -T ranger -e 'ranger' ;;
         " rea(D) me"           ) xfce4-terminal -T readme -e 'nvim -p /home/$USER/Unclear/readme.md /home/$USER/Unclear/path /home/$USER/Files/InProgress' ;;
         " neo(V)im"            ) xfce4-terminal -T neovim -e 'nvim' ;;
+        " stick(Y) terminal"   ) xfce4-terminal -T sticky ;;
         " newsboa(T)"          ) xfce4-terminal -T rss -e "newsboat --config-file=/home/$USER/.config/newsboat/config --url-file=/home/$USER/.config/newsboat/urls --cache-file=/home/$USER/.config/newsboat/cache.db" ;;
         " radi(O)"             ) urxvt -title radio -e sh -ic 'mpv --no-video https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance' ;;
         " (M)eteo"             ) urxvt -e sh -ic 'curl --header "Accept-Language: fr" wttr.in/poitiers && bash' ;;
