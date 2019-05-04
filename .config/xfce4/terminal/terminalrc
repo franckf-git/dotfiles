@@ -41,4 +41,7 @@ BackgroundMode=TERMINAL_BACKGROUND_IMAGE
 BackgroundImageFile=~/.config/themes/wallpaper.png
 BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_CENTERED
 BackgroundImageShading=0.960000
+DropdownWidth=100
+DropdownAlwaysShowTabs=FALSE
+FontName=Inconsolata 12
 
