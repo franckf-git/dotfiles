@@ -9,7 +9,7 @@ conky.config = {
     cpu_avg_samples = 2,
     net_avg_samples = 2,
     override_utf8_locale = true,
-    font = 'Monospace',
+    font = 'Inconsolata',
 
     color1 = 'd1d1d1',
     color2 = 'e6db74',
@@ -27,23 +27,23 @@ conky.config = {
 
 
 conky.text = [[
-${color2}${font Monospace:size=52}${time %H:%M}${font Monospace}
-${offset 300}${color1}${font Monospace:size=20}${time %d/%m/%Y}${font Monospace}
-${color2}${font FontAwesome:solid:pixelsize=14} ${font Monospace} ${color3}${execi 60 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6} $color1(${execi 60 pactl list sinks | grep "Mute" | sed 'y/M/m/' | sed 's/\:\ /-/' | sed 's/\t//' })
-${if_existing /proc/acpi/battery/BAT0/state }${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${battery_percent}% ${color1}(${acpiacadapter ACAD})
+${color2}${font Inconsolata:size=52}${time %H:%M}${font Inconsolata}
+${offset 300}${color1}${font Inconsolata:size=20}${time %d/%m/%Y}${font Inconsolata}
+${color2}${font FontAwesome:solid:pixelsize=14} ${font Inconsolata} ${color3}${execi 60 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6} $color1(${execi 60 pactl list sinks | grep "Mute" | sed 'y/M/m/' | sed 's/\:\ /-/' | sed 's/\t//' })
+${if_existing /proc/acpi/battery/BAT0/state }${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${battery_percent}% ${color1}(${acpiacadapter ACAD})
 ${else}\
 ${endif}
-${if_existing /proc/net/route wlp0s29u1u5}${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${wireless_link_qual wlo1}% $color1(${wireless_essid wlo1})
+${if_existing /proc/net/route wlp0s29u1u5}${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${wireless_link_qual wlo1}% $color1(${wireless_essid wlo1})
 ${else}\
 ${endif}
 
-${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${fs_used_perc /home}%\
-${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${execi 30000 dnf check-update | grep update | wc -l}
-${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${fs_used_perc /}%\
-${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${tcp_portmon 1 65535 count}
+${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${fs_used_perc /home}%\
+${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${execi 30000 dnf check-update | grep update | wc -l}
+${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${fs_used_perc /}%\
+${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${tcp_portmon 1 65535 count}
 
-${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}${cpu}%\
-${offset 300}${color2}${font FontAwesome:solid:pixelsize=14}${font Monospace} ${color3}$mem
+${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${cpu}%\
+${offset 300}${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}$mem
 ${color1}${top name 1} ${top cpu 1}%${offset 100}${color1}${top_mem name 1}${top_mem mem_res 1}
 ${color1}${top name 2} ${top cpu 2}%${offset 100}${color1}${top_mem name 2}${top_mem mem_res 2}
 ]]
