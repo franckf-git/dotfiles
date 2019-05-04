@@ -11,7 +11,7 @@
 set $win Mod4
 
 # font for window titles
-font pango:monospace 0
+font pango:inconsolata 0
 
 # launch rofi for system
 bindsym $win+Shift+Delete    exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh system
@@ -174,6 +174,7 @@ exec --no-startup-id nm-applet --sm-disable
 
 # start a terminal
 bindsym $win+Return          exec --no-startup-id xfce4-terminal -e zsh
+bindsym $win+Ctrl+Return     exec --no-startup-id xfce4-terminal --drop-down -e zsh
 bindsym $win+Shift+Return    exec --no-startup-id urxvt
 
 # start rofi program launcher (shift+arrow to move between modules)
@@ -251,7 +252,7 @@ bar {
         position top
         mode invisible
 
-        font pango:monospace 10
+        font pango:inconsolata 10
     colors {
         background $background
         statusline $text
