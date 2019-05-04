@@ -3,6 +3,7 @@
 https://www.lemonde.fr/rss/une.xml                                             "~le-monde"              news daily
 https://motherboard.vice.com/en_us/rss                                         "~motherboard/us"        news daily
 https://www.zdnet.fr/feeds/rss/actualites/                                     "~zdnet-fr"              news daily
+https://www.zdnet.fr/feeds/rss/actualites/informatique/                        "~zdnet-tech"            news daily
 https://www.cert.ssi.gouv.fr/feed/                                             "~cert-fr"               security daily
 https://www.journalduhacker.net/rss                                            "~journal-du-hacker"     technews daily
 https://www.minimachines.net/feed                                              "~mini-machines"         technews daily
@@ -10,6 +11,7 @@ https://scantrad.fr/rss                                                        "
 https://lel.koneko-scantrad.fr/feeds/rss/                                      "~koneko-scantrad"       manga
 https://www.viedemerde.fr/rss                                                  "~vdm"                   fun daily
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ   "~linuxtricks"           youtube technews daily
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ   "~level1techs"           youtube technews daily
 ----------------------------tech
 http://lxer.com/module/newswire/headlines.rss                                  "~lxer"                  technews
 http://www.tuxmachines.org/node/feed                                           "~tux-machines"          technews
@@ -19,7 +21,6 @@ https://fedoramagazine.org/feed/                                               "
 https://itsfoss.com/feed/                                                      "~its-foss"              technews
 https://krebsonsecurity.com/feed/                                              "~krebs-on-security"     security
 https://www.raspberrypi.org/magpi/feed/                                        "~magpi"                 technews
-https://boards.4channel.org/g/index.rss                                        "~g/technology"          board
 https://www.reddit.com/r/ansible.rss                                           "~r/ansible"             board
 https://www.reddit.com/r/commandline.rss                                       "~r/commandline"         board
 https://www.reddit.com/r/i3wm.rss                                              "~r/i3wm"                board
@@ -31,7 +32,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA   "
 https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w   "~level1linux"           youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw   "~linus-tech-tips"       youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCj_iGliGCkLcHSZ8eqVNPDQ   "~grafikart"             youtube
-https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ   "~level1techs"           youtube technews daily
+https://boards.4channel.org/g/index.rss                                        "~g/technology"          board
 ----------------------------fun
 http://ajianoscantrad.fr/reader/rss.xml                                        "~ajia-no-scantrad"      manga
 #http://www.scan-manga.com/rss/BD.xml                                           "~scan-manga"            manga
