@@ -1,5 +1,5 @@
 rofi.theme: /usr/share/rofi/themes/Monokai.rasi
-rofi.font: monospace 14
+rofi.font: inconsolata 14
 rofi.width: 96
 rofi.columns: 3
 rofi.bw: 0
