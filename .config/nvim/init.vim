@@ -187,10 +187,6 @@ inoremap < <><Esc>:let leavechar=">"<CR>i
 inoremap " ""<Esc>:let leavechar='"'<CR>i
 inoremap ' ''<Esc>:let leavechar="'"<CR>i
 
-" CSV
-syntax match csvHeading /\%1l\%(\%("\zs\%([^"]\|""\)*\ze"\)\|\%(\zs[^,"]*\ze\)\)/
-highlight def link csvHeading Type
-
 """""""""""""""""""""""""""
 " KEYS MAPPING
 """""""""""""""""""""""""""
