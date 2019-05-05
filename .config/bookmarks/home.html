@@ -9,6 +9,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ynh-style.css">
   <script src="script.js"></script>
 </head>
 
@@ -18,7 +19,7 @@
 
     <div class="container-fluid">
 
-        <br><br>
+<br><br>
         <div class="text-center mx-5">
             <div id="clock"></div>
             <br><br>
@@ -27,50 +28,46 @@
                     <input name='q' type='text' class="form-control" placeholder='search duckduckgo'/>
                 </div>
             </form>
-<!--             <iframe src="https://duckduckgo.com/search.html?duck=yes&prefill=search duckduckgo&bgcolor=272822&focus=yes&kh=1&kae=d&kj=p&kt=monospace&ka=monospace&k1=-1" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe> -->
         </div>
-<br><hr><br>
+<br><hr>
+
+<div class="overlay">
+      <div id="apps" class="wrapper apps">
+        <ul class="listing-apps">
+          <li><a href="https://www.meteorama.fr/86000.html?v=heure-par-heure" class="greenbg"><span class="first-letter" data-first-letter="today"></span><span class="name">weather</span></a></li>
+          <li><a href="https://www.scantrad-union.com/" class="redbg"><span class="first-letter" data-first-letter="last"></span><span class="name">scantrad-union</span></a></li>
+          <li><a href="https://9gag.com/" class="darkbluebg"><span class="first-letter" data-first-letter="9gag"></span><span class="name"></span></a></li>
+          <li><a href="https://framagit.org/users/efydd/projects" class="orangebg"><span class="first-letter" data-first-letter="my"></span><span class="name">gitlab</span></a></li>
+          <li><a href="https://www.youtube.com/results?search_query=live+music" class="purpledarkbg"><span class="first-letter" data-first-letter="play"></span><span class="name">music</span></a></li>
+          <li><a href="https://outils.cerise-collection.fr/nextcloud/index.php/login" class="bluebg"><span class="first-letter" data-first-letter="share"></span><span class="name">nextcloud</span></a></li>
+          <li><a href="http://www.anime-ultime.net/index-0-1#principal" class="turquoisebg"><span class="first-letter" data-first-letter="last"></span><span class="name">anime-ultime</span></a></li>
+          <li><a href="http://www.vitalis-poitiers.fr/" class="lightbluebg"><span class="first-letter" data-first-letter="bus"></span><span class="name">vitalis</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+<hr><br>
 
         <div class="row content mx-5">
-            <div class="col-sm-4">
-                <a href="https://www.meteorama.fr/86000.html?v=heure-par-heure" class="btn btn-lg btn-block btn-success" role="button">weather</a>
-                <a href="https://www.scantrad-union.com/" class="btn btn-lg btn-block btn-danger" role="button">scantrad-union</a>
-                <a href="https://9gag.com/" class="btn btn-lg btn-block btn-dark" role="button">9gag</a>
-            </div>
-            <div class="col-sm-4">
-                <a href="https://www.youtube.com/results?search_query=live+music" class="btn btn-lg btn-block btn-outline-light" role="button">music</a>
-                <a href="https://framagit.org/users/efydd/projects" class="btn btn-lg btn-block btn-warning" role="button">gitlab</a>
-                <a href="https://outils.cerise-collection.fr/nextcloud/index.php/login" class="btn btn-lg btn-block btn-primary" role="button">nextcloud</a>
-            </div>
-            <div class="col-sm-4">
-                <a href="http://www.vitalis-poitiers.fr/" class="btn btn-lg btn-block" role="button">vitalis</a>
-                <a href="https://fr.wikipedia.org" class="btn btn-lg btn-block btn-secondary" role="button">wikipedia</a>
-                <a href="http://www.anime-ultime.net/index-0-1#principal" class="btn btn-lg btn-block btn-info" role="button">anime-ultime</a>
-            </div>
-        </div>
-
-        <br><hr><br>
-
-        <div class="row content mx-5">
-            <a href="AREMPLIRURL" class="btn btn-lg btn-block btn-outline-secondary" role="button">TEMPORAIRES</a>
-            <a href="https://www.devops-cloud.fr/raspberry-cluster-une-nouvelle-aventure-devops/" class="btn btn-lg btn-block btn-outline-secondary" role="button">raspberry-cluster</a>
-            <a href="https://www.youtube.com/watch?v=XA2WjJbmmoM" class="btn btn-lg btn-block btn-outline-secondary" role="button">vim-tuto</a>
+            <a href="AREMPLIRURL" class="btn btn-lg btn-block btn-secondary" role="button">TEMPORAIRES</a>
+            <a href="https://www.devops-cloud.fr/raspberry-cluster-une-nouvelle-aventure-devops/" class="btn btn-lg btn-block btn-secondary" role="button">raspberry-cluster</a>
+            <a href="https://www.youtube.com/watch?v=XA2WjJbmmoM" class="btn btn-lg btn-block btn-secondary" role="button">vim-tuto</a>
         </div>
 
         <br><hr><br>
 
         <div class="row content mx-5">
             <div class="col-sm-3">
-                <a href="administration.html" class="btn btn-lg btn-block btn-outline-info" role="button">administration</a>
+                <a href="administration.html" class="btn btn-lg btn-block btn-info" role="button">administration</a>
             </div>
             <div class="col-sm-3">
-                <a href="work.html" class="btn btn-lg btn-block btn-outline-warning" role="button">work</a>
+                <a href="work.html" class="btn btn-lg btn-block btn-warning" role="button">work</a>
             </div>
             <div class="col-sm-3">
-                <a href="storage.html" class="btn btn-lg btn-block btn-outline-danger" role="button">storage</a>
+                <a href="storage.html" class="btn btn-lg btn-block btn-danger" role="button">storage</a>
             </div>
             <div class="col-sm-3">
-                <a href="tor.html" class="btn btn-lg btn-block btn-outline-dark" role="button">tor</a>
+                <a href="tor.html" class="btn btn-lg btn-block btn-dark" role="button">tor</a>
             </div>
 
         </div>

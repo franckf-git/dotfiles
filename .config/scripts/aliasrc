@@ -132,7 +132,7 @@ sudo dnf autoremove --assumeyes
 # save a url inside the bookmark file
 addurl () {
 sed -i -E 's/(.*AREMPLIRURL.*)/\1\n\1/' /home/$USER/.config/bookmarks/home.html
-sed -i -E "45s+(.*)(AREMPLIRURL)(.*)(TEMPORAIRES)(.*)+\1"$1"\3"$2"\5+g" /home/$USER/.config/bookmarks/home.html
+sed -i -E "53s+(.*)(AREMPLIRURL)(.*)(TEMPORAIRES)(.*)+\1"$1"\3"$2"\5+g" /home/$USER/.config/bookmarks/home.html
 }
 
 ######################################################
