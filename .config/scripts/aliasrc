@@ -163,7 +163,7 @@ alias ddgr="ddgr --expand --num 9 --reg 'fr-fr'"
 alias zshconfig="nvim -p /home/$USER/.oh-my-zsh /home/$USER/.zshrc"
 
 # upgrade
-alias upg='sudo dnf upgrade --refresh ; sudo dnf autoremove --assumeyes ; sudo dnf clean all ; sudo flatpak update -y && notify-send " the upgrade is over."'
+alias upg='sudo dnf upgrade-minimal --refresh && flatpak update -y && notify-send " the upgrade is over."'
 
 # backup
 alias bup='rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Medias/","Transferts/","VirtualBox/",".cache/"} /home/$USER /run/media/$USER/RSYNC/ ; ls --recursive {"Medias/","Transferts/"} > /run/media/$USER/RSYNC/contenu.log ; notify-send " the backup is over."'
@@ -187,4 +187,4 @@ alias musicdl='youtube-dl --output "%(title)s.%(ext)s" --extract-audio --audio-f
 alias meteo='curl --header "Accept-Language: fr" wttr.in/poitiers'
 
 # clean cache
-alias clean='bleachbit --clean firefox.* chromium.* google_chrome.cache system.tmp system.cache system.custom && notify-send " the cleanning is over."'
+alias clean='bleachbit --clean firefox.* chromium.* google_chrome.cache system.tmp system.cache system.custom  && sudo dnf autoremove --assumeyes && sudo dnf clean all && notify-send " the cleanning is over."'
