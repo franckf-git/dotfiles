@@ -217,20 +217,3 @@ inoremap <C-q> <Esc>:xall<CR>
 
 " Web preview
 map <Leader>w :! surf %<CR>
-
-"""""""""""""""""""""""""""
-" PLUGINS
-"""""""""""""""""""""""""""
-
-"filetype off
-" Set the runtime path to include Vundle and initialize
-"set rtp+=/home/$USER/.config/nvim/bundle/Vundle.vim
-"call vundle#begin()
-"Plugin 'VundleVim/Vundle.vim'
-
-"Plugin 'The-NERD-tree'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-
-"call vundle#end()
-"filetype plugin indent on
