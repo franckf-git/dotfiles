@@ -51,22 +51,22 @@ colors spacevim
 
 " Always show status bar
 set laststatus=2
-set statusline=                                            "clear the statusline
-set statusline+=%<\                                        "cut at start
-set statusline+=\ %m                                       "modified flag
-set statusline+=\ %F                                       "full path name
-set statusline+=%{b:gitbranch}                             "function git branch
-set statusline+=\ %h                                       "help file flag
-set statusline+=\ %r                                       "read only flag
-set statusline+=\ %w                                       "windows flag
-set statusline+=%=                                         "right separator
-set statusline+=\ %y                                       "filetype
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding} "fileencoding
-set statusline+=\ pos:%p%%                                 "percentage
-set statusline+=\ col:%c                                   "cursor column
-set statusline+=\ lin:%l/%L                                "cursor line/total lines
-set statusline+=\ %{strftime(\"%H:%M\")}                   "time
-set statusline+=\                                          "end space
+set statusline=                                                  "clear the statusline
+set statusline+=%<\                                              "cut at start
+set statusline+=\ %m                                             "modified flag
+set statusline+=\ \ \ %F                                       "full path name
+set statusline+=\ %{b:gitbranch}                                 "function git branch
+set statusline+=\ %h                                             "help file flag
+set statusline+=\ %r                                             "read only flag
+set statusline+=\ %w                                             "windows flag
+set statusline+=%=                                               "right separator
+set statusline+=\ \ \ %y                                        "filetype
+set statusline+=\ \ \ %{&fileencoding?&fileencoding:&encoding}  "fileencoding
+set statusline+=\ \ \ %p%%                                      "percentage
+set statusline+=\ \ \ %c                                        "cursor column
+set statusline+=\ \ \ %l/%L                                     "cursor line/total lines
+set statusline+=\ \ \ %{strftime(\"%H:%M\")}                    "time
+set statusline+=\                                                "end space
 
 " Always show current position
 set ruler
@@ -85,10 +85,10 @@ function! StatuslineGitBranch()
   let b:gitbranch=""
   if &modifiable
     lcd %:p:h
-    let l:gitrevparse=system("git rev-parse --abbrev-ref HEAD")
+    let l:gitrevparse=system("echo ' ' && git rev-parse --abbrev-ref HEAD")
     lcd -
     if l:gitrevparse!~"fatal: not a git repository"
-      let b:gitbranch="(".substitute(l:gitrevparse, '\n', '', 'g').") "
+      let b:gitbranch="[ ".substitute(l:gitrevparse, '\n', '', 'g')." ] "
     endif
   endif
 endfunction
@@ -103,17 +103,23 @@ augroup END
 """""""""""""""""""""""""""
 
 " No banner
-"let g:netrw_banner = 0
+let g:netrw_banner = 0
 
 " Better view in netrw explorer
 let g:netrw_liststyle = 3
 
 " For netrw explorer open in horizontal split
-"let g:netrw_browse_split = 2
-"let g:netrw_altv = 1
+let g:netrw_browse_split = 2
+let g:netrw_altv = 1
 
 " Width of the directory explorer to 25 %
-"let g:netrw_winsize = 25
+let g:netrw_winsize = 25
+
+" Search down into subfolders
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
 
 """""""""""""""""""""""""""
 " TABS
@@ -121,9 +127,7 @@ let g:netrw_liststyle = 3
 
 " Display tabs
 nnoremap <C-n> :tabnext<CR>
-inoremap <C-n> <Esc>:tabnext<CR>
 nnoremap <C-p> :tabprevious<CR>
-inoremap <C-p> <Esc>:tabprevious<CR>
 
 " Newtab
 nnoremap <C-t> :tabnew<CR>
