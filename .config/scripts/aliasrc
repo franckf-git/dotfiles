@@ -176,7 +176,7 @@ alias disconnect='umount /run/media/$USER/* && for i in {b..f} ; do udisksctl po
 alias connectsec='sudo cryptsetup luksOpen /dev/sdb1 Backup && sudo mount /dev/mapper/Backup /mnt && notify-send " usb mounted."'
 
 # music
-alias radio='mpv --no-video https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance'
+alias radio='mpv --no-video "https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance"'
 alias zen='mpv --no-video https://www.youtube.com/watch?v=qYnA9wWFHLI'
 alias nature='mpv --no-video https://www.youtube.com/watch?v=eKFTSSKCzWA'
 
@@ -187,4 +187,4 @@ alias musicdl='youtube-dl --output "%(title)s.%(ext)s" --extract-audio --audio-f
 alias meteo='curl --header "Accept-Language: fr" wttr.in/poitiers'
 
 # clean cache
-alias clean='bleachbit --clean firefox.* chromium.* google_chrome.cache system.tmp system.cache system.custom  && sudo dnf autoremove --assumeyes && sudo dnf clean all && notify-send " the cleanning is over."'
+alias clean='bleachbit --clean "firefox.*" "chromium.*" google_chrome.cache system.tmp system.cache system.custom  && sudo dnf autoremove --assumeyes && sudo dnf clean all && notify-send " the cleanning is over."'
