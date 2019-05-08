@@ -8,6 +8,6 @@
 	],
 	"save_on_focus_lost": true,
 	"tab_size": 4,
-	"theme": "Default.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
