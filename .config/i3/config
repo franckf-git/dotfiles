@@ -241,8 +241,8 @@ hide_edge_borders smart
 # Bar
 ######################################################
 
-# show the bar for ten secondes
-bindsym $win+b exec i3-msg "bar mode dock" && sleep 10s && exec i3-msg "bar mode invisible"
+# show/hide the bar
+bindsym $win+b       exec i3-msg "bar mode invisible"
 bindsym $win+Shift+b exec i3-msg "bar mode dock"
 
 # start i3bar to display a workspace bar but invisible
@@ -250,7 +250,7 @@ bar {
         status_command i3status --config /home/$USER/.config/i3status/config
         strip_workspace_numbers yes
         position top
-        mode invisible
+#        mode invisible
 
         font pango:inconsolata 10
     colors {
