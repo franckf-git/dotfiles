@@ -3,6 +3,7 @@
 """""""""""""""""""""""""""
 
 " Shortcuts Index
+" Control + a    open explorer
 " Control + o    open new file
 " Control + s    save file
 " Control + c    copy to system clipboard
@@ -120,6 +121,10 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+" Open explorer
+nnoremap <C-a> :Vexplore <CR>
+inoremap <C-a> <Esc>:Vexplore <CR>
 
 """""""""""""""""""""""""""
 " TABS
