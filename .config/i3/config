@@ -133,6 +133,9 @@ floating_modifier $win
 # change focus between tiling / floating windows
 bindsym $win+space           focus mode_toggle
 
+# made a windows sticky - visible every workspace
+bindsym $win+Shift+s         sticky toggle
+
 ######################################################
 # Rotate Screen and Multiscreen
 ######################################################
