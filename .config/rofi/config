@@ -1,4 +1,4 @@
-rofi.theme: /usr/share/rofi/themes/Monokai.rasi
+rofi.theme: color.rasi
 rofi.font: inconsolata 14
 rofi.width: 96
 rofi.columns: 3
