@@ -13,33 +13,39 @@ Xft*rgba: rgb
 
 ! Colorscheme https://terminal.sexy
 
-! Monokai
 ! special
-*.foreground:   #d1d1d1
-*.background:   #272822
-*.cursorColor:  #e6db74
-
-! black
-*.color0:       #272822
-*.color8:       #75715e
-! red
-*.color1:       #f92672
-*.color9:       #f92672
-! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
-! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
-! blue
-*.color4:       #66d9ef
-*.color12:      #66d9ef
-! magenta
-*.color5:       #ae81ff
-*.color13:      #ae81ff
-! cyan
-*.color6:       #a1efe4
-*.color14:      #a1efe4
-! white
-*.color7:       #f8f8f2
-*.color15:      #f9f8f5
+*.foreground:      #d1d1d1
+*.background:      #2A2A2A
+*.cursorColor:     #D60000
+! black                    BLACK
+*.color0:          #111111
+! darkgrey                 LIME
+*.color8:          #01FF70
+! darkred                  MAROON
+*.color1:          #C00000
+! red                      RED
+*.color9:          #FF4136
+! darkgreen                OLIVE
+*.color2:          #3D9970
+! green                    GREEN
+*.color10:         #2ECC40
+! darkyellow               ORANGE
+*.color3:          #FF851B
+! yellow                   YELLOW
+*.color11:         #FFDC00
+! darkblue                 NAVY
+*.color4:          #001F3F
+! blue                     BLUE
+*.color12:         #0074D9
+! darkmagenta              FUCHSIA
+*.color5:          #F012BE
+! magenta                  PURPLE
+*.color13:         #B10DC9
+!darkcyan                  AQUA
+*.color6:          #7FDBFF
+! cyan                     TEAL
+*.color14:         #39CCCC
+! lightgrey                GRAY
+*.color7:          #AAAAAA
+! white                    SILVER
+*.color15:         #DDDDDD
