@@ -1,4 +1,4 @@
-delete-read-articles-on-quit    yes
+#delete-read-articles-on-quit    yes
 max-items                       50
 keep-articles-days              30
 auto-reload                     yes
