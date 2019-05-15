@@ -3,6 +3,7 @@
 - [Dark Mode](https://addons.mozilla.org/fr/firefox/addon/dark-mode-webextension)
 - [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin)
 - [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
+- [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/?src=search)
 
 > about:config
 
