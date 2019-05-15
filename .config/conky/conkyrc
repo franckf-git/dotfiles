@@ -38,7 +38,7 @@ ${else}\
 ${endif}
 
 ${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${fs_used_perc /home}%\
-${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${execi 30000 dnf check-update | grep update | wc -l}
+${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${execi 3600 dnf check-update | grep update | wc -l}
 ${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${fs_used_perc /}%\
 ${offset 286}${color2}${font FontAwesome:solid:pixelsize=14}${font Inconsolata} ${color3}${tcp_portmon 1 65535 count}
 
