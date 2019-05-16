@@ -166,6 +166,7 @@ bindsym $win+r               exec --no-startup-id bash /home/$USER/.config/scrip
 exec --no-startup-id conky --config=/home/$USER/.config/conky/conkyrc
 exec --no-startup-id feh --bg-center /home/$USER/.config/themes/wallpaper.png
 exec --no-startup-id unclutter -idle 1
+exec --no-startup-id xrdb -load ~/.Xdefaults
 # apps
 exec --no-startup-id urxvt -e sh -ic 'bash /home/$USER/.config/scripts/check_repository.sh'
 exec --no-startup-id firefox --private-window file:///home/$USER/.config/bookmarks/home.html
@@ -221,19 +222,32 @@ bindsym $win+F10             exec --no-startup-id surf -dgNpis -a a file:///home
 ######################################################
 
 # set the colors
-set $background         #272822
-set $text               #d1d1d1
-set $urgent             #e6db74
+set_from_resource $black       color0  #000000
+set_from_resource $lightblack  color8  #000000
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
 
 # assign color to the title and border of the windows
-# class                 border       background   text        indicator    child_border
-client.focused          $text        $text        $background $text        $text
-client.focused_inactive $background  $background  $text       $background  $background
-client.unfocused        $background  $background  $text       $background  $background
-client.urgent           $urgent      $urgent      $text       $urgent      $urgent
-client.placeholder      $background  $background  $text       $background  $background
+# class                 border       background   text     indicator    child_border
+client.focused          $white       $white       $black   $white       $white
+client.focused_inactive $black       $black       $white   $black       $black
+client.unfocused        $black       $black       $white   $black       $black
+client.urgent           $darkgreen   $darkgreen   $white   $darkgreen   $darkgreen
+client.placeholder      $black       $black       $white   $black       $black
 
-client.background       $text
+client.background       $white
 
 # for every windows set the title and border, no title, small border
 for_window [class=".*"] border pixel 1
@@ -257,13 +271,13 @@ bar {
         font               pango:inconsolata 10
 
     colors {
-        background         $background
-        statusline         $text
+        background         $black
+        statusline         $white
         separator          $focus
-#       class              text        background
-        focused_workspace  $urgent     $background
-        active_workspace   $text       $background
-        inactive_workspace $text       $background
-        urgent_workspace   $background $urgent
+#       class              text         background
+        focused_workspace  $darkgreen   $black
+        active_workspace   $white       $black
+        inactive_workspace $white       $black
+        urgent_workspace   $black       $darkgreen
     }
 }
