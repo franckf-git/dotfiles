@@ -162,19 +162,7 @@ bindsym $win+r               exec --no-startup-id bash /home/$USER/.config/scrip
 ######################################################
 
 # auto-startup
-# decos
-exec --no-startup-id conky --config=/home/$USER/.config/conky/conkyrc
-exec --no-startup-id feh --bg-center /home/$USER/.config/themes/wallpaper.png
-exec --no-startup-id unclutter -idle 1
-exec --no-startup-id xrdb -load ~/.Xdefaults
-# apps
-exec --no-startup-id urxvt -e sh -ic 'bash /home/$USER/.config/scripts/check_repository.sh'
-exec --no-startup-id firefox --private-window file:///home/$USER/.config/bookmarks/home.html
-exec --no-startup-id xfce4-terminal -T rss -e "newsboat --config-file=/home/$USER/.config/newsboat/config --url-file=/home/$USER/.config/newsboat/urls --cache-file=/home/$USER/.config/newsboat/cache.db"
-exec --no-startup-id xfce4-terminal -T ranger -e 'ranger'
-# systemtray
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id nm-applet --sm-disable
+exec --no-startup-id bash /home/$USER/.config/scripts/startup.sh
 
 # start a terminal
 bindsym $win+Return          exec --no-startup-id xfce4-terminal -e zsh
