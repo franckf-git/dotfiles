@@ -52,7 +52,7 @@ bindsym $win+egrave              workspace $ws7
 bindsym $win+underscore          workspace $ws8
 bindsym $win+ccedilla            workspace $ws9
 bindsym $win+agrave              workspace $ws0
-bindsym $win+parenright          exec --no-startup-id i3-msg workspace "$RANDOM:          "
+bindsym $win+parenright          exec --no-startup-id i3-msg workspace $(shuf -n 1 /home/$USER/.config/scripts/fontawesome_icons)
 
 # switch between workspaces
 bindsym $win+Tab                 workspace next
@@ -175,35 +175,15 @@ bindsym $win+asterisk        exec --no-startup-id bash /home/$USER/.config/scrip
 bindsym $win+t               exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh work
 
 # start some apps with floating
-for_window [class="Galculator"] floating enable          ; move position center
-for_window [title="Network Connections"] floating enable ; move position center
-for_window [title="radio"] floating enable               ; move position center
-for_window [title="XClipboard"] floating enable          ; move position center
-for_window [title="sticky"] sticky enable
+for_window [title="Network Connections"] floating enable sticky enable ; move position center
 
 # assign program windows to workspace
-assign [title="KeePassXC"]          $ws2
-assign [class="Mattermost"]         $ws3
-assign [class="Claws"]              $ws4
-assign [title="rss"]                $ws4
-assign [title="Thunar|ranger"]      $ws5
-assign [class="Chromium|Chrome"]    $ws6
-assign [class="Firefox"]            $ws7
-assign [class="Sublime"]            $ws8
-assign [class="mpv"]                $ws9
-assign [class="surf"]               $ws0
-
-# launch apps with function keys who match assign workspaces
-bindsym $win+F1              exec --no-startup-id xfce4-terminal -e zsh
-bindsym $win+F2              exec --no-startup-id keepassxc
-bindsym $win+F3              exec --no-startup-id flatpak run com.mattermost.Desktop
-bindsym $win+F4              exec --no-startup-id claws-mail
-bindsym $win+F5              exec --no-startup-id xfce4-terminal -T ranger -e 'ranger'
-bindsym $win+F6              exec --no-startup-id chromium-browser --incognito
-bindsym $win+F7              exec --no-startup-id firefox --private-window
-bindsym $win+F8              exec --no-startup-id flatpak run com.sublimetext.three
-bindsym $win+F9              exec --no-startup-id mpv
-bindsym $win+F10             exec --no-startup-id surf -dgNpis -a a file:///home/$USER/.config/bookmarks/home.html
+assign [title="rss"]                $ws_rss
+assign [title="ranger"]             $ws_filemanager
+assign [class="Chromium|Chrome"]    $ws_chromium
+assign [class="Firefox"]            $ws_web
+assign [class="Sublime"]            $ws_editor
+assign [class="mpv"]                $ws_video
 
 ######################################################
 # Decorations
