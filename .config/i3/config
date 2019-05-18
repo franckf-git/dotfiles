@@ -65,20 +65,6 @@ bindsym $win+Next                workspace prev
 # pressing workspace key again toggles back
 workspace_auto_back_and_forth yes
 
-# move focused container to workspace and switch to it
-bindsym $win+Shift+ampersand     move container to workspace $ws1 ; workspace $ws1
-bindsym $win+Shift+eacute        move container to workspace $ws2 ; workspace $ws2
-bindsym $win+Shift+quotedbl      move container to workspace $ws3 ; workspace $ws3
-bindsym $win+Shift+apostrophe    move container to workspace $ws4 ; workspace $ws4
-bindsym $win+Shift+parenleft     move container to workspace $ws5 ; workspace $ws5
-bindsym $win+Shift+minus         move container to workspace $ws6 ; workspace $ws6
-bindsym $win+Shift+egrave        move container to workspace $ws7 ; workspace $ws7
-bindsym $win+Shift+underscore    move container to workspace $ws8 ; workspace $ws8
-bindsym $win+Shift+ccedilla      move container to workspace $ws9 ; workspace $ws9
-bindsym $win+Shift+agrave        move container to workspace $ws0 ; workspace $ws0
-bindsym $win+Shift+parenright    move container to workspace "          "
-bindsym $win+Shift+equal         move container to workspace "          "
-
 ######################################################
 # Organize Windows
 ######################################################
@@ -87,11 +73,7 @@ bindsym $win+Shift+equal         move container to workspace "          "
 focus_follows_mouse no
 
 # kill focused window
-bindsym $win+BackSpace       kill
 bindsym $win+c               kill
-
-# enter fullscreen mode for the focused container
-bindsym $win+f fullscreen toggle
 
 # change focus
 bindsym $win+Left            focus left
@@ -99,63 +81,14 @@ bindsym $win+Down            focus down
 bindsym $win+Up              focus up
 bindsym $win+Right           focus right
 
-# move focused window
-bindsym $win+Shift+Left      move left
-bindsym $win+Shift+Down      move down
-bindsym $win+Shift+Up        move up
-bindsym $win+Shift+Right     move right
-
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
 # default layout
 workspace_layout tabbed
 
-# split in horizontal and vertical orientation
-bindsym $win+h               split toggle
-
-# focus the parent container
-bindsym $win+q               focus parent
-
-# focus the child container
-bindsym $win+d               focus child
-
 # change container layout
-bindsym $win+s               layout toggle all
 bindsym $win+x               layout toggle splith tabbed
-
-# toggle tiling / floating
-bindsym $win+Shift+space     floating toggle
-
-# use mouse+$win to move floating windows
-floating_modifier $win
-
-# change focus between tiling / floating windows
-bindsym $win+space           focus mode_toggle
-
-# made a windows sticky - visible every workspace
-bindsym $win+Shift+s         sticky toggle
-
-######################################################
-# Rotate Screen and Multiscreen
-######################################################
-
-# resize window, you can use the mouse
-set $resize "resize windows"
-
-mode $resize {
-        # these bindings trigger as soon as you enter the resize mode
-        bindsym Left  resize shrink width  10 px or 10 ppt
-        bindsym Down  resize grow   height 10 px or 10 ppt
-        bindsym Up    resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow   width  10 px or 10 ppt
-
-        # echap for back to normal
-        bindsym Escape mode "default"
-}
-
-bindsym $win+Shift+r         mode $resize
-bindsym $win+r               exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh rotate
 
 ######################################################
 # Programs
@@ -166,7 +99,6 @@ exec --no-startup-id bash /home/$USER/.config/scripts/startup.sh
 
 # start a terminal
 bindsym $win+Return          exec --no-startup-id xfce4-terminal -e zsh
-bindsym $win+Ctrl+Return     exec --no-startup-id xfce4-terminal --drop-down -e zsh
 bindsym $win+Shift+Return    exec --no-startup-id urxvt
 
 # start rofi program launcher (shift+arrow to move between modules)
@@ -174,7 +106,7 @@ bindsym twosuperior          exec --no-startup-id bash /home/$USER/.config/scrip
 bindsym $win+asterisk        exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh rofi
 bindsym $win+t               exec --no-startup-id bash /home/$USER/.config/scripts/launcher.sh work
 
-# start some apps with floating
+# start some apps with floating and visible on every workspace
 for_window [title="Network Connections"] floating enable sticky enable ; move position center
 
 # assign program windows to workspace
@@ -189,7 +121,7 @@ assign [class="mpv"]                $ws_video
 # Decorations
 ######################################################
 
-# set the colors
+# set the colors from Xdefaults
 set_from_resource $black       color0  #000000
 set_from_resource $lightblack  color8  #000000
 set_from_resource $darkred     color1  #000000
@@ -217,7 +149,7 @@ client.placeholder      $black       $black       $white   $black       $black
 
 client.background       $white
 
-# for every windows set the title and border, no title, small border
+# for every windows no title and small border
 for_window [class=".*"] border pixel 1
 
 # no border if only one windows
@@ -230,7 +162,7 @@ hide_edge_borders smart
 # show/hide the bar
 bindsym $win+b             bar mode toggle
 
-# start i3bar to display a workspace bar but invisible
+# start i3bar to display a workspace bar
 bar {
         status_command     bash /home/$USER/.config/scripts/i3title_status.sh
         position           top
