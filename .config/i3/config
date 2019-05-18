@@ -26,21 +26,21 @@ bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.pn
 ######################################################
 
 # set workspaces titles and icons
-set $ws_terminal "    "
-set $ws_rss "    "
-set $ws_filemanager "    "
-set $ws_chromium "    "
-set $ws_web "    "
-set $ws_editor "    "
-set $ws_video "    "
+set $ws_terminal                   "    "
+set $ws_rss                        "    "
+set $ws_filemanager                "    "
+set $ws_chromium                   "    "
+set $ws_web                        "    "
+set $ws_editor                     "    "
+set $ws_video                      "    "
 
 # assign program to workspace
-assign [title="rss"]                $ws_rss
-assign [title="ranger"]             $ws_filemanager
-assign [class="Chromium|Chrome"]    $ws_chromium
-assign [class="Firefox"]            $ws_web
-assign [class="Sublime"]            $ws_editor
-assign [class="mpv"]                $ws_video
+assign [title="rss"]               $ws_rss
+assign [title="ranger"]            $ws_filemanager
+assign [class="Chromium|Chrome"]   $ws_chromium
+assign [class="Firefox"]           $ws_web
+assign [class="Sublime"]           $ws_editor
+assign [class="mpv"]               $ws_video
 
 # start some apps with floating and visible on every workspace
 for_window [title="Network Connections"] floating enable sticky enable ; move position center
@@ -52,6 +52,8 @@ bindsym $win+Shift+asterisk  exec --no-startup-id i3-msg move container to works
 # switch between workspaces
 bindsym $win+Down            workspace prev
 bindsym $win+Up              workspace next
+bindsym $win+h               workspace prev
+bindsym $win+l               workspace next
 
 # pressing workspace key again toggles back
 workspace_auto_back_and_forth yes
@@ -69,6 +71,8 @@ bindsym $win+q               kill
 # change focus
 bindsym $win+Left            focus left
 bindsym $win+Right           focus right
+bindsym $win+j               focus left
+bindsym $win+k               focus right
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
