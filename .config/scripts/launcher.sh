@@ -25,7 +25,7 @@ CHOICES=$(echo -e "\
  restart i3\n\
  shutdown\n\
 -\
-" | rofi -dmenu -l 8 -p "go for ")
+" | rofi -dmenu -l 8 -p "  ")
     case "$CHOICES" in
         " radio"          ) urxvt -title radio -e sh -ic 'mpv --no-video https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance' ;;
         " duckduckgo"     ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpis -a a https://duckduckgo.com/ ;;
