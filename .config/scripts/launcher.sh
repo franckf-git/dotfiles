@@ -32,7 +32,7 @@ CHOICES=$(echo -e "\
         " windows"        ) rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme  ;;
         " applications"   ) rofi -modi drun -show drun -sidebar-mode -show-icons -drun-icon-theme ;;
         " shutdown"       ) systemctl poweroff --ignore-inhibitors ;;
-        " lock"           ) i3lock --nofork --color=272822 --tiling --image=/home/$USER/.config/themes/lock.png ;;
+        " lock"           ) i3lock --nofork --color=2a1d17 --tiling --image=/home/$USER/.config/themes/lock.png ;;
         " exit i3"        ) i3-msg exit ;;
         " reboot"         ) systemctl reboot --ignore-inhibitors ;;
         " ranger"         ) xfce4-terminal -T ranger -e 'ranger' ;;
