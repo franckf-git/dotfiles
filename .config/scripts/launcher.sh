@@ -40,7 +40,7 @@ CHOICES=$(echo -e "\
         " meteo"          ) urxvt -e sh -ic 'curl --header "Accept-Language: fr" wttr.in/poitiers && bash' ;;
         " layout"         ) i3-msg "layout splitv ; move left ; resize grow right 20 px or 20 ppt" ;;
         " sublime"        ) /home/$USER/.sublime_text_3/sublime_text ; flatpak run com.sublimetext.three ;;
-        " check repo"     ) urxvt -e sh -ic 'bash /home/$USER/.config/scripts/check_repository.sh' ;;
+        " check repo"     ) xfce4-terminal -T term -e   "bash /home/$USER/.config/scripts/check_repository.sh" ;;
         " read me"        ) xfce4-terminal -T readme -e 'nvim -p /home/$USER/Unclear/readme.md /home/$USER/Unclear/path /home/$USER/Files/InProgress' ;;
         " surf"           ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpiS -a a file:///home/$USER/.config/bookmarks/home.html ;;
         " restart i3"     ) i3-msg restart ;;
