@@ -95,7 +95,7 @@ bindsym $win+Tab             layout toggle splith tabbed
 bindsym twosuperior          exec --no-startup-id sh /home/$USER/.config/scripts/launcher.sh
 
 # start a terminal
-bindsym $win+Return          exec --no-startup-id xfce4-terminal -e zsh
+bindsym $win+Return          exec --no-startup-id $TERMINAL -e zsh
 bindsym $win+Shift+Return    exec --no-startup-id urxvt
 
 ######################################################
@@ -122,7 +122,7 @@ set_from_resource $white       color15 #000000
 
 # assign color to the title and border of the windows
 # class                 border       background   text     indicator    child_border
-client.focused          $white       $white       $black   $white       $white
+client.focused          $darkgreen   $darkgreen   $black   $darkgreen   $darkgreen
 client.focused_inactive $black       $black       $white   $black       $black
 client.unfocused        $black       $black       $white   $black       $black
 client.urgent           $darkgreen   $darkgreen   $white   $darkgreen   $darkgreen
