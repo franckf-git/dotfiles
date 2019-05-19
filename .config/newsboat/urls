@@ -19,7 +19,6 @@ https://blog.adafruit.com/feed/                                                "
 https://hackaday.com/feed/                                                     "~hackaday"              technews hardware
 https://fedoramagazine.org/feed/                                               "~fedora-magazine"       technews
 https://blog.centos.org/feed/                                                  "~centos"                technews
-https://itsfoss.com/feed/                                                      "~its-foss"              technews
 https://krebsonsecurity.com/feed/                                              "~krebs-on-security"     security
 https://www.raspberrypi.org/magpi/feed/                                        "~magpi"                 technews
 https://www.reddit.com/r/ansible.rss                                           "~r/ansible"             board
