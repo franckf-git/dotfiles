@@ -6,5 +6,5 @@ general {
 order += "tztime hour"
 
 tztime hour {
-        format = "    %H:%M  "
+        format = "  %H:%M  "
 }
