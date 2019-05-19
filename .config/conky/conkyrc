@@ -11,9 +11,12 @@ conky.config = {
     override_utf8_locale = true,
     font = 'Inconsolata',
 
-    color1 = 'd1d1d1',
-    color2 = 'e6db74',
-    color3 = 'dc322f',
+--sub-titles     foreground
+    color1 = 'e9e9e9',
+--icons          color0
+    color2 = '2a1d17',
+--variables      color10
+    color3 = '3ea250',
 
     own_window_transparent = true,
     own_window_type = 'normal',
@@ -24,7 +27,6 @@ conky.config = {
     gap_y = 700,
     gap_x = -600,
 }
-
 
 conky.text = [[
 ${color2}${font Inconsolata:size=52}${time %H:%M}${font Inconsolata}
