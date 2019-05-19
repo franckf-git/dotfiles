@@ -3,7 +3,7 @@
 CHOICES=$(echo -e "\
  firefox\n\
  chromium\n\
- surf\n\
+ surf\n\
  duckduckgo\n\
  gitlab\n\
  sublime\n\
@@ -18,7 +18,7 @@ CHOICES=$(echo -e "\
  check repo\n\
 -\n\
  windows\n\
- layout\n\
+ layout\n\
  reboot\n\
  lock\n\
  exit i3\n\
@@ -38,11 +38,11 @@ CHOICES=$(echo -e "\
         " ranger"         ) xfce4-terminal -T ranger -e 'ranger' ;;
         " newsboat"       ) xfce4-terminal -T rss -e "newsboat --config-file=/home/$USER/.config/newsboat/config --url-file=/home/$USER/.config/newsboat/urls --cache-file=/home/$USER/.config/newsboat/cache.db" ;;
         " meteo"          ) urxvt -e sh -ic 'curl --header "Accept-Language: fr" wttr.in/poitiers && bash' ;;
-        " layout"         ) i3-msg "layout splitv ; move left ; resize grow right 20 px or 20 ppt" ;;
+        " layout"         ) i3-msg "layout splitv ; move left ; resize grow right 20 px or 20 ppt" ;;
         " sublime"        ) /home/$USER/.sublime_text_3/sublime_text ; flatpak run com.sublimetext.three ;;
         " check repo"     ) xfce4-terminal -T term -e   "bash /home/$USER/.config/scripts/check_repository.sh" ;;
-        " read me"        ) xfce4-terminal -T readme -e 'nvim -p /home/$USER/Unclear/readme.md /home/$USER/Unclear/path /home/$USER/Files/InProgress' ;;
-        " surf"           ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpiS -a a file:///home/$USER/.config/bookmarks/home.html ;;
+        " read me"        ) xfce4-terminal -T readme -e 'nvim -p Unclear/readme.md Unclear/path Files/InProgress' ;;
+        " surf"           ) surf -u "Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0" -dgNpiS -a a file:///home/$USER/.config/bookmarks/home.html ;;
         " restart i3"     ) i3-msg restart ;;
         " chromium"       ) chromium-browser --incognito ;;
         " firefox"        ) firefox --private-window ;;

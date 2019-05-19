@@ -65,7 +65,7 @@ set statusline+=\ \ \ %y                                        "filetype
 set statusline+=\ \ \ %{&fileencoding?&fileencoding:&encoding}  "fileencoding
 set statusline+=\ \ \ %p%%                                      "percentage
 set statusline+=\ \ \ %c                                        "cursor column
-set statusline+=\ \ \ %l/%L                                     "cursor line/total lines
+set statusline+=\ \ \ %l/%L                                     "cursor line/total lines
 set statusline+=\ \ \ %{strftime(\"%H:%M\")}                    "time
 set statusline+=\                                                "end space
 
