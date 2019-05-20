@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 # background and mouse
 feh --bg-center /home/$USER/.config/themes/wallpaper.png &
@@ -10,6 +10,6 @@ xfce4-terminal -T rss -e    "newsboat --config-file=/home/$USER/.config/newsboat
 xfce4-terminal -T ranger -e "ranger" &
 firefox --private-window file:///home/$USER/.config/bookmarks/home.html &
 # colorscheme
-sleep 3s
+sleep 2s
 xrdb -load ~/.Xdefaults &
 i3-msg reload &
