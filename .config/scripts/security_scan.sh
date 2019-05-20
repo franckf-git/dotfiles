@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 #add with
 #sudo crontab -e
 #00 07 * * 0 /home/$USER/config/scripts/security_scan.sh
