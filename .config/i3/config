@@ -96,7 +96,7 @@ bindsym twosuperior          exec --no-startup-id sh /home/$USER/.config/scripts
 
 # start a terminal
 bindsym $win+Return          exec --no-startup-id $TERMINAL -e zsh
-bindsym $win+Shift+Return    exec --no-startup-id urxvt
+bindsym $win+Shift+Return    exec --no-startup-id $LITETERMINAL
 
 ######################################################
 # Decorations
@@ -130,11 +130,8 @@ client.placeholder      $black       $black       $white   $black       $black
 
 client.background       $white
 
-# for every windows no title and small border
-for_window [class=".*"] border pixel 1
-
-# no border if only one windows
-hide_edge_borders smart
+# for every windows no title and no border
+for_window [class=".*"] border pixel 0
 
 ######################################################
 # Bar
