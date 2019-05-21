@@ -11,14 +11,16 @@ export HISTCONTROL=ignorespace:ignoredups
 # Text editors
 export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim
+export BIGEDITOR="flatpak run com.sublimetext.three"
 export PAGER="less --quit-if-one-screen --RAW-CONTROL-CHARS --LINE-NUMBERS --LONG-PROMPT"
 
 # Terminals
 export TERM=xterm-256color
+export LITETERMINAL="urxvt"
 export TERMINAL="xfce4-terminal"
 
 # Applications
-#export BROWSER="surf -u 'Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0' -dgNpis -a a"
+export BROWSER="surf -dgNpis -a a"
 export READER="mupdf"
 export FILE="ranger"
 
