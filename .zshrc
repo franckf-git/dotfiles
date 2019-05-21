@@ -48,7 +48,6 @@ COMPLETION_WAITING_DOTS="true"
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-catimg
 colored-man-pages
 git
 git-extras
