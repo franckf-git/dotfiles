@@ -1,5 +1,6 @@
 #https://framagit.org/efydd.atom                                                "~efydd-activity"        outcast
 ----------------------------top
+http://fedoraplanet.org/rss20.xml
 https://www.lemonde.fr/rss/une.xml                                             "~le-monde"              news daily
 https://motherboard.vice.com/en_us/rss                                         "~motherboard/us"        news daily
 https://www.zdnet.fr/feeds/rss/actualites/                                     "~zdnet-fr"              news daily
