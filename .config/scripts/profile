@@ -23,6 +23,7 @@ export TERMINAL="xfce4-terminal"
 export BROWSER="surf -dgNpis -a a"
 export READER="mupdf"
 export FILE="ranger"
+export IMAGE="feh --image-bg black --draw-filename --fullscreen --auto-zoom --scale-down --info 'date +%T'"
 
 # GTK2 cutomized
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
