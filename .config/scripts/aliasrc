@@ -116,6 +116,7 @@ prename 's/mns-rs--//' *
 prename 's/rs--//' *
 prename 's/mns--//' *
 prename 's/monster-no-scantrad-//' *
+prename 's/koneko-scantrad-//' *
 }
 
 # upgrade only security and bugfix
