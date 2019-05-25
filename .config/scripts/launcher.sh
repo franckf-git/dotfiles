@@ -29,7 +29,7 @@ CHOICES=$(echo -e "\
     case "$CHOICES" in
         " radio"          ) $LITETERMINAL -title radio -e sh -ic 'mpv --no-video https://chai5she.cdn.dvmr.fr/fip-webradio1.mp3?ID=radiofrance' ;;
         " duckduckgo"     ) $BROWSER https://duckduckgo.com/?q=&ka=monospace&kh=1&kj=p&kt=monospace&k1=-1&kae=d&ia=answer ;;
-        " windows"        ) rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme  ;;
+        " windows"        ) rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme ;;
         " applications"   ) rofi -modi drun -show drun -sidebar-mode -show-icons -drun-icon-theme ;;
         " shutdown"       ) systemctl poweroff --ignore-inhibitors ;;
         " lock"           ) python3 $XDG_CONFIG_HOME/scripts/i3lock_blured.py ;;
