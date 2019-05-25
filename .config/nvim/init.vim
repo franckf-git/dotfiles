@@ -113,8 +113,8 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 2
 let g:netrw_altv = 1
 
-" Width of the directory explorer to 25 %
-let g:netrw_winsize = 25
+" Width of the directory explorer
+let g:netrw_winsize = 20
 
 " Search down into subfolders
 set path+=**
@@ -166,6 +166,9 @@ set backspace=indent,eol,start
 
 " Highlight search results
 set hlsearch
+
+" Incremental search
+set incsearch
 
 " Ignore case when searching
 set ignorecase
