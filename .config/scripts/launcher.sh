@@ -42,7 +42,7 @@ CHOICES=$(echo -e "\
         " sublime"        ) $BIGEDITOR ;;
         " check repo"     ) $TERMINAL -T term -e   "bash $XDG_CONFIG_HOME/scripts/check_repository.sh" ;;
         " read me"        ) $TERMINAL -T readme -e "nvim -p Unclear/readme.md Unclear/path Files/InProgress" ;;
-        " surf"           ) $BROWSER file://$XDG_CONFIG_HOME/bookmarks/home.html ;;
+        " surf"           ) $BROWSER https://efydd.frama.io/startpage/ ;;
         " restart i3"     ) i3-msg restart ;;
         " chromium"       ) chromium-browser --incognito ;;
         " firefox"        ) firefox --private-window ;;

@@ -8,7 +8,7 @@ unclutter -idle 1 &
 xfce4-terminal -T term -e   "bash $XDG_CONFIG_HOME/scripts/check_repository.sh" &
 xfce4-terminal -T rss -e    "newsboat --config-file=$XDG_CONFIG_HOME/newsboat/config --url-file=$XDG_CONFIG_HOME/newsboat/urls --cache-file=$XDG_CONFIG_HOME/newsboat/cache.db" &
 xfce4-terminal -T ranger -e "ranger" &
-firefox --private-window file://$XDG_CONFIG_HOME/bookmarks/home.html &
+firefox --private-window https://efydd.frama.io/startpage/ &
 # colorscheme
 sleep 3s
 xrdb -load ~/.Xdefaults &
