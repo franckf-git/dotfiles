@@ -145,6 +145,7 @@ alias ll='ls -l --all --size --classify --human-readable --color=auto'
 alias ls='ls --color=auto'
 alias lu='ls -l --human-readable --reverse -u -t --color=auto'
 alias rename='prename --verbose'
+alias tmux='tmux attach'
 
 # display text files
 alias less='less --quit-if-one-screen --RAW-CONTROL-CHARS --LINE-NUMBERS --LONG-PROMPT'
