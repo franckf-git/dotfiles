@@ -9,3 +9,4 @@ rofi.padding: 5
 rofi.fake-transparency: true
 rofi.fake-background: screenshot
 rofi.auto-select: true
+rofi.lines: 7
