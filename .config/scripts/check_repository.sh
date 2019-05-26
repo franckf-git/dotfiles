@@ -27,11 +27,21 @@ echo ""
 echo ""
 echo ""
 
+cd /home/$USER/.config/startpage
+echo "################################################################"
+echo -e "In the repository ${RED} startpage ${COLOR_OFF} your status is : "
+echo "################################################################"
+echo ""
+git status
+echo ""
+echo ""
+
 echo "################################################################"
 echo "You can work on :"
 echo "1 - rtfm"
 echo "2 - dotfiles"
 echo "3 - quick_scripts"
+echo "4 - startpage"
 echo "9 - radio"
 echo "0 - push everybody to remote git"
 echo "################################################################"
@@ -81,6 +91,15 @@ exec bash
     "3")
 echo ""
 cd /home/$USER/Files/InProgress/quick_scripts
+echo "################################################################"
+git diff --color-words
+echo "################################################################"
+echo ""
+exec bash
+;;
+    "4")
+echo ""
+cd /home/$USER/.config/startpage
 echo "################################################################"
 git diff --color-words
 echo "################################################################"
