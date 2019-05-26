@@ -167,8 +167,8 @@ alias backup='rsync --recursive --links --perms --times --owner --group --device
 alias ecp='rsync --archive --human-readable --relative --progress'
 
 # manage periphericals
-alias connect='for i in {b..f} ; do udisksctl mount --block-device /dev/sd"$i"1; done && notify-send " usb mounted."'
-alias disconnect='umount /run/media/$USER/* && for i in {b..f} ; do udisksctl power-off --block-device /dev/sd$i; done && notify-send " it is safe to eject."'
+alias connect='for i in {c..g} ; do udisksctl mount --block-device /dev/sd"$i"1; done && notify-send " usb mounted."'
+alias disconnect='umount /run/media/$USER/* && for i in {c..g} ; do udisksctl power-off --block-device /dev/sd$i; done && notify-send " it is safe to eject."'
 alias connectsec='sudo cryptsetup luksOpen /dev/sdb1 Backup && sudo mount /dev/mapper/Backup /mnt && notify-send " usb mounted."'
 
 # music
