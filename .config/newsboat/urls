@@ -22,19 +22,12 @@ https://fedoramagazine.org/feed/                                               "
 https://blog.centos.org/feed/                                                  "~centos"                technews
 https://krebsonsecurity.com/feed/                                              "~krebs-on-security"     security
 https://www.raspberrypi.org/magpi/feed/                                        "~magpi"                 technews
-https://www.reddit.com/r/ansible.rss                                           "~r/ansible"             board
-https://www.reddit.com/r/commandline.rss                                       "~r/commandline"         board
-https://www.reddit.com/r/i3wm.rss                                              "~r/i3wm"                board
-https://www.reddit.com/r/linux.rss                                             "~r/linux"               board
-https://www.reddit.com/r/sysadmin.rss                                          "~r/sysadmin"            board
-https://www.reddit.com/r/vim.rss                                               "~r/vim"                 board
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg   "~distrotube"            youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA   "~luke smith"            youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA   "~bryan-lunduke"         youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w   "~level1linux"           youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw   "~linus-tech-tips"       youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCj_iGliGCkLcHSZ8eqVNPDQ   "~grafikart"             youtube
-https://boards.4channel.org/g/index.rss                                        "~g/technology"          board
 ----------------------------fun
 http://ajianoscantrad.fr/reader/rss.xml                                        "~ajia-no-scantrad"      manga
 #http://www.scan-manga.com/rss/BD.xml                                           "~scan-manga"            manga
@@ -42,10 +35,6 @@ https://www.brothers-brick.com/feed/                                           "
 https://www.commitstrip.com/fr/feed/                                           "~commitstrip"           fun
 https://www.xkcd.com/rss.xml                                                   "~xkcd"                  fun
 https://clientsfromhell.net/feed/                                              "~clients-from-hell"     fun
-https://www.reddit.com/r/linuxmemes.rss                                        "~r/linuxmemes"          board fun
-https://www.reddit.com/r/linuxmasterrace.rss                                   "~r/linuxmasterrace"     board fun
-https://www.reddit.com/r/unixporn.rss                                          "~r/unixporn"            board fun
-https://www.reddit.com/r/ProgrammerHumor.rss                                   "~r/programmerhumor"     board fun
 http://twitrss.me/twitter_user_to_rss/?user=iamdevloper                        "~iamdevloper"           outcast fun
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCMxHHciWRBBouzk-PGzmtQ   "~bazard-du-grenier"     youtube fun
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_yP2DpIgs5Y1uWC0T03Chw   "~joueur-du-grenier"     youtube fun
