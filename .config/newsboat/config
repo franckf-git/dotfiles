@@ -11,8 +11,8 @@ external-url-viewer "urlscan -dc"
 
 # open with small web browser [, + s]
 macro s set browser "surf -u 'Mozilla/5.0 (Windows NT 10.0;) Gecko Firefox/66.0' -dgNpis -a a"; open-in-browser ; set browser "firefox --private-window %u"
-# open with terminal web browser [, + l]
-macro l set browser "lynx"; open-in-browser ; set browser "firefox --private-window %u"
+# open with terminal web browser [, + w]
+macro w set browser "w3m"; open-in-browser ; set browser "firefox --private-window %u"
 
 # see video in mpv [, + v]
 macro v set browser "i3 exec mpv"; open-in-browser ; set browser "firefox --private-window %u"
