@@ -8,7 +8,7 @@ CHOICES=$(echo -e "\
  gitlab\n\
  sublime\n\
  read me\n\
--\n\
+ w3m\n\
  applications\n\
  newsboat\n\
  radio\n\
@@ -40,9 +40,10 @@ CHOICES=$(echo -e "\
         " meteo"          ) $LITETERMINAL -e sh -ic 'curl --header "Accept-Language: fr" wttr.in/poitiers && bash' ;;
         " layout"         ) i3-msg "layout splitv ; move left ; resize grow right 20 px or 20 ppt" ;;
         " sublime"        ) $BIGEDITOR ;;
-        " check repo"     ) $TERMINAL -T term -e   "bash $XDG_CONFIG_HOME/scripts/check_repository.sh" ;;
+        " check repo"      ) $TERMINAL -T term -e   "bash $XDG_CONFIG_HOME/scripts/check_repository.sh" ;;
         " read me"        ) $TERMINAL -T readme -e "nvim -p Unclear/readme.md Unclear/path Files/InProgress" ;;
         " surf"           ) $BROWSER https://efydd.frama.io/startpage/ ;;
+        " w3m"            ) $TERMINAL -e "w3m https://efydd.frama.io/startpage/" ;;
         " restart i3"     ) i3-msg restart ;;
         " chromium"       ) chromium-browser --incognito ;;
         " firefox"        ) firefox --private-window ;;
