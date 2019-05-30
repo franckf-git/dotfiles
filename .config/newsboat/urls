@@ -14,7 +14,6 @@ http://ajianoscantrad.fr/reader/rss.xml                                        "
 https://www.brothers-brick.com/feed/                                           "~brothers-brick"        outcast
 https://www.commitstrip.com/fr/feed/                                           "~commitstrip"           fun
 https://www.xkcd.com/rss.xml                                                   "~xkcd"                  fun
-https://clientsfromhell.net/feed/                                              "~clients-from-hell"     fun
 http://lxer.com/module/newswire/headlines.rss                                  "~lxer"                  technews
 http://www.tuxmachines.org/node/feed                                           "~tux-machines"          technews
 https://blog.adafruit.com/feed/                                                "~adafruit"              technews hardware
@@ -23,6 +22,7 @@ https://fedoramagazine.org/feed/                                               "
 https://blog.centos.org/feed/                                                  "~centos"                technews
 https://krebsonsecurity.com/feed/                                              "~krebs-on-security"     security
 https://www.raspberrypi.org/magpi/feed/                                        "~magpi"                 technews
+https://clientsfromhell.net/feed/                                              "~clients-from-hell"     fun
 https://www.viedemerde.fr/rss                                                  "~vdm"                   fun
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ   "~linuxtricks"           youtube technews
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ   "~level1techs"           youtube technews
