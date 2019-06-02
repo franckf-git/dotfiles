@@ -55,18 +55,18 @@ set laststatus=2
 set statusline=                                                  "clear the statusline
 set statusline+=%<\                                              "cut at start
 set statusline+=\ %m                                             "modified flag
-set statusline+=\ \ \ %F                                       "full path name
+set statusline+=\ 📂\ \ %F                                       "full path name
 set statusline+=\ %{b:gitbranch}                                 "function git branch
 set statusline+=\ %h                                             "help file flag
 set statusline+=\ %r                                             "read only flag
 set statusline+=\ %w                                             "windows flag
 set statusline+=%=                                               "right separator
-set statusline+=\ \ \ %y                                        "filetype
-set statusline+=\ \ \ %{&fileencoding?&fileencoding:&encoding}  "fileencoding
-set statusline+=\ \ \ %p%%                                      "percentage
-set statusline+=\ \ \ %c                                        "cursor column
-set statusline+=\ \ \ %l/%L                                     "cursor line/total lines
-set statusline+=\ \ \ %{strftime(\"%H:%M\")}                    "time
+set statusline+=\ 📄\ \ %y                                        "filetype
+set statusline+=\ 📝\ \ %{&fileencoding?&fileencoding:&encoding}  "fileencoding
+set statusline+=\ 🎚\ \ %p%%                                      "percentage
+set statusline+=\ ◫\ \ %c                                        "cursor column
+set statusline+=\ ⚞\ \ %l/%L                                     "cursor line/total lines
+set statusline+=\ 🕑\ \ %{strftime(\"%H:%M\")}                    "time
 set statusline+=\                                                "end space
 
 " Always show current position
@@ -86,7 +86,7 @@ function! StatuslineGitBranch()
   let b:gitbranch=""
   if &modifiable
     lcd %:p:h
-    let l:gitrevparse=system("echo ' ' && git rev-parse --abbrev-ref HEAD")
+    let l:gitrevparse=system("echo '🎛 ' && git rev-parse --abbrev-ref HEAD")
     lcd -
     if l:gitrevparse!~"fatal: not a git repository"
       let b:gitbranch="[ ".substitute(l:gitrevparse, '\n', '', 'g')." ] "
