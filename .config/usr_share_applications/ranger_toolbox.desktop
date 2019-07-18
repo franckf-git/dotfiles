@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=ranger
+GenericName=ranger file manager
+Exec=toolbox run --container workstation mate-terminal -e ranger
+Terminal=True
+Icon=utilities-terminal
+Type=Application
+C ategories=ConsoleOnly;System;FileTools;FileManager;
+Nodisplay=true

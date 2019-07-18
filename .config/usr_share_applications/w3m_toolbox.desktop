@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=w3m bad
+GenericName=Web Browser
+Comment=Access the Internet
+Exec=toolbox run --container workstation mate-terminal -e "w3m https://efydd.frama.io/startpage/"
+StartupNotify=true
+Terminal=false
+Icon=surf
+Type=Application
+Categories=Network;WebBrowser;
+NoDisplay=true
