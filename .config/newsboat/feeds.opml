@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://fedoraplanet.org/rss20.xml" htmlUrl="" title="fedora-planet"/>
+    <outline type="rss" xmlUrl="https://www.lemonde.fr/rss/une.xml" htmlUrl="" title="le-monde"/>
+    <outline type="rss" xmlUrl="https://motherboard.vice.com/en_us/rss" htmlUrl="" title="motherboard/us"/>
+    <outline type="rss" xmlUrl="https://www.zdnet.fr/feeds/rss/actualites/" htmlUrl="" title="zdnet-fr"/>
+    <outline type="rss" xmlUrl="https://www.developpez.com/index/rss" htmlUrl="" title="developpez"/>
+    <outline type="rss" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="" title="cert-fr"/>
+    <outline type="rss" xmlUrl="https://www.journalduhacker.net/rss" htmlUrl="" title="journal-du-hacker"/>
+    <outline type="rss" xmlUrl="https://www.minimachines.net/feed" htmlUrl="" title="mini-machines"/>
+    <outline type="rss" xmlUrl="https://scantrad.fr/rss" htmlUrl="" title="scantrad"/>
+    <outline type="rss" xmlUrl="https://lel.koneko-scantrad.fr/feeds/rss/" htmlUrl="" title="koneko-scantrad"/>
+    <outline type="rss" xmlUrl="http://ajianoscantrad.fr/reader/rss.xml" htmlUrl="" title="ajia-no-scantrad"/>
+    <outline type="rss" xmlUrl="https://www.brothers-brick.com/feed/" htmlUrl="" title="brothers-brick"/>
+    <outline type="rss" xmlUrl="https://www.commitstrip.com/fr/feed/" htmlUrl="" title="commitstrip"/>
+    <outline type="rss" xmlUrl="https://www.xkcd.com/rss.xml" htmlUrl="" title="xkcd"/>
+    <outline type="rss" xmlUrl="http://lxer.com/module/newswire/headlines.rss" htmlUrl="" title="lxer"/>
+    <outline type="rss" xmlUrl="http://www.tuxmachines.org/node/feed" htmlUrl="" title="tux-machines"/>
+    <outline type="rss" xmlUrl="https://blog.adafruit.com/feed/" htmlUrl="" title="adafruit"/>
+    <outline type="rss" xmlUrl="https://hackaday.com/feed/" htmlUrl="" title="hackaday"/>
+    <outline type="rss" xmlUrl="https://fedoramagazine.org/feed/" htmlUrl="" title="fedora-magazine"/>
+    <outline type="rss" xmlUrl="https://blog.centos.org/feed/" htmlUrl="" title="centos"/>
+    <outline type="rss" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="" title="krebs-on-security"/>
+    <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="" title="magpi"/>
+    <outline type="rss" xmlUrl="https://clientsfromhell.net/feed/" htmlUrl="" title="clients-from-hell"/>
+    <outline type="rss" xmlUrl="https://www.viedemerde.fr/rss" htmlUrl="" title="vdm"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ" htmlUrl="" title="linuxtricks"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ" htmlUrl="" title="level1techs"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg" htmlUrl="" title="distrotube"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA" htmlUrl="" title="luke smith"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA" htmlUrl="" title="bryan-lunduke"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w" htmlUrl="" title="level1linux"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw" htmlUrl="" title="linus-tech-tips"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCj_iGliGCkLcHSZ8eqVNPDQ" htmlUrl="" title="grafikart"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCCMxHHciWRBBouzk-PGzmtQ" htmlUrl="" title="bazard-du-grenier"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC_yP2DpIgs5Y1uWC0T03Chw" htmlUrl="" title="joueur-du-grenier"/>
+    <outline type="rss" xmlUrl="https://cyrille-borne.com/feed/" htmlUrl="" title="cyrille-borne"/>
+    <outline type="rss" xmlUrl="https://www.nolimitsecu.fr/feed/" htmlUrl="" title="no-limit-secu"/>
+    <outline type="rss" xmlUrl="https://www.comptoirsecu.fr/feed/all.xml" htmlUrl="" title="comptoir-secu"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/Cpu-Programmes" htmlUrl="" title="cpu"/>
+    <outline type="rss" xmlUrl="http://frenchspin.fr/feed/" htmlUrl="" title="frenchspin"/>
+  </body>
+</opml>
