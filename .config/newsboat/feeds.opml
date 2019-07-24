@@ -26,6 +26,7 @@
     <outline type="rss" xmlUrl="https://blog.centos.org/feed/" htmlUrl="" title="centos"/>
     <outline type="rss" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="" title="krebs-on-security"/>
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="" title="magpi"/>
+    <outline type="rss" xmlUrl="https://nodejs.org/en/feed/vulnerability.xml" htmlUrl="" title="nodejs-security"/>
     <outline type="rss" xmlUrl="https://clientsfromhell.net/feed/" htmlUrl="" title="clients-from-hell"/>
     <outline type="rss" xmlUrl="https://www.viedemerde.fr/rss" htmlUrl="" title="vdm"/>
     <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ" htmlUrl="" title="linuxtricks"/>

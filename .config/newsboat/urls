@@ -22,6 +22,7 @@ https://fedoramagazine.org/feed/                                               "
 https://blog.centos.org/feed/                                                  "~centos"                technews
 https://krebsonsecurity.com/feed/                                              "~krebs-on-security"     security
 https://www.raspberrypi.org/magpi/feed/                                        "~magpi"                 technews
+https://nodejs.org/en/feed/vulnerability.xml                                   "~nodejs-security"       technews
 https://clientsfromhell.net/feed/                                              "~clients-from-hell"     fun
 https://www.viedemerde.fr/rss                                                  "~vdm"                   fun
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ   "~linuxtricks"           youtube technews
