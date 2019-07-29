@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Mattermost
+Comment=Mattermost Desktop application for Linux
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=mattermost-flatpak com.mattermost.Desktop
+Terminal=false
+Type=Application
+Icon=com.mattermost.Desktop
+Categories=Network;InstantMessaging;
+X-Flatpak=com.mattermost.Desktop
+NoDisplay=true
