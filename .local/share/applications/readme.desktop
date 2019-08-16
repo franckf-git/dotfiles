@@ -3,8 +3,9 @@ Encoding=UTF-8
 Version=1.0
 Name=ReadMe
 GenericName=Edit text files
-Exec=xfce4-terminal -T readme -e 'nvim -p /home/$USER/Unclear/readme.md /home/$USER/Unclear/path /home/$USER/Files/InProgress'
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 com.gexperts.Tilix --maximize -e nvim -p /var/home/efydd/Documents/readme.md /var/home/efydd/Documents/path
 Terminal=false
-Icon=nvim
 Type=Application
+Icon=nvim
 Categories=Utility;TextEditor;
+StartupNotify=false
