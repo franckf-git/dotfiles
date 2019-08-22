@@ -14,6 +14,7 @@ http://ajianoscantrad.fr/reader/rss.xml                                        "
 https://www.brothers-brick.com/feed/                                           "~brothers-brick"        outcast
 https://www.commitstrip.com/fr/feed/                                           "~commitstrip"           fun
 https://www.xkcd.com/rss.xml                                                   "~xkcd"                  fun
+https://www.monkeyuser.com/feed.xml                                            "~monkey"                fun
 http://lxer.com/module/newswire/headlines.rss                                  "~lxer"                  technews
 http://www.tuxmachines.org/node/feed                                           "~tux-machines"          technews
 https://blog.adafruit.com/feed/                                                "~adafruit"              technews hardware
