@@ -11,57 +11,18 @@
 set $win Mod4
 
 # font for window titles
-font pango:inconsolata 0
+font pango:monospace 0
 
 # volume controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%     # && notify-send                    " volume up"
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%     # && notify-send --urgency=low      " volume down"
-bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 toggle      && notify-send --urgency=critical " volume mute"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # screenshot
-bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Downloads' && notify-send " screenshot taken in downloads"
+bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Téléchargements'
 
-######################################################
-# Workspaces
-######################################################
-
-# set workspaces titles and icons
-set $ws_terminal                   "    "
-set $ws_rss                        "    "
-set $ws_filemanager                "    "
-set $ws_chromium                   "    "
-set $ws_web                        "    "
-set $ws_editor                     "    "
-set $ws_video                      "    "
-
-# assign program to workspace
-assign [title="term"]              $ws_terminal
-assign [title="rss"]               $ws_rss
-assign [title="ranger"]            $ws_filemanager
-assign [class="Chromium|Chrome"]   $ws_chromium
-assign [class="Firefox"]           $ws_web
-assign [class="Sublime"]           $ws_editor
-assign [class="mpv"]               $ws_video
-
-# start some apps with floating and visible on every workspace
-for_window [title="Network Connections"] floating enable sticky enable ; move position center
-
-# switch/move to no define workspaces
-bindsym $win+asterisk        exec --no-startup-id i3-msg workspace                   $(shuf -n 1 /home/$USER/.config/scripts/fontawesome_icons)
-bindsym $win+Shift+asterisk  exec --no-startup-id i3-msg move container to workspace $(shuf -n 1 /home/$USER/.config/scripts/fontawesome_icons)
-
-# switch between workspaces
-bindsym $win+Down            workspace prev
-bindsym $win+Up              workspace next
-bindsym $win+h               workspace prev
-bindsym $win+l               workspace next
-
-# move  between workspaces
-bindsym $win+Shift+Down      move container to workspace prev ; workspace prev
-bindsym $win+Shift+Up        move container to workspace next ; workspace next
-
-# pressing workspace key again toggles back
-workspace_auto_back_and_forth yes
+# start a terminal
+bindsym $win+Return exec gnome-terminal
 
 ######################################################
 # Windows
@@ -76,8 +37,8 @@ bindsym $win+q               kill
 # change focus
 bindsym $win+Left            focus left
 bindsym $win+Right           focus right
-bindsym $win+j               focus left
-bindsym $win+k               focus right
+#bindsym $win+j               focus left
+#bindsym $win+k               focus right
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -89,50 +50,86 @@ workspace_layout default
 bindsym $win+Tab             layout toggle splith tabbed
 
 ######################################################
+# Workspaces
+######################################################
+
+# Define names for default workspaces for which we configure key bindings later on.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "0"
+
+# switch to workspace
+bindsym $win+ampersand workspace $ws1
+bindsym $win+eacute workspace $ws2
+bindsym $win+quotedbl workspace $ws3
+bindsym $win+apostrophe workspace $ws4
+bindsym $win+parenleft workspace $ws5
+bindsym $win+minus workspace $ws6
+bindsym $win+egrave workspace $ws7
+bindsym $win+underscore workspace $ws8
+bindsym $win+ccedilla workspace $ws9
+bindsym $win+agrave workspace $ws0
+
+# move focused container to workspace
+bindsym $win+Shift+ampersand move container to workspace $ws1
+bindsym $win+Shift+eacute move container to workspace $ws2
+bindsym $win+Shift+quotedbl move container to workspace $ws3
+bindsym $win+Shift+apostrophe move container to workspace $ws4
+bindsym $win+Shift+5 move container to workspace $ws5
+bindsym $win+Shift+minus move container to workspace $ws6
+bindsym $win+Shift+egrave move container to workspace $ws7
+bindsym $win+Shift+underscore move container to workspace $ws8
+bindsym $win+Shift+ccedilla move container to workspace $ws9
+bindsym $win+Shift+agrave move container to workspace $ws0
+
+# switch between workspaces
+#bindsym $win+Down            workspace prev
+#bindsym $win+Up              workspace next
+bindsym $win+Prior              workspace prev
+bindsym $win+Next               workspace next
+
+# move  between workspaces
+#bindsym $win+Shift+Down      move container to workspace prev ; workspace prev
+#bindsym $win+Shift+Up        move container to workspace next ; workspace next
+bindsym $win+Shift+Prior       move container to workspace prev ; workspace prev
+bindsym $win+Shift+Next        move container to workspace next ; workspace next
+
+# pressing workspace key again toggles back
+workspace_auto_back_and_forth yes
+
+######################################################
 # Programs
 ######################################################
 
-# auto-startup
-                             exec --no-startup-id sh /home/$USER/.config/scripts/startup.sh
+# applications
+bindsym $win+d exec --no-startup-id i3-dmenu-desktop
+bindsym $win+a exec --no-startup-id rofi -modi drun -show drun -sidebar-mode -show-icons -drun-icon-theme
 
-# start rofi program launcher
-bindsym twosuperior          exec --no-startup-id sh /home/$USER/.config/scripts/launcher.sh
-
-# start a terminal
-bindsym $win+Return          exec --no-startup-id $TERMINAL -e zsh
-bindsym $win+Shift+Return    exec --no-startup-id $LITETERMINAL
+# reload the configuration file
+bindsym $win+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $win+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 ######################################################
 # Decorations
 ######################################################
 
-# set the colors from Xdefaults
-set_from_resource $black       color0  #000000
-set_from_resource $lightblack  color8  #000000
-set_from_resource $darkred     color1  #000000
-set_from_resource $red         color9  #000000
-set_from_resource $darkgreen   color2  #000000
-set_from_resource $green       color10 #000000
-set_from_resource $darkyellow  color3  #000000
-set_from_resource $yellow      color11 #000000
-set_from_resource $darkblue    color4  #000000
-set_from_resource $blue        color12 #000000
-set_from_resource $darkmagenta color5  #000000
-set_from_resource $magenta     color13 #000000
-set_from_resource $darkcyan    color6  #000000
-set_from_resource $cyan        color14 #000000
-set_from_resource $darkwhite   color7  #000000
-set_from_resource $white       color15 #000000
+# set the colors
 
-# assign color to the title and border of the windows
-# class                 border       background   text     indicator    child_border
-client.focused          $darkgreen   $darkgreen   $black   $darkgreen   $darkgreen
-client.focused_inactive $black       $black       $white   $black       $black
-client.unfocused        $black       $black       $white   $black       $black
-client.urgent           $darkgreen   $darkgreen   $white   $darkgreen   $darkgreen
-client.placeholder      $black       $black       $white   $black       $black
 
-client.background       $white
+
+
+
+
 
 # for every windows no title and no border
 for_window [class=".*"] border pixel 0
@@ -144,22 +141,10 @@ for_window [class=".*"] border pixel 0
 # show/hide the bar
 bindsym $win+b             bar mode toggle
 
-# start i3bar to display a workspace bar
 bar {
-        status_command     bash /home/$USER/.config/scripts/i3title_status.sh
+        font pango:monospace 8
+        status_command i3status
         position           top
         modifier           none
         tray_output        none
-        font               pango:inconsolata 10
-
-    colors {
-        background         $black
-        statusline         $white
-        separator          $focus
-#       class              text         background
-        focused_workspace  $darkgreen   $black
-        active_workspace   $white       $black
-        inactive_workspace $white       $black
-        urgent_workspace   $black       $darkgreen
-    }
 }
