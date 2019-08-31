@@ -151,8 +151,18 @@ bindsym $win+b             bar mode toggle
 
 bar {
         font pango:monospace 8
-        status_command i3status
-        position           top
-        modifier           none
-        tray_output        none
+        status_command       i3status
+        position             top
+        modifier             none
+        tray_output          none
+colors {
+        background           $background
+        statusline           $text
+        separator            $urgent
+#       class                text           background
+        focused_workspace    $background    $urgent
+        active_workspace     $text          $background
+        inactive_workspace   $text          $background
+        urgent_workspace     $background    $urgent
+        }
 }
