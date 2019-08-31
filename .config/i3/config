@@ -92,16 +92,12 @@ bindsym $win+Shift+ccedilla move container to workspace $ws9
 bindsym $win+Shift+agrave move container to workspace $ws0
 
 # switch between workspaces
-#bindsym $win+Down            workspace prev
-#bindsym $win+Up              workspace next
-bindsym $win+Prior              workspace prev
-bindsym $win+Next               workspace next
+bindsym $win+Prior           workspace prev
+bindsym $win+Next            workspace next
 
 # move  between workspaces
-#bindsym $win+Shift+Down      move container to workspace prev ; workspace prev
-#bindsym $win+Shift+Up        move container to workspace next ; workspace next
-bindsym $win+Shift+Prior       move container to workspace prev ; workspace prev
-bindsym $win+Shift+Next        move container to workspace next ; workspace next
+bindsym $win+Shift+Prior     move container to workspace prev ; workspace prev
+bindsym $win+Shift+Next      exec --no-startup-id i3-msg move container to workspace $(date +%H%M) ; exec --no-startup-id i3-msg workspace $(date +%H%M)
 
 # pressing workspace key again toggles back
 workspace_auto_back_and_forth yes
