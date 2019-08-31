@@ -36,19 +36,16 @@ focus_follows_mouse no
 bindsym $alt+F4              kill
 
 # change focus
-bindsym $win+Left            focus left
-bindsym $win+Right           focus right
-#bindsym $win+j               focus left
-#bindsym $win+k               focus right
+bindsym $win+Tab             focus right
 
 # switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+for_window [urgent=latest]   focus
 
 # default layout
-workspace_layout default
+workspace_layout             tabbed
 
 # change container layout
-bindsym $win+Tab             layout toggle splith tabbed
+bindsym twosuperior          layout toggle splith tabbed
 
 ######################################################
 # Workspaces
