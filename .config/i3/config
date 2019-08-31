@@ -147,7 +147,7 @@ for_window [class=".*"] border pixel 0
 ######################################################
 
 # show/hide the bar
-bindsym $win+b             bar mode toggle
+bindsym $win+b               bar mode toggle
 
 bar {
         font pango:monospace 8
