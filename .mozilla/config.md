@@ -4,6 +4,7 @@
 - [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin)
 - [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
 - [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/?src=search)
+- [DownThemAll](https://addons.mozilla.org/fr/firefox/addon/downthemall/)
 
 > about:config
 
