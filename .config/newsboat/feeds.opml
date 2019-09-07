@@ -18,6 +18,7 @@
     <outline type="rss" xmlUrl="https://www.brothers-brick.com/feed/" htmlUrl="" title="brothers-brick"/>
     <outline type="rss" xmlUrl="https://www.commitstrip.com/fr/feed/" htmlUrl="" title="commitstrip"/>
     <outline type="rss" xmlUrl="https://www.xkcd.com/rss.xml" htmlUrl="" title="xkcd"/>
+    <outline type="rss" xmlUrl="https://www.monkeyuser.com/feed.xml" htmlUrl="" title="monkeyuser"/>
     <outline type="rss" xmlUrl="http://lxer.com/module/newswire/headlines.rss" htmlUrl="" title="lxer"/>
     <outline type="rss" xmlUrl="http://www.tuxmachines.org/node/feed" htmlUrl="" title="tux-machines"/>
     <outline type="rss" xmlUrl="https://blog.adafruit.com/feed/" htmlUrl="" title="adafruit"/>
