@@ -187,3 +187,6 @@ alias clean='bleachbit --clean "firefox.*" "chromium.*" google_chrome.cache syst
 
 # enter dev container
 alias devpod='podman start dev && podman exec --user=root --interactive --tty dev /bin/bash'
+
+# be nice to sudo
+alias please='sudo $(history -p !!)'
