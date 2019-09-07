@@ -56,17 +56,16 @@ set statusline=                                                  "clear the stat
 set statusline+=%<\                                              "cut at start
 set statusline+=\ %m                                             "modified flag
 set statusline+=\ 📂\ \ %F                                       "full path name
-set statusline+=\ %{b:gitbranch}                                 "function git branch
 set statusline+=\ %h                                             "help file flag
 set statusline+=\ %r                                             "read only flag
 set statusline+=\ %w                                             "windows flag
 set statusline+=%=                                               "right separator
-set statusline+=\ 📄\ \ %y                                        "filetype
-set statusline+=\ 📝\ \ %{&fileencoding?&fileencoding:&encoding}  "fileencoding
-set statusline+=\ 🎚\ \ %p%%                                      "percentage
-set statusline+=\ ◫\ \ %c                                        "cursor column
-set statusline+=\ ⚞\ \ %l/%L                                     "cursor line/total lines
-set statusline+=\ 🕑\ \ %{strftime(\"%H:%M\")}                    "time
+set statusline+=\ 📄\ \ %y                                       "filetype
+set statusline+=\ 📝\ \ %{&fileencoding?&fileencoding:&encoding} "fileencoding
+set statusline+=\ \ \ %p%%                                       "percentage
+set statusline+=\ c\ \ %c                                        "cursor column
+set statusline+=\ l\ \ %l/%L                                     "cursor line/total lines
+set statusline+=\ 🕑\ \ %{strftime(\"%H:%M\")}                   "time
 set statusline+=\                                                "end space
 
 " Always show current position
@@ -80,24 +79,6 @@ set mouse=a
 
 " Show current line in LineNbr bar
 set cursorline
-
-" Function to display git banch in status bar
-function! StatuslineGitBranch()
-  let b:gitbranch=""
-  if &modifiable
-    lcd %:p:h
-    let l:gitrevparse=system("echo '🎛 ' && git rev-parse --abbrev-ref HEAD")
-    lcd -
-    if l:gitrevparse!~"fatal: not a git repository"
-      let b:gitbranch="[ ".substitute(l:gitrevparse, '\n', '', 'g')." ] "
-    endif
-  endif
-endfunction
-
-augroup GetGitBranch
-  autocmd!
-  autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
-augroup END
 
 """""""""""""""""""""""""""
 " EXPLORER
