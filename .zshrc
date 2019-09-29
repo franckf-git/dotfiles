@@ -1,11 +1,8 @@
-# .zshrc
-
-######################################################
-# Oh my zsh configuration
-######################################################
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/$USER/.config/oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -20,6 +17,7 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 )
 
 # powerlevel9k config for prompt
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host time dir vcs newline user)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 POWERLEVEL9K_HOST_LOCAL_BACKGROUND='deepskyblue4'
@@ -39,7 +37,7 @@ POWERLEVEL9K_USER_DEFAULT_FOREGROUND='black'
 DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -59,17 +57,31 @@ zsh-syntax-highlighting
 
 source $ZSH/oh-my-zsh.sh
 
-######################################################
-# Optimize Configuration
-######################################################
+# User configuration
 
-# Get the environnement variables
-. /home/$USER/.config/scripts/profile
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# Get the aliases and functions for the work
-if [ -f /home/$USER/.config/scripts/bashrcwork ]; then
-  . /home/$USER/.config/scripts/bashrcwork
-fi
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# Get the parsonnal aliases and functions
-. /home/$USER/.config/scripts/aliasrc
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias backup='rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/'
+alias autogit='git commit -a -m "$(curl -sk https://whatthecommit.com/index.txt)" && git push'
+alias devpod='podman start dev && podman exec --user=root --interactive --tty dev /bin/bash'
