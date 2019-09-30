@@ -9,6 +9,7 @@
     <outline type="rss" xmlUrl="https://motherboard.vice.com/en_us/rss" htmlUrl="" title="motherboard/us"/>
     <outline type="rss" xmlUrl="https://www.zdnet.fr/feeds/rss/actualites/" htmlUrl="" title="zdnet-fr"/>
     <outline type="rss" xmlUrl="https://www.developpez.com/index/rss" htmlUrl="" title="developpez"/>
+    <outline type="rss" xmlUrl="https://www.jesuisundev.com/feed/" htmlUrl="" title="je-suis-un-dev"/>
     <outline type="rss" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="" title="cert-fr"/>
     <outline type="rss" xmlUrl="https://www.journalduhacker.net/rss" htmlUrl="" title="journal-du-hacker"/>
     <outline type="rss" xmlUrl="https://www.minimachines.net/feed" htmlUrl="" title="mini-machines"/>

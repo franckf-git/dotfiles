@@ -4,6 +4,7 @@ https://www.lemonde.fr/rss/une.xml                                             "
 https://motherboard.vice.com/en_us/rss                                         "~motherboard/us"        news
 https://www.zdnet.fr/feeds/rss/actualites/                                     "~zdnet-fr"              news
 https://www.developpez.com/index/rss                                           "~developpez"            news
+https://www.jesuisundev.com/feed/                                              "~je-suis-un-dev"        news
 https://www.cert.ssi.gouv.fr/feed/                                             "~cert-fr"               security
 https://www.journalduhacker.net/rss                                            "~journal-du-hacker"     technews
 https://www.minimachines.net/feed                                              "~mini-machines"         technews
