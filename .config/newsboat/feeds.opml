@@ -36,5 +36,7 @@
     <outline type="rss" xmlUrl="https://www.comptoirsecu.fr/feed/all.xml" htmlUrl="" title="comptoir-secu"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/Cpu-Programmes" htmlUrl="" title="cpu"/>
     <outline type="rss" xmlUrl="http://frenchspin.fr/feed/" htmlUrl="" title="frenchspin"/>
+    <outline type="rss" xmlUrl="http://www.captainweb.net/feed/" htmlUrl="" title="captainweb"/>
+    <outline type="rss" xmlUrl="https://artisandeveloppeur.fr/blog/" htmlUrl="" title="artisandeveloppeur"/>
   </body>
 </opml>
