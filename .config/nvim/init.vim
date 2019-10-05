@@ -44,8 +44,9 @@ map <SPACE> :
 " INTERFACE
 """""""""""""""""""""""""""
 
-" Show lines number
+" Show relative lines number
 set number
+set relativenumber
 
 " Colorscheme
 colors spacevim
