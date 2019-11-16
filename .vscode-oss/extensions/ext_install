@@ -4,6 +4,7 @@ ext install chenxsan.vscode-standardjs
 ext install christian-kohler.npm-intellisense
 ext install christian-kohler.path-intellisense
 ext install digitalbrainstem.javascript-ejs-support
+ext install dbaeumer.vscode-eslint
 ext install eamodio.gitlens
 ext install eg2.vscode-npm-script
 ext install formulahendry.auto-rename-tag
@@ -17,3 +18,5 @@ ext install visualstudioexptteam.vscodeintellicode
 ext install vscode-icons-team.vscode-icons
 ext install vscoss.vscode-ansible
 ext install xabikos.javascriptsnippets
+ext install esbenp.prettier-vscode
+ext install ritwickdey.liveserver
