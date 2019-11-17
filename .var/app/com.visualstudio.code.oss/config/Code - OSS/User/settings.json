@@ -24,5 +24,6 @@
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
     "editor.formatOnSave": true,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "vsicons.dontShowNewVersionMessage": true
 }

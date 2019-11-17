@@ -23,11 +23,14 @@ bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Téléchargements'
 
 # start a terminal
-bindsym $win+Return          exec gnome-terminal
+bindsym $win+Return          exec gnome-terminal -e zsh
 
 # power
 bindsym $win+Delete          exec poweroff
 bindsym $win+$alt+Delete     exec reboot
+
+# lock screen
+bindsym $win+l               exec i3lock --ignore-empty-password --show-failed-attempts --color=222222
 
 ######################################################
 # Windows
@@ -116,7 +119,9 @@ bindsym $win+Shift+r restart
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # systemtray
-exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id xfce4-power-manager
+exec --no-startup-id firefox
+exec --no-startup-id flatpak run io.gitlab.Goodvibes
 
 ######################################################
 # Decorations
@@ -160,7 +165,7 @@ colors {
         statusline           $text
         separator            $urgent
 #       class                text           background
-        focused_workspace    $background    $urgent
+        focused_workspace    $urgent $background
         active_workspace     $text          $background
         inactive_workspace   $text          $background
         urgent_workspace     $background    $urgent

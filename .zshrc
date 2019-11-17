@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH="/home/efydd/.oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -17,21 +17,9 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 )
 
 # powerlevel9k config for prompt
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host time dir vcs newline user)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-POWERLEVEL9K_HOST_LOCAL_BACKGROUND='deepskyblue4'
-POWERLEVEL9K_HOST_LOCAL_FOREGROUND='black'
-POWERLEVEL9K_TIME_BACKGROUND='deepskyblue3'
-POWERLEVEL9K_TIME_FOREGROUND='black'
 POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='deepskyblue4'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='deepskyblue4'
-POWERLEVEL9K_DIR_ETC_BACKGROUND='deepskyblue4'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='deepskyblue4'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_USER_DEFAULT_BACKGROUND='deepskyblue4'
-POWERLEVEL9K_USER_DEFAULT_FOREGROUND='black'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -82,6 +70,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias backup='rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/'
-alias autogit='git commit -a -m "$(curl -sk https://whatthecommit.com/index.txt)" && git push'
+alias backup='rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/efydd /run/media/efydd/RSYNC/'
+alias autogit='git commit -a -m "$(curl -sk http://whatthecommit.com/index.txt)" && git push'
 alias devpod='podman start dev && podman exec --user=root --interactive --tty dev /bin/bash'
