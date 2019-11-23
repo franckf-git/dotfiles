@@ -73,3 +73,25 @@ source $ZSH/oh-my-zsh.sh
 alias backup='rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/efydd /run/media/efydd/RSYNC/'
 alias autogit='git commit -a -m "$(curl -sk http://whatthecommit.com/index.txt)" && git push'
 alias devpod='podman start dev && podman exec --user=root --interactive --tty dev /bin/bash'
+
+# mygit
+# commit => gca
+# push => gp
+
+feature () {
+    case $1 in
+          new)    git checkout -b feature/"$2" master  ;;
+          push)   git push -u origin feature/"$2"      ;;
+          end)    vi package.json && git checkout master && git merge --no-ff feature/"$2" && git tag "$3" && git push origin master --tags && git branch -d feature/"$2" && git push origin :feature/"$2" ;;
+          *) echo "usage: feature [new/push/end] BRANCH TAG" ;;
+    esac
+}
+
+hotfix () {
+    case $1 in
+          new)    git checkout -b hotfix/"$2" master  ;;
+          push)   git push -u origin hotfix/"$2"      ;;
+          end)    vi package.json && git checkout master && git merge --no-ff hotfix/"$2" && git tag "$3" && git push origin master --tags && git branch -d hotfix/"$2" && git push origin :hotfix/"$2" ;;
+          *) echo "usage: hotfix [new/push/end] BRANCH TAG" ;;
+    esac
+}
