@@ -140,6 +140,7 @@ alias ls='ls --color=auto'
 alias lu='ls -l --human-readable --reverse -u -t --color=auto'
 alias rename='prename --verbose'
 alias tmux='tmux attach'
+alias histsrch='history | grep'
 
 # display text files
 alias less='less --quit-if-one-screen --RAW-CONTROL-CHARS --LINE-NUMBERS --LONG-PROMPT'
