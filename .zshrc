@@ -131,7 +131,7 @@ feature () {
     case $1 in
           new)    git checkout -b feature/"$2" master  ;;
           push)   git push -u origin feature/"$2"      ;;
-          end)    sed 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
+          end)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
                   git commit -am "$3" && \
                   git checkout master && \
                   git merge --no-ff feature/"$2" && \
@@ -147,7 +147,7 @@ hotfix () {
     case $1 in
           new)    git checkout -b hotfix/"$2" master  ;;
           push)   git push -u origin hotfix/"$2"      ;;
-          end)    sed 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
+          end)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
                   git commit -am "$3" && \
                   git checkout master && \
                   git merge --no-ff hotfix/"$2" && \
