@@ -156,6 +156,9 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # search
 alias ddgr="ddgr --expand --num 9 --reg 'fr-fr'"
 
+# nmon++
+alias nmon='export NMON=cmdrtn && nmon'
+
 # zsh config
 alias zshconfig="nvim -p /home/$USER/.oh-my-zsh /home/$USER/.zshrc"
 
