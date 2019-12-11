@@ -123,39 +123,40 @@ alias backup='rsync --recursive --links --perms --times --owner --group --device
 alias autogit='git commit -a -m "$(curl -sk http://whatthecommit.com/index.txt)" && git push'
 alias devpod='podman start dev && podman exec --user=root --interactive --tty dev /bin/bash'
 
+
 # mygit
-# commit => gca
-# push => gp
+# commit and push => gca & gp
 
 feature () {
     case $1 in
-          new)    git checkout -b feature/"$2" master  ;;
+          new)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
+                  git commit -am "ouverture feature $2 - $3" && \
+                  git push origin master --tags && \
+                  git checkout -b feature/"$2" master  ;;
           push)   git push -u origin feature/"$2"      ;;
-          end)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
-                  git commit -am "$3" && \
-                  git checkout master && \
+          end)    git checkout master && \
                   git merge --no-ff feature/"$2" && \
                   git tag "$3" && \
                   git push origin master --tags && \
                   git branch -d feature/"$2" && \
                   git push origin :feature/"$2" ;;
-          *) echo "usage: feature [new/push] BRANCH or [end] BRANCH TAG" ;;
+          *) echo "usage: feature [new] BRANCH TAG or [push] BRANCH or [end] BRANCH TAG" ;;
     esac
 }
 
 hotfix () {
     case $1 in
-          new)    git checkout -b hotfix/"$2" master  ;;
+          new)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
+                  git commit -am "ouverture hotfix $2 - $3" && \
+                  git push origin master --tags && \
+                  git checkout -b hotfix/"$2" master  ;;
           push)   git push -u origin hotfix/"$2"      ;;
-          end)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
-                  git commit -am "$3" && \
-                  git checkout master && \
+          end)    git checkout master && \
                   git merge --no-ff hotfix/"$2" && \
                   git tag "$3" && \
                   git push origin master --tags && \
                   git branch -d hotfix/"$2" && \
                   git push origin :hotfix/"$2" ;;
-          *) echo "usage: hotfix [new/push] BRANCH or [end] BRANCH TAG" ;;
+          *) echo "usage: hotfix [new] BRANCH TAG or [push] BRANCH or [end] BRANCH TAG" ;;
     esac
 }
-
