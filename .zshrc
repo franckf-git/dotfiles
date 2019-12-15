@@ -119,13 +119,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias backup='rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/efydd /run/media/efydd/RSYNC/'
+alias enterpod='podman start $(grep name package.json | cut -d'"' -f4) && podman exec --user=node --interactive --tty $(grep name package.json | cut -d'"' -f4) /bin/bash'
+
+alias ll='ls -lash'
+alias ddg='web_search duckduckgo'
+
+alias backup='rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/'
+
 alias autogit='git commit -a -m "$(curl -sk http://whatthecommit.com/index.txt)" && git push'
-alias devpod='podman start dev && podman exec --user=root --interactive --tty dev /bin/bash'
-
-
-# mygit
-# commit and push => gca & gp
+alias gaa='git add --all'
+alias gca='git commit -v -a'
+alias gl='git pull'
+alias glgga='git log --graph --decorate --all'
+alias glgp='git log --stat -p'
+alias glo='git log --oneline --decorate'
+alias gm='git merge'
+alias gpv='git push -v'
+alias gss='git status -s'
 
 feature () {
     case $1 in
