@@ -92,11 +92,11 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
 " For netrw explorer open in horizontal split
-let g:netrw_browse_split = 2
-let g:netrw_altv = 1
+"let g:netrw_browse_split = 2
+"let g:netrw_altv = 1
 
 " Width of the directory explorer
-let g:netrw_winsize = 20
+"let g:netrw_winsize = 20
 
 " Search down into subfolders
 set path+=**
@@ -105,8 +105,8 @@ set path+=**
 set wildmenu
 
 " Open explorer
-nnoremap <C-a> :Vexplore <CR>
-inoremap <C-a> <Esc>:Vexplore <CR>
+nnoremap <C-b> :Vexplore <CR>
+inoremap <C-b> <Esc>:Vexplore <CR>
 
 """""""""""""""""""""""""""
 " TABS
