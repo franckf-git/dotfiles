@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/efydd/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias enterpod="podman start $(grep name package.json | cut -d'"' -f4) && podman exec --user=node --interactive --tty $(grep name package.json | cut -d'"' -f4) /bin/bash"
+#alias enterpod="podman start $(grep name package.json | cut -d'"' -f4) && podman exec --user=node --interactive --tty $(grep name package.json | cut -d'"' -f4) /bin/bash"
 
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
