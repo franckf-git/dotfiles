@@ -127,15 +127,7 @@ alias ddg="web_search duckduckgo"
 alias backup="rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/"
 
 alias autogit="git commit -a -m '$(curl -sk http://whatthecommit.com/index.txt)' && git push"
-alias gaa="git add --all"
-alias gca="git commit -v -a"
-alias gl="git pull"
-alias glgga="git log --graph --decorate --all"
-alias glgp="git log --stat -p"
-alias glo="git log --oneline --decorate"
-alias gm="git merge"
-alias gpv="git push -v"
-alias gss="git status -s"
+alias fullgit="git pull && git add --all && git commit -v -a && git push -v"
 
 feature () {
     case $1 in
