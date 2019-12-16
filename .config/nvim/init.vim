@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""
 
 " Shortcuts Index
-" Control + a    open explorer
+" Control + b    open explorer
 " Control + o    open new file
 " Control + s    save file
 " Control + c    copy to system clipboard
@@ -53,21 +53,20 @@ colors spacevim
 
 " Always show status bar
 set laststatus=2
-set statusline=                                                  "clear the statusline
-set statusline+=%<\                                              "cut at start
-set statusline+=\ %m                                             "modified flag
-set statusline+=\ 📂\ \ %F                                       "full path name
-set statusline+=\ %h                                             "help file flag
-set statusline+=\ %r                                             "read only flag
-set statusline+=\ %w                                             "windows flag
-set statusline+=%=                                               "right separator
-set statusline+=\ 📄\ \ %y                                       "filetype
-set statusline+=\ 📝\ \ %{&fileencoding?&fileencoding:&encoding} "fileencoding
-set statusline+=\ \ \ %p%%                                       "percentage
-set statusline+=\ c\ \ %c                                        "cursor column
-set statusline+=\ l\ \ %l/%L                                     "cursor line/total lines
-set statusline+=\ 🕑\ \ %{strftime(\"%H:%M\")}                   "time
-set statusline+=\                                                "end space
+set statusline=                                                "clear the statusline
+set statusline+=%<\                                            "cut at start
+set statusline+=\ %m                                           "modified flag
+set statusline+=\ 📂\ %F                                        "full path name
+set statusline+=\ %h                                           "help file flag
+set statusline+=\ %r                                           "read only flag
+set statusline+=\ %w                                           "windows flag
+set statusline+=%=                                             "right separator
+set statusline+=\ Ln\ %l/%L                                    "cursor line/total lines
+set statusline+=\ Col\ %c                                      "cursor column
+set statusline+=\ 📝\ %{&fileencoding?&fileencoding:&encoding}  "fileencoding
+set statusline+=\ 📄\ %y                                        "filetype
+set statusline+=\ 🕑\ %{strftime(\"%H:%M\")}                    "time
+set statusline+=\                                              "end space
 
 " Always show current position
 set ruler
