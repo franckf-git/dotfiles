@@ -3,7 +3,7 @@ Encoding=UTF-8
 Version=1.0
 Name=Private Chromium Web Browser
 GenericName=Web Browser
-Exec=chromium-browser --incognito %U
+Exec=chromium-browser --password-store=basic --incognito %U
 Terminal=false
 Icon=chromium-browser
 Type=Application
