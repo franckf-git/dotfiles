@@ -131,7 +131,8 @@ alias fullgit="git pull && git add --all && git commit -v -a && git push -v"
 
 feature () {
     case $1 in
-          new)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
+          new)    git pull && \
+                  sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
                   git commit -am "ouverture feature $2 - $3" && \
                   git push origin master --tags && \
                   git checkout -b feature/"$2" master  ;;
@@ -148,7 +149,8 @@ feature () {
 
 hotfix () {
     case $1 in
-          new)    sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
+          new)    git pull && \
+                  sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
                   git commit -am "ouverture hotfix $2 - $3" && \
                   git push origin master --tags && \
                   git checkout -b hotfix/"$2" master  ;;
