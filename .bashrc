@@ -43,5 +43,5 @@ prename 's/monster-no-scantrad-//' *
 
 enterpod () {
   podman start $(grep name package.json | cut -d'"' -f4)
-  podman exec --user=node --interactive --tty $(grep name package.json | cut -d'"' -f4) /bin/bash
+  podman exec --user=root --interactive --tty $(grep name package.json | cut -d'"' -f4) /bin/bash
   }
