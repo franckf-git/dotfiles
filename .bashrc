@@ -17,7 +17,6 @@ export PATH
 
 # User specific aliases and functions
 
-
 # clean rename
 renameclean () {
 for i in $(ls)
@@ -41,3 +40,8 @@ prename 's/mns-ps--//g' *
 prename 's/schlag--//g' *
 prename 's/monster-no-scantrad-//' *
 }
+
+enterpod () {
+  podman start $(grep name package.json | cut -d'"' -f4)
+  podman exec --user=node --interactive --tty $(grep name package.json | cut -d'"' -f4) /bin/bash
+  }
