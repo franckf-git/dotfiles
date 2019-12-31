@@ -126,7 +126,7 @@ alias ddg="web_search duckduckgo"
 
 alias backup="rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/"
 
-alias autogit="git commit -a -m '$(curl -sk http://whatthecommit.com/index.txt)' && git push"
+alias autogit="git commit -a -m '$(shuf -n1 /home/$USER/Documents/ProjectsInProgress/dotfiles/.config/scripts/command-not-found)' && git push -v"
 alias fullgit="git pull && git add --all && git commit -v -a && git push -v"
 
 feature () {
