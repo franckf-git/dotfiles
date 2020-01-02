@@ -38,7 +38,6 @@
     <outline type="rss" xmlUrl="http://frenchspin.fr/feed/" htmlUrl="" title="frenchspin"/>
     <outline type="rss" xmlUrl="http://www.captainweb.net/feed/" htmlUrl="" title="captainweb"/>
     <outline type="rss" xmlUrl="https://artisandeveloppeur.fr/blog/" htmlUrl="" title="artisandeveloppeur"/>
-    <outline type="rss" xmlUrl="https://github.com/VSCodium/vscodium/releases/" htmlUrl="" title="vscodium"/>
-    <outline type="rss" xmlUrl="https://github.com/VSCodium/vscodium/releases.atom" htmlUrl="" title="vscodium-atom"/>
+    <outline type="rss" xmlUrl="https://github.com/VSCodium/vscodium/releases.atom" htmlUrl="" title="vscodium"/>
   </body>
 </opml>
