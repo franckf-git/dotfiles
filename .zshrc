@@ -139,11 +139,11 @@ feature () {
           push)   git push -u origin feature/"$2"      ;;
           end)    git checkout master && \
                   git merge --no-ff feature/"$2" && \
-                  git tag "$3" && \
+                  git tag $(grep version package.json | cut -d'"' -f4) && \
                   git push origin master --tags && \
                   git branch -d feature/"$2" && \
                   git push origin :feature/"$2" ;;
-          *) echo "usage: feature [new] BRANCH TAG or [push] BRANCH or [end] BRANCH TAG" ;;
+          *) echo "usage: feature [new] BRANCH TAG or [push] BRANCH or [end] BRANCH" ;;
     esac
 }
 
@@ -157,10 +157,10 @@ hotfix () {
           push)   git push -u origin hotfix/"$2"      ;;
           end)    git checkout master && \
                   git merge --no-ff hotfix/"$2" && \
-                  git tag "$3" && \
+                  git tag $(grep version package.json | cut -d'"' -f4) && \
                   git push origin master --tags && \
                   git branch -d hotfix/"$2" && \
                   git push origin :hotfix/"$2" ;;
-          *) echo "usage: hotfix [new] BRANCH TAG or [push] BRANCH or [end] BRANCH TAG" ;;
+          *) echo "usage: hotfix [new] BRANCH TAG or [push] BRANCH or [end] BRANCH" ;;
     esac
 }
