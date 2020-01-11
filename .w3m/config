@@ -123,9 +123,9 @@ ssl_cert_file
 ssl_key_file 
 ssl_ca_path /etc/pki/tls/certs/
 ssl_ca_file 
-use_cookie 0
-show_cookie 0
-accept_cookie 0
+use_cookie 1
+show_cookie 1
+accept_cookie 1
 accept_bad_cookie 0
 cookie_reject_domains 
 cookie_accept_domains 
