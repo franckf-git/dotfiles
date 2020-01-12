@@ -3,7 +3,7 @@ Encoding=UTF-8
 Version=1.0
 Name=Private Chromium Web Browser
 GenericName=Web Browser
-Exec=chromium-browser --password-store=basic --incognito %U
+Exec=chromium-browser --password-store=basic --incognito --disable-crash-reporter --disable-component-update --disable-background-networking --disable-sync --disable-reading-from-canvas --disable-3d-apis https://franckf.gitlab.io/startpage/
 Terminal=false
 Icon=chromium-browser
 Type=Application
