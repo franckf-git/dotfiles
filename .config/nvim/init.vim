@@ -15,6 +15,7 @@
 " Control + p    previous tab
 " Control + w    close file
 " Control + q    close all files
+" , + w          preview in w3m
 
 " Sets how many lines of history
 set history=500
@@ -185,8 +186,8 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 """""""""""""""""""""""""""
 
 " Open new file
-nnoremap <C-o> :tabedit /home/$USER/ <CR>
-inoremap <C-o> <Esc>:tabedit /home/$USER/ <CR>
+nnoremap <C-o> :tabedit . <CR>
+inoremap <C-o> <Esc>:tabedit . <CR>
 
 " Save file
 nnoremap <C-s> :w<CR>
@@ -209,4 +210,4 @@ nnoremap <C-q> :xall<CR>
 inoremap <C-q> <Esc>:xall<CR>
 
 " Web preview
-map <Leader>w :! surf %<CR>
+map <Leader>w :! w3m %<CR>
