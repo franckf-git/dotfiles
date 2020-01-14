@@ -14,15 +14,15 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=(
-"agnoster"
-"bira"
-"bureau"
-"dieter"
-"funky"
-"gnzh"
-"wezm"
-)
+#ZSH_THEME_RANDOM_CANDIDATES=(
+#"agnoster"
+#"bira"
+#"bureau"
+#"dieter"
+#"funky"
+#"gnzh"
+#"wezm"
+#)
 
 # powerlevel9k config for prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host time dir vcs newline user)

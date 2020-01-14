@@ -1,11 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Version=1.0
-Name=xterm full
-GenericName=simple terminal
+Name=xterm Full
+GenericName=Simple Terminal
 Exec=xterm -rv +sb -fullscreen
 Terminal=false
-Icon=help-browser
+Icon=computer
 Type=Application
 Categories=Utility;Terminal;
 # Ctrl click gauche : Main menu
