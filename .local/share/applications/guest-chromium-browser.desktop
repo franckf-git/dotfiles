@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Guest Chromium Web Browser
+GenericName=Web Browser
+Exec=chromium-browser --guest https://franckf.gitlab.io/startpage/
+Terminal=false
+Icon=chromium-browser
+Type=Application
+Categories=Network;WebBrowser;
