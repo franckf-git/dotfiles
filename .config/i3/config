@@ -118,7 +118,7 @@ bindsym $win+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# systemtray
+# in startup
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
 exec --no-startup-id flatpak run io.gitlab.Goodvibes
