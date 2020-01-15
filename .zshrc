@@ -119,14 +119,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#alias enterpod="podman start $(grep name package.json | cut -d'"' -f4) && podman exec --user=node --interactive --tty $(grep name package.json | cut -d'"' -f4) /bin/bash"
-
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
 
 alias backup="rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/"
 
-alias autogit="git commit -a -m '$(shuf -n1 /home/$USER/Documents/ProjectsInProgress/dotfiles/.config/scripts/command-not-found)' && git push -v"
 alias fullgit="git pull && git add --all && git commit -v -a && git push -v"
 
 feature () {
