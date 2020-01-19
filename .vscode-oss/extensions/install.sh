@@ -14,3 +14,4 @@ codium --install-extension visualstudioexptteam.vscodeintellicode
 codium --install-extension vscode-icons-team.vscode-icons
 codium --install-extension vscoss.vscode-ansible
 codium --install-extension xabikos.javascriptsnippets
+codium --install-extension msjsdiag.vscode-react-native
