@@ -16,3 +16,4 @@ codium --install-extension vscoss.vscode-ansible
 codium --install-extension xabikos.javascriptsnippets
 codium --install-extension msjsdiag.vscode-react-native
 codium --install-extension chakrounanas.turbo-console-log
+codium --install-extension coenraads.bracket-pair-colorizer
