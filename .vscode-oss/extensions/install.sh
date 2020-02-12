@@ -15,3 +15,4 @@ codium --install-extension tyriar.sort-lines
 codium --install-extension visualstudioexptteam.vscodeintellicode
 codium --install-extension vscode-icons-team.vscode-icons
 codium --install-extension xabikos.javascriptsnippets
+codium --install-extension alexcvzz.vscode-sqlite
