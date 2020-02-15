@@ -1,6 +1,5 @@
 codium --install-extension aaron-bond.better-comments
 codium --install-extension amandeepmittal.expressjs
-codium --install-extension chakrounanas.turbo-console-log
 codium --install-extension chenxsan.vscode-standardjs
 codium --install-extension christian-kohler.npm-intellisense
 codium --install-extension christian-kohler.path-intellisense
