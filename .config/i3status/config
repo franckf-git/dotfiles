@@ -3,10 +3,10 @@ general {
         interval = 5
 }
 
-order += "wireless wlo1"
+order += "wireless wlp0s29u1u5"
 order += "tztime hour"
 
-wireless wlo1 {
+wireless wlp0s29u1u5 {
         format_up = "  %ip  "
         format_down = "  wifi down  "
 }
