@@ -3,6 +3,7 @@ general {
         interval = 5
 }
 
+order += "wireless wlo1"
 order += "tztime hour"
 
 wireless wlo1 {

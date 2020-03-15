@@ -123,6 +123,8 @@ bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
 exec --no-startup-id flatpak run io.gitlab.Goodvibes
+exec --no-startup-id flatpak run io.freetubeapp.FreeTube
+exec --no-startup-id flatpak run com.sublimetext.three
 
 ######################################################
 # Decorations
@@ -166,7 +168,7 @@ colors {
         statusline           $text
         separator            $urgent
 #       class                text           background
-        focused_workspace    $urgent $background
+        focused_workspace    $urgent        $background
         active_workspace     $text          $background
         inactive_workspace   $text          $background
         urgent_workspace     $background    $urgent
