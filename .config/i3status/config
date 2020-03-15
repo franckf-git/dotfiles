@@ -7,7 +7,7 @@ order += "wireless wlp0s29u1u5"
 order += "tztime hour"
 
 wireless wlp0s29u1u5 {
-        format_up = "  %ip  "
+        format_up = "  wifi %quality  %ip  "
         format_down = "  wifi down  "
 }
 
