@@ -27,7 +27,7 @@ bindsym $win+Return          exec gnome-terminal -e zsh
 bindsym $win+Shift+Return    exec xterm -rv +sb -fa 'Monospace' -fs 14
 
 # power
-bindsym $win+Delete          exec poweroff
+bindsym $win+Shift+Delete    exec poweroff
 bindsym $win+$alt+Delete     exec reboot
 
 # lock screen
