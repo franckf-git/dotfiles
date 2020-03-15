@@ -4,10 +4,11 @@ general {
 }
 
 order += "wireless wlp0s29u1u5"
+order += "tztime date"
 order += "tztime hour"
 
 wireless wlp0s29u1u5 {
-        format_up = "  wifi %quality  %ip  "
+        format_up = "  wifi %quality  "
         format_down = "  wifi down  "
 }
 
@@ -20,6 +21,10 @@ battery 0 {
         status_full = "FULL"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
+}
+
+tztime date {
+        format = "  %a %d-%m  "
 }
 
 tztime hour {
