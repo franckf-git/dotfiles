@@ -122,6 +122,8 @@ source $ZSH/oh-my-zsh.sh
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
 
+alias upg="sudo dnf upgrade-minimal --refresh && flatpak update -y"
+
 alias backup="rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/"
 
 alias fullgit="git add --all && git commit -v -a && git push -v"
