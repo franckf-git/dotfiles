@@ -84,16 +84,16 @@ bindsym $win+ccedilla workspace $ws9
 bindsym $win+agrave workspace $ws0
 
 # move focused container to workspace
-bindsym $win+Shift+ampersand move container to workspace $ws1
-bindsym $win+Shift+eacute move container to workspace $ws2
-bindsym $win+Shift+quotedbl move container to workspace $ws3
-bindsym $win+Shift+apostrophe move container to workspace $ws4
-bindsym $win+Shift+5 move container to workspace $ws5
-bindsym $win+Shift+minus move container to workspace $ws6
-bindsym $win+Shift+egrave move container to workspace $ws7
-bindsym $win+Shift+underscore move container to workspace $ws8
-bindsym $win+Shift+ccedilla move container to workspace $ws9
-bindsym $win+Shift+agrave move container to workspace $ws0
+bindsym $win+Shift+ampersand move container to workspace $ws1 ; workspace $ws1
+bindsym $win+Shift+eacute move container to workspace $ws2 ; workspace $ws2
+bindsym $win+Shift+quotedbl move container to workspace $ws3 ; workspace $ws3
+bindsym $win+Shift+apostrophe move container to workspace $ws4 ; workspace $ws4
+bindsym $win+Shift+parenleft move container to workspace $ws5 ; workspace $ws5
+bindsym $win+Shift+minus move container to workspace $ws6 ; workspace $ws6
+bindsym $win+Shift+egrave move container to workspace $ws7 ; workspace $ws7
+bindsym $win+Shift+underscore move container to workspace $ws8 ; workspace $ws8
+bindsym $win+Shift+ccedilla move container to workspace $ws9 ; workspace $ws9
+bindsym $win+Shift+agrave move container to workspace $ws0 ; workspace $ws0
 
 # switch between workspaces
 bindsym $win+Prior           workspace prev
