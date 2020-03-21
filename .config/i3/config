@@ -111,8 +111,9 @@ workspace_auto_back_and_forth yes
 ######################################################
 
 # applications
-bindsym $alt+F2 exec --no-startup-id dmenu_run -l 15
-bindsym $win+a  exec --no-startup-id rofi -modi drun -show drun -sidebar-mode -show-icons -drun-icon-theme
+bindsym $alt+F2    exec --no-startup-id dmenu_run -l 15
+bindsym $win+a     exec --no-startup-id rofi -modi drun -show drun -sidebar-mode -show-icons -drun-icon-theme
+bindsym $win+space exec --no-startup-id rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $win+Shift+r restart
