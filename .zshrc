@@ -121,6 +121,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
+alias www="w3m https://franckf.gitlab.io/startpage/"
 
 alias upg="sudo dnf upgrade-minimal --refresh && flatpak update -y"
 
