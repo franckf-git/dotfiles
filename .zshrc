@@ -124,6 +124,7 @@ alias ddg="web_search duckduckgo"
 alias www="w3m https://franckf.gitlab.io/startpage/"
 
 alias upg="sudo dnf upgrade-minimal --refresh && flatpak update -y"
+alias upgf="sudo dnf upgrade --refresh && flatpak update -y"
 
 alias backup="rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/RSYNC/"
 
