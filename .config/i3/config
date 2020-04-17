@@ -50,7 +50,7 @@ bindsym $win+Tab             focus right
 for_window [urgent=latest]   focus
 
 # default layout
-workspace_layout             tabbed
+workspace_layout             default
 
 # change container layout
 bindsym twosuperior          layout toggle splith tabbed
@@ -120,12 +120,22 @@ bindsym $win+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# assign program windows to workspace
+assign [title="VSCodium"]           VSCodium
+assign [class="Chromium|Chrome"]    Chromium
+assign [class="Firefox"]            Firefox
+assign [class="Sublime"]            Sublime
+assign [class="FreeTube"]           FreeTube
+
 # in startup
-#exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
-exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
-exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id flatpak run com.sublimetext.three
+exec --no-startup-id flatpak run io.freetubeapp.FreeTube
+exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
+#exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id flatpak run io.gitlab.Goodvibes
+#totem https://direct.fipradio.fr/live/fip-webradio2.mp3
+#exec --no-startup-id sleep 30s && exec ~/Musique/Ankama\ Launcher-Setup-x86_64.AppImage
 
 ######################################################
 # Decorations
