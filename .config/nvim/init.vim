@@ -13,7 +13,6 @@
 " Control + t    new tab
 " Control + n    next tab
 " Control + p    previous tab
-" Control + w    close file
 " Control + q    close all files
 " , + w          preview in w3m
 
@@ -109,6 +108,20 @@ nnoremap <C-b> :Vexplore <CR>
 inoremap <C-b> <Esc>:Vexplore <CR>
 
 """""""""""""""""""""""""""
+" SPLITS
+"""""""""""""""""""""""""""
+
+"Move between splits                              ctrl + w ← ↑ → ↓
+"Max out the height of the current split          ctrl + w _
+"Max out the width of the current split           ctrl + w |
+"Normalize all split sizes                        ctrl + w =
+"Swap top/bottom or left/right split              ctrl+W R
+"Close every window but the current one           ctrl+W o
+
+set splitbelow
+set splitright
+
+"""""""""""""""""""""""""""
 " TABS
 """""""""""""""""""""""""""
 
@@ -186,8 +199,8 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 """""""""""""""""""""""""""
 
 " Open new file
-nnoremap <C-o> :tabedit . <CR>
-inoremap <C-o> <Esc>:tabedit . <CR>
+nnoremap <C-o> :tabedit /home/$USER/ <CR>
+inoremap <C-o> <Esc>:tabedit /home/$USER/ <CR>
 
 " Save file
 nnoremap <C-s> :w<CR>
@@ -200,10 +213,6 @@ map <Leader>y "*y
 " Paste from system clipboard
 inoremap <C-v> <Esc>"+p
 map <Leader>p "*p
-
-" Close file
-nnoremap <C-w> :x<CR>
-inoremap <C-w> <Esc>:x<CR>
 
 " Close all files
 nnoremap <C-q> :xall<CR>
