@@ -40,6 +40,9 @@ let mapleader = ","
 map ; :
 map <SPACE> :
 
+" Open terminal
+nnoremap <C-e> :edit term://zsh<CR>
+
 """""""""""""""""""""""""""
 " INTERFACE
 """""""""""""""""""""""""""
@@ -56,16 +59,16 @@ set laststatus=2
 set statusline=                                                "clear the statusline
 set statusline+=%<\                                            "cut at start
 set statusline+=\ %m                                           "modified flag
-set statusline+=\ 📂\ %F                                        "full path name
+set statusline+=\ 📂\ %F                                       "full path name
 set statusline+=\ %h                                           "help file flag
 set statusline+=\ %r                                           "read only flag
 set statusline+=\ %w                                           "windows flag
 set statusline+=%=                                             "right separator
 set statusline+=\ Ln\ %l/%L                                    "cursor line/total lines
 set statusline+=\ Col\ %c                                      "cursor column
-set statusline+=\ 📝\ %{&fileencoding?&fileencoding:&encoding}  "fileencoding
-set statusline+=\ 📄\ %y                                        "filetype
-set statusline+=\ 🕑\ %{strftime(\"%H:%M\")}                    "time
+set statusline+=\ 📝\ %{&fileencoding?&fileencoding:&encoding} "fileencoding
+set statusline+=\ 📄\ %y                                       "filetype
+set statusline+=\ 🕑\ %{strftime(\"%H:%M\")}                   "time
 set statusline+=\                                              "end space
 
 " Always show current position
@@ -95,7 +98,7 @@ let g:netrw_liststyle = 3
 "let g:netrw_altv = 1
 
 " Width of the directory explorer
-"let g:netrw_winsize = 20
+let g:netrw_winsize = 20
 
 " Search down into subfolders
 set path+=**
@@ -112,8 +115,8 @@ inoremap <C-b> <Esc>:Vexplore <CR>
 """""""""""""""""""""""""""
 
 "Move between splits                              ctrl + w ← ↑ → ↓
-"Max out the height of the current split          ctrl + w _
 "Max out the width of the current split           ctrl + w |
+"Max out the height of the current split          ctrl + w _
 "Normalize all split sizes                        ctrl + w =
 "Swap top/bottom or left/right split              ctrl+W R
 "Close every window but the current one           ctrl+W o
