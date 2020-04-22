@@ -25,7 +25,7 @@ bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.pn
 # start a terminal
 bindsym $win+Return          exec gnome-terminal -e zsh
 bindsym $win+Shift+Return    exec xterm -rv +sb -fa 'Monospace' -fs 12
-bindsym $win+t               exec gnome-terminal -e "toolbox enter"
+bindsym $win+t               exec gnome-terminal -- toolbox run zsh
 
 # power
 bindsym $win+Shift+Delete    exec poweroff
@@ -43,6 +43,7 @@ focus_follows_mouse no
 
 # kill focused window
 bindsym $alt+F4              kill
+bindsym $win+Delete          kill
 
 # change focus
 bindsym $win+Tab             focus right
@@ -61,16 +62,16 @@ bindsym twosuperior          layout toggle splith tabbed
 ######################################################
 
 # Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws0 "0"
+set $ws1 "---1---"
+set $ws2 "---2---"
+set $ws3 "---3---"
+set $ws4 "---4---"
+set $ws5 "---5---"
+set $ws6 "---6---"
+set $ws7 "---7---"
+set $ws8 "---8---"
+set $ws9 "---9---"
+set $ws0 "---0---"
 
 # switch to workspace
 bindsym $win+ampersand workspace $ws1
@@ -129,14 +130,12 @@ assign [class="Sublime"]            Sublime
 assign [class="FreeTube"]           FreeTube
 
 # in startup
+#exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
 exec --no-startup-id flatpak run com.sublimetext.three
 exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
-#exec --no-startup-id xfce4-power-manager
-#exec --no-startup-id flatpak run io.gitlab.Goodvibes
-#totem https://direct.fipradio.fr/live/fip-webradio2.mp3
-#exec --no-startup-id sleep 30s && exec ~/Musique/Ankama\ Launcher-Setup-x86_64.AppImage
+#exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio8.mp3
 
 ######################################################
 # Decorations
@@ -179,7 +178,7 @@ colors {
         background           $background
         statusline           $text
         separator            $urgent
-#       class                text           background
+#       class                 text           background
         focused_workspace    $urgent        $background
         active_workspace     $text          $background
         inactive_workspace   $text          $background
