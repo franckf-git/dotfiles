@@ -24,7 +24,7 @@ bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.pn
 
 # start a terminal
 bindsym $win+Return          exec gnome-terminal -e zsh
-bindsym $win+Shift+Return    exec xterm -rv +sb -fa 'Monospace' -fs 12
+bindsym $win+Shift+Return    exec st -e zsh
 bindsym $win+t               exec gnome-terminal -- toolbox run zsh
 
 # power
