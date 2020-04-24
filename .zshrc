@@ -119,6 +119,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vimdiff='nvim -d'
+alias neovim='nvim -p'
+alias vim='nvim -p'
+alias vi='nvim -p'
+
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
 alias www="w3m https://franckf.gitlab.io/startpage/"
