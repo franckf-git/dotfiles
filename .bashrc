@@ -27,18 +27,22 @@ done
 prename 'y/A-Z\ /a-z-/' *
 prename 's/\[//g' *
 prename 's/[^a-z0-9-.]/-/g' *
-prename 's/ryozanpaku-//g' *
 prename 's/ajia-no-scantrad-//' *
 prename 's/ajia-rs--//' *
-prename 's/mns-tnt--//' *
-prename 's/mns-rs--//' *
-prename 's/rs--//' *
-prename 's/mns--//' *
-prename 's/shp--//g' *
 prename 's/koneko-scantrad-//g' *
+prename 's/mangaqc-franco-//' *
+prename 's/mns--//' *
 prename 's/mns-ps--//g' *
-prename 's/schlag--//g' *
+prename 's/mns-rs--//' *
+prename 's/mns-tnt--//' *
 prename 's/monster-no-scantrad-//' *
+prename 's/rs--//' *
+prename 's/ryozanpaku-//g' *
+prename 's/schlag--//g' *
+prename 's/shp--//g' *
+prename 's/shp-//g' *
+prename 's/stu--//' *
+prename 's/yorokobe--//' *
 }
 
 enterpod () {
