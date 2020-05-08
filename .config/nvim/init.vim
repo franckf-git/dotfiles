@@ -107,8 +107,8 @@ set path+=**
 set wildmenu
 
 " Open explorer
-nnoremap <C-b> :Vexplore <CR>
-inoremap <C-b> <Esc>:Vexplore <CR>
+nnoremap <C-b> :Lexplore <CR>
+inoremap <C-b> <Esc>:Lexplore <CR>
 
 """""""""""""""""""""""""""
 " SPLITS
@@ -202,8 +202,8 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 """""""""""""""""""""""""""
 
 " Open new file
-nnoremap <C-o> :tabedit /home/$USER/ <CR>
-inoremap <C-o> <Esc>:tabedit /home/$USER/ <CR>
+nnoremap <C-o> :tabedit . <CR>
+inoremap <C-o> <Esc>:tabedit . <CR>
 
 " Save file
 nnoremap <C-s> :w<CR>
