@@ -87,6 +87,11 @@ set cursorline
 " EXPLORER
 """""""""""""""""""""""""""
 
+"o - Open file/directory in new horizontal split
+"v - Open file/directory in new vertical split
+"t - Open file/directory in new tab
+"p - Preview file without (moving the cursor from netrw)
+
 " No banner
 let g:netrw_banner = 0
 
@@ -114,12 +119,13 @@ inoremap <C-b> <Esc>:Lexplore <CR>
 " SPLITS
 """""""""""""""""""""""""""
 
-"Move between splits                              ctrl + w ← ↑ → ↓
-"Max out the width of the current split           ctrl + w |
-"Max out the height of the current split          ctrl + w _
-"Normalize all split sizes                        ctrl + w =
-"Swap top/bottom or left/right split              ctrl+W R
-"Close every window but the current one           ctrl+W o
+"Move between splits                              ctrl+w ← ↑ → ↓
+"Max out the width of the current split           ctrl+w |
+"Max out the height of the current split          ctrl+w _
+"Normalize all split sizes                        ctrl+w =
+"Swap top/bottom or left/right split              ctrl+w R
+"Close every window but the current one           ctrl+w o
+"Swap windows                                     ctrl+w H
 
 set splitbelow
 set splitright
