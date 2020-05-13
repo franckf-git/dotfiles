@@ -42,11 +42,10 @@ bindsym $win+l               exec i3lock --ignore-empty-password --show-failed-a
 focus_follows_mouse no
 
 # kill focused window
-bindsym $alt+F4              kill
 bindsym $win+Delete          kill
 
 # change focus
-bindsym $win+Tab             focus right
+bindsym $win+Tab             focus next
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest]   focus
@@ -56,22 +55,26 @@ workspace_layout             default
 
 # change container layout
 bindsym twosuperior          layout toggle splith tabbed
+bindsym $win+twosuperior     exec i3-msg 'layout splitv' && i3-msg 'move left'
 
 ######################################################
 # Workspaces
 ######################################################
 
+# Rename current workspace
+bindsym $win+equal exec i3-input -F 'rename workspace to "%s"' -P ''
+
 # Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "---1---"
-set $ws2 "---2---"
-set $ws3 "---3---"
-set $ws4 "---4---"
-set $ws5 "---5---"
-set $ws6 "---6---"
-set $ws7 "---7---"
-set $ws8 "---8---"
-set $ws9 "---9---"
-set $ws0 "---0---"
+set $ws1 "1: Firefox"
+set $ws2 "2: Sublime"
+set $ws3 "3: FreeTube"
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: VSCodium"
+set $ws8 "8: Chromium"
+set $ws9 "9: "
+set $ws0 "0: "
 
 # switch to workspace
 bindsym $win+ampersand workspace $ws1
@@ -123,11 +126,11 @@ bindsym $win+Shift+r restart
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # assign program windows to workspace
-assign [title="VSCodium"]           VSCodium
-assign [class="Chromium|Chrome"]    Chromium
-assign [class="Firefox"]            Firefox
-assign [class="Sublime"]            Sublime
-assign [class="FreeTube"]           FreeTube
+assign [title="VSCodium"]           $ws7
+assign [class="Chromium|Chrome"]    $ws8
+assign [class="Firefox"]            $ws1
+assign [class="Sublime"]            $ws2
+assign [class="FreeTube"]           $ws3
 
 # in startup
 #exec --no-startup-id xfce4-power-manager
@@ -135,7 +138,6 @@ exec --no-startup-id firefox
 exec --no-startup-id flatpak run com.sublimetext.three
 exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
-#exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio8.mp3
 
 ######################################################
 # Decorations
