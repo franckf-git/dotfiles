@@ -23,9 +23,9 @@ bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Téléchargements'
 
 # start a terminal
-bindsym $win+Return          exec gnome-terminal -e zsh
-bindsym $win+Shift+Return    exec st -e zsh
-bindsym $win+t               exec gnome-terminal -- toolbox run zsh
+bindsym $win+Return          exec gnome-terminal
+bindsym $win+Shift+Return    exec st
+bindsym $win+t               exec gnome-terminal -- toolbox enter
 
 # power
 bindsym $win+Shift+Delete    exec poweroff
