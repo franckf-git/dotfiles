@@ -65,15 +65,15 @@ bindsym $win+twosuperior     exec i3-msg 'layout splitv' && i3-msg 'move left'
 bindsym $win+equal exec i3-input -F 'rename workspace to "%s"' -P ''
 
 # Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "1: Firefox"
-set $ws2 "2: Sublime"
-set $ws3 "3: FreeTube"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
 set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
+set $ws5 "5: ranger"
+set $ws6 "6: FreeTube"
 set $ws7 "7: VSCodium"
 set $ws8 "8: Chromium"
-set $ws9 "9: "
+set $ws9 "9: Firefox"
 set $ws0 "0: "
 
 # switch to workspace
@@ -126,16 +126,16 @@ bindsym $win+Shift+r restart
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # assign program windows to workspace
+assign [class="ranger"]             $ws5
+assign [class="FreeTube"]           $ws6
 assign [title="VSCodium"]           $ws7
 assign [class="Chromium|Chrome"]    $ws8
-assign [class="Firefox"]            $ws1
-assign [class="Sublime"]            $ws2
-assign [class="FreeTube"]           $ws3
+assign [class="Firefox"]            $ws9
 
 # in startup
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
-exec --no-startup-id st -e ranger
+exec --no-startup-id st -t ranger -e ranger
 exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
 
