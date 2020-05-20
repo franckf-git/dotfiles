@@ -135,7 +135,7 @@ assign [class="FreeTube"]           $ws3
 # in startup
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
-exec --no-startup-id flatpak run com.sublimetext.three
+exec --no-startup-id st -e ranger
 exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
 
