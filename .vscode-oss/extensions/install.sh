@@ -16,3 +16,6 @@ codium --install-extension vscode-icons-team.vscode-icons
 codium --install-extension xabikos.javascriptsnippets
 codium --install-extension alexcvzz.vscode-sqlite
 codium --install-extension ecmel.vscode-html-css
+
+echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
+sysctl -p

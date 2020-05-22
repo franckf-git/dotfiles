@@ -14,5 +14,13 @@
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
     "editor.formatOnSave": true,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "vscode-icons",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true
+    }
 }
