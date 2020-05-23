@@ -65,16 +65,16 @@ bindsym $win+twosuperior     exec i3-msg 'layout splitv' && i3-msg 'move left'
 bindsym $win+equal exec i3-input -F 'rename workspace to "%s"' -P ''
 
 # Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: ranger"
-set $ws6 "6: FreeTube"
-set $ws7 "7: VSCodium"
-set $ws8 "8: Chromium"
-set $ws9 "9: Firefox"
-set $ws0 "0: "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5 ranger"
+set $ws6 "6 FreeTube"
+set $ws7 "7 VSCodium"
+set $ws8 "8 Chromium"
+set $ws9 "9 Firefox"
+set $ws0 "0 "
 
 # switch to workspace
 bindsym $win+ampersand workspace $ws1
@@ -135,7 +135,7 @@ assign [class="Firefox"]            $ws9
 # in startup
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
-exec --no-startup-id st -t ranger -e ranger
+exec --no-startup-id st -c ranger -e ranger
 exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
 
