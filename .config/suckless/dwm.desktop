@@ -1,0 +1,5 @@
+[Desktop Entry]
+Version=1.0
+Name=DWM Session
+Name[fr]=Session DWM
+Exec=./.config/suckless/dwm/session.sh
