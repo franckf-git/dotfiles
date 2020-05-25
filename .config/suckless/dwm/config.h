@@ -64,45 +64,29 @@ static const char *powercmd[]        = { "poweroff", NULL };
 
 static const char *upvol[]           = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[]         = { "pactl", "set-sink-volume", "0", "-5%", NULL };
-static const char *mutevol[]         = { "pactl", "set-sink-volume", "0", "toggle", NULL };
 
-static const char *brightnessup[]    = { "xbacklight", "-inc", "5", "-time", "100", NULL };
-static const char *brightnessdown[]  = { "xbacklight", "-dec", "5", "-time", "100", NULL };
-
+#include "shiftview.c"
 static Key keys[] = {
     /* modifier                    key               function        argument */
     /* multimedias */
-//    { 0,                           XK_XF86AudioRaiseVolume,          spawn, {.v = upvol } },
-//    { 0,                           XK_XF86AudioLowerVolume,          spawn, {.v = downvol } },
-//    { 0,                           XK_XF86AudioMute,                 spawn, {.v = mutevol } },
-//    { 0,                           XK_XF86MonBrightnessUp,           spawn, {.v = brightnessup } },
-//    { 0,                           XK_XF86MonBrightnessDown,         spawn, {.v = brightnessdown } },
-/*    { MODKEY,                      XF86XK_AudioMute,                 spawn, {.v = mutevol } },
-    { MODKEY,                      XF86XK_AudioRaiseVolume,          spawn, {.v = upvol } },
-    { MODKEY,                      XF86XK_AudioLowerVolume,          spawn, {.v = downvol } },
-    { MODKEY,                      XK_F10,           spawn,          {.v = mutevol    } },
-    { MODKEY,                      XK_F11,           spawn,          {.v = downvol    } },
-    { MODKEY,                      XK_F12,           spawn,          {.v = upvol      } },
-    { 0,                           0x1008ff11,       spawn,          {.v = downvol    } },
-    { 0,                           0x1008ff13,       spawn,          {.v = upvol      } },
-    { 0,                           0x1008ff02,       spawn,          {.v = upbri      } },
-    { 0,                           0x1008ff03,       spawn,          {.v = downbri    } }, */
-    { MODKEY,                      XK_i,             spawn,          {.v = upvol } },
-    { MODKEY,                      XK_u,             spawn,          {.v = downvol } },
-    { MODKEY,                      XK_y,             spawn,          {.v = mutevol } },
-    { MODKEY,                      XK_o,             spawn,          {.v = brightnessup } },
-    { MODKEY,                      XK_p,             spawn,          {.v = brightnessdown } },
+    { MODKEY,                      XK_p,             spawn,          {.v = upvol } },
+    { MODKEY,                      XK_m,             spawn,          {.v = downvol } },
 
     { MODKEY,                      XK_a,             spawn,          {.v = dmenucmd } },
     { MODKEY,                      XK_Return,        spawn,          {.v = termcmd } },
     { MODKEY|ShiftMask,            XK_Delete,        spawn,          {.v = powercmd } },
     
     { MODKEY,                      XK_b,             togglebar,      {0} },
+    { MODKEY,                      XK_f,             spawn,          SHCMD("firefox") },
 
     /* windows */
     { MODKEY,                      XK_Delete,        killclient,     {0} },
     { MODKEY,                      XK_Tab,           focusstack,     {.i = +1 } },
     { 0,                           XK_twosuperior,   setlayout,      {0} },
+    { MODKEY,                      XK_Left,          shiftview,      { .i = -1 } },
+    { MODKEY|ShiftMask,            XK_Left,          shifttag,       { .i = -1 } },
+    { MODKEY,                      XK_Right,         shiftview,      { .i = 1 } },
+    { MODKEY|ShiftMask,            XK_Right,         shifttag,       { .i = 1 } },
 
     /* layouts aka workspaces */ 
     TAGKEYS(                       XK_ampersand,                     0)
