@@ -16,7 +16,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5 ranger", "6 Freetube", "7 VSCodium", "8 Chromium", "9 Firefox" };
+static const char *tags[] = { "0", "1", "2", "3", "4", "5 file", "6 video", "7 code", "8 design", "9 web" };
 
 static const Rule rules[] = {
 /* isfloating: True : client flottant, False : client en tiling */
@@ -27,11 +27,11 @@ static const Rule rules[] = {
      *    WM_NAME(STRING) = title
      */
     /* class       instance    title       tags mask     isfloating   monitor */
-    { "ranger",    NULL,       NULL,       1 << 4,       0,           -1 },
-    { "Freetube",  NULL,       NULL,       1 << 5,       0,           -1 },
-    { "VSCodium",  NULL,       NULL,       1 << 6,       0,           -1 },
-    { "Chromium",  NULL,       NULL,       1 << 7,       0,           -1 },
-    { "Firefox",   NULL,       NULL,       1 << 8,       0,           -1 },
+    { "ranger",    NULL,       NULL,       1 << 5,       0,           -1 },
+    { "Freetube",  NULL,       NULL,       1 << 6,       0,           -1 },
+    { "VSCodium",  NULL,       NULL,       1 << 7,       0,           -1 },
+    { "Chromium",  NULL,       NULL,       1 << 8,       0,           -1 },
+    { "Firefox",   NULL,       NULL,       1 << 9,       0,           -1 },
 };
 
 /* layout(s) */
@@ -89,15 +89,16 @@ static Key keys[] = {
     { MODKEY|ShiftMask,            XK_Right,         shifttag,       { .i = 1 } },
 
     /* layouts aka workspaces */ 
-    TAGKEYS(                       XK_ampersand,                     0)
-    TAGKEYS(                       XK_eacute,                        1)
-    TAGKEYS(                       XK_quotedbl,                      2)
-    TAGKEYS(                       XK_apostrophe,                    3)
-    TAGKEYS(                       XK_parenleft,                     4)
-    TAGKEYS(                       XK_minus,                         5)
-    TAGKEYS(                       XK_egrave,                        6)
-    TAGKEYS(                       XK_underscore,                    7)
-    TAGKEYS(                       XK_ccedilla,                      8)
+    TAGKEYS(                       XK_agrave,                        0)
+    TAGKEYS(                       XK_ampersand,                     1)
+    TAGKEYS(                       XK_eacute,                        2)
+    TAGKEYS(                       XK_quotedbl,                      3)
+    TAGKEYS(                       XK_apostrophe,                    4)
+    TAGKEYS(                       XK_parenleft,                     5)
+    TAGKEYS(                       XK_minus,                         6)
+    TAGKEYS(                       XK_egrave,                        7)
+    TAGKEYS(                       XK_underscore,                    8)
+    TAGKEYS(                       XK_ccedilla,                      9)
     
     { MODKEY|ShiftMask,            XK_e,             quit,           {0} },
 };
