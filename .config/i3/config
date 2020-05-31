@@ -23,7 +23,7 @@ bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Téléchargements'
 
 # start a terminal
-bindsym $win+Return          exec gnome-terminal
+bindsym $win+Return          exec gnome-terminal -- zsh
 bindsym $win+Shift+Return    exec st
 bindsym $win+t               exec gnome-terminal -- toolbox enter
 
@@ -74,7 +74,7 @@ set $ws6 "6 FreeTube"
 set $ws7 "7 VSCodium"
 set $ws8 "8 Chromium"
 set $ws9 "9 Firefox"
-set $ws0 "0 "
+set $ws0 "0"
 
 # switch to workspace
 bindsym $win+ampersand workspace $ws1
@@ -135,7 +135,8 @@ assign [class="Firefox"]            $ws9
 # in startup
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
-exec --no-startup-id st -c ranger -e ranger
+#exec --no-startup-id st -c ranger -e ranger
+exec --no-startup-id i3-msg 'workspace $ws5 ; exec gnome-terminal -- ranger; workspace $ws1'
 exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
 

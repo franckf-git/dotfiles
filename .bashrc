@@ -45,6 +45,7 @@ prename 's/ajia-rs--//' *
 prename 's/koneko-scantrad-//g' *
 prename 's/mangaqc-franco-//' *
 prename 's/mns--//' *
+prename 's/mns-//' *
 prename 's/mns-ps--//g' *
 prename 's/mns-rs--//' *
 prename 's/mns-tnt--//' *
