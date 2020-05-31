@@ -64,9 +64,11 @@ set statusline+=\ %h                                           "help file flag
 set statusline+=\ %r                                           "read only flag
 set statusline+=\ %w                                           "windows flag
 set statusline+=%=                                             "right separator
+set statusline+=\ %p%%                                         "percentage of document
 set statusline+=\ Ln\ %l/%L                                    "cursor line/total lines
 set statusline+=\ Col\ %c                                      "cursor column
 set statusline+=\ 📝\ %{&fileencoding?&fileencoding:&encoding} "fileencoding
+set statusline+=\[%{&fileformat}\]
 set statusline+=\ 📄\ %y                                       "filetype
 set statusline+=\ 🕑\ %{strftime(\"%H:%M\")}                   "time
 set statusline+=\                                              "end space
