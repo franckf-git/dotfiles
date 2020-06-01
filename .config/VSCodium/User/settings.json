@@ -22,5 +22,7 @@
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
         "**/node_modules/*/**": true
-    }
+    },
+    "explorer.confirmDragAndDrop": false,
+    "html.format.wrapLineLength": 0
 }
