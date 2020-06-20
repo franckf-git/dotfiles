@@ -135,10 +135,11 @@ assign [class="Firefox"]            $ws9
 # in startup
 #exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
-#exec --no-startup-id st -c ranger -e ranger
 exec --no-startup-id i3-msg 'workspace $ws5 ; exec gnome-terminal -- ranger; workspace $ws1'
+exec --no-startup-id exec gnome-terminal -- newsboat
 exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
+exec --no-startup-id sleep 20s && i3-msg 'workspace $ws1'
 
 ######################################################
 # Decorations
