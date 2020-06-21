@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Ranger
+GenericName=ranger file manager
+Exec=gnome-terminal -- ranger
+Terminal=true
+Icon=utilities-terminal
+Type=Application
+Categories=ConsoleOnly;System;FileTools;FileManager;
