@@ -70,10 +70,10 @@ set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5 ranger"
-set $ws6 "6 FreeTube"
-set $ws7 "7 VSCodium"
-set $ws8 "8 Chromium"
-set $ws9 "9 Firefox"
+set $ws6 "6 newsboat"
+set $ws7 "7 coding"
+set $ws8 "8 design"
+set $ws9 "9 www"
 set $ws0 "0"
 
 # switch to workspace
@@ -127,19 +127,24 @@ bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 
 # assign program windows to workspace
 assign [class="ranger"]             $ws5
-assign [class="FreeTube"]           $ws6
+assign [class="newsboat"]           $ws6
 assign [title="VSCodium"]           $ws7
 assign [class="Chromium|Chrome"]    $ws8
 assign [class="Firefox"]            $ws9
 
 # in startup
 #exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" 304 1
 exec --no-startup-id firefox
 exec --no-startup-id i3-msg 'workspace $ws5 ; exec gnome-terminal -- ranger; workspace $ws1'
-exec --no-startup-id exec gnome-terminal -- newsboat
-exec --no-startup-id flatpak run io.freetubeapp.FreeTube
-exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
+exec --no-startup-id i3-msg 'workspace $ws6 ; exec gnome-terminal -- newsboat; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace $ws7 ; exec gnome-terminal -- nvim ~/Documents/ProjectsInProgress/carnet-de-suivi/; workspace $ws1'
 exec --no-startup-id sleep 20s && i3-msg 'workspace $ws1'
+exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
+#exec --no-startup-id chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/
+#exec --no-startup-id codium
+#exec --no-startup-id st -c ranger -e ranger
+#exec --no-startup-id flatpak run io.freetubeapp.FreeTube
 
 ######################################################
 # Decorations
