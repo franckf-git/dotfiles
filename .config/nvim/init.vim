@@ -53,6 +53,10 @@ set relativenumber
 
 " Colorscheme
 colors spacevim
+"colors monokai
+"colors morning
+"colors blue
+"colors koehler
 
 " Always show status bar
 set laststatus=2
