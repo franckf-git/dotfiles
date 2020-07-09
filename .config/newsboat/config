@@ -5,6 +5,9 @@ auto-reload                     yes
 download-path                   "/home/$USER/Downloads/%h/%n"
 browser                         "firefox %u"
 
+bind-key j down
+bind-key k up
+
 # open with small web browser [, + s]
 macro s set browser "surf -dgNpis -a a"; open-in-browser ; set browser "firefox %u"
 

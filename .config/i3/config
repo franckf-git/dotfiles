@@ -103,6 +103,8 @@ bindsym $win+Shift+agrave move container to workspace $ws0 ; workspace $ws0
 # switch between workspaces
 bindsym $win+Left             workspace prev
 bindsym $win+Right            workspace next
+bindsym $win+j                workspace prev
+bindsym $win+k                workspace next
 
 # move  between workspaces
 bindsym $win+Shift+Left       move container to workspace prev ; workspace prev
