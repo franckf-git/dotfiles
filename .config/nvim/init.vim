@@ -52,7 +52,9 @@ set number
 set relativenumber
 
 " Colorscheme
-colors spacevim
+"colors spacevim
+colors gruvbox
+"colors solarized
 "colors monokai
 "colors morning
 "colors blue
