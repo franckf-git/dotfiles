@@ -43,6 +43,9 @@ map <SPACE> :
 " Open terminal
 nnoremap <C-e> :edit term://zsh<CR>
 
+" Escape terminal
+tnoremap <Esc> <C-\><C-n>
+
 """""""""""""""""""""""""""
 " INTERFACE
 """""""""""""""""""""""""""
