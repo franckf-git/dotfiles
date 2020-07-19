@@ -13,7 +13,6 @@
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
-    "editor.formatOnSave": true,
     "explorer.confirmDelete": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -24,5 +23,11 @@
         "**/node_modules/*/**": true
     },
     "explorer.confirmDragAndDrop": false,
-    "html.format.wrapLineLength": 0
+    "html.format.wrapLineLength": 0,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "update.mode": "none",
+    "editor.formatOnSave": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "liveServer.settings.donotVerifyTags": true,
+    "terminal.integrated.automationShell.linux": "/usr/bin/zsh"
 }
