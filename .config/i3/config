@@ -27,6 +27,7 @@ bindsym $win+Return          exec gnome-terminal -- zsh
 # power
 bindsym $win+Ctrl+Delete     exec poweroff
 bindsym $win+Ctrl+r          exec reboot
+bindsym $win+Ctrl+u          exec systemctl suspend
 
 # lock screen
 bindsym $win+Ctrl+l          exec i3lock --ignore-empty-password --show-failed-attempts --color=222222
