@@ -9,7 +9,6 @@
 
 # set modifier key Mod1 is Alt key and Mod4 is Win key
 set $win Mod4
-set $alt Mod1
 
 # font for window titles
 font pango:JetBrains Mono 8
@@ -24,15 +23,13 @@ bindsym Print                exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.pn
 
 # start a terminal
 bindsym $win+Return          exec gnome-terminal -- zsh
-bindsym $win+Shift+Return    exec st
-bindsym $win+t               exec gnome-terminal -- toolbox enter
 
 # power
-bindsym $win+Shift+Delete    exec poweroff
-bindsym $win+$alt+Delete     exec reboot
+bindsym $win+Ctrl+Delete     exec poweroff
+bindsym $win+Ctrl+r          exec reboot
 
 # lock screen
-bindsym $win+l               exec i3lock --ignore-empty-password --show-failed-attempts --color=222222
+bindsym $win+Ctrl+l          exec i3lock --ignore-empty-password --show-failed-attempts --color=222222
 
 ######################################################
 # Windows
@@ -55,7 +52,25 @@ workspace_layout             default
 
 # change container layout
 bindsym twosuperior          layout toggle splith tabbed
-bindsym $win+twosuperior     exec i3-msg 'layout splitv' && i3-msg 'move left'
+
+# enter fullscreen mode
+bindsym $win+f fullscreen toggle
+
+mode "move windows" {
+        # move windows mode
+        bindsym Left move left
+        bindsym Down move down
+        bindsym Up move up
+        bindsym Right move right
+        # back to normal: Escape
+        bindsym Escape mode "default"
+}
+bindsym $win+m mode "move windows"
+
+# split in horizontal orientation
+bindsym $win+h split h
+# split in vertical orientation
+bindsym $win+v split v
 
 ######################################################
 # Workspaces
@@ -69,11 +84,11 @@ set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
-set $ws5 "5 ranger"
-set $ws6 "6 newsboat"
-set $ws7 "7 coding"
-set $ws8 "8 design"
-set $ws9 "9 www"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
 set $ws0 "0"
 
 # switch to workspace
@@ -118,7 +133,7 @@ workspace_auto_back_and_forth yes
 ######################################################
 
 # applications
-bindsym $alt+F2    exec --no-startup-id dmenu_run -l 15
+bindsym $win+d     exec --no-startup-id dmenu_run -l 15
 bindsym $win+a     exec --no-startup-id rofi -modi drun -show drun -sidebar-mode -show-icons -drun-icon-theme
 bindsym $win+space exec --no-startup-id rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme
 
@@ -127,26 +142,12 @@ bindsym $win+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# assign program windows to workspace
-assign [class="ranger"]             $ws5
-assign [class="newsboat"]           $ws6
-assign [title="VSCodium"]           $ws7
-assign [class="Chromium|Chrome"]    $ws8
-assign [class="Firefox"]            $ws9
-
 # in startup
 #exec --no-startup-id xfce4-power-manager
-#exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" 304 1
-exec --no-startup-id firefox
-exec --no-startup-id i3-msg 'workspace $ws5 ; exec gnome-terminal -- ranger; workspace $ws1'
-exec --no-startup-id i3-msg 'workspace $ws6 ; exec gnome-terminal -- newsboat; workspace $ws1'
-exec --no-startup-id i3-msg 'workspace $ws7 ; exec gnome-terminal -- nvim ~/Documents/ProjectsInProgress/carnet-de-suivi/; workspace $ws1'
-exec --no-startup-id sleep 20s && i3-msg 'workspace $ws1'
-exec --no-startup-id sleep 30s && totem https://direct.fipradio.fr/live/fip-webradio1.mp3
-#exec --no-startup-id chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/
-#exec --no-startup-id codium
-#exec --no-startup-id st -c ranger -e ranger
-#exec --no-startup-id flatpak run io.freetubeapp.FreeTube
+#exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" 309 1
+exec --no-startup-id i3-msg 'workspace firefox  ; exec firefox                    ; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace ranger   ; exec gnome-terminal -- ranger   ; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace newsboat ; exec gnome-terminal -- newsboat ; workspace $ws1'
 
 ######################################################
 # Decorations
@@ -169,8 +170,9 @@ client.placeholder      $background  $background  $text       $background  $back
 
 client.background       $text
 
-# for every windows no title and no border
-for_window [class=".*"] border pixel 0
+# small border - hidden if alone
+for_window [class=".*"] border pixel 4
+hide_edge_borders smart
 
 ######################################################
 # Bar
@@ -190,7 +192,7 @@ colors {
         statusline           $text
         separator            $urgent
 #       class                 text           background
-        focused_workspace    $urgent        $background
+        focused_workspace    $background    $text
         active_workspace     $text          $background
         inactive_workspace   $text          $background
         urgent_workspace     $background    $urgent
