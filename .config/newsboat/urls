@@ -36,7 +36,8 @@ https://blog.centos.org/feed/                                                  "
 https://krebsonsecurity.com/feed/                                              "~krebs-on-security"
 https://www.raspberrypi.org/magpi/feed/                                        "~magpi"
 https://nodejs.org/en/feed/vulnerability.xml                                   "~nodejs-security"
-https://www.nextinpact.com/rss/news.xml
+https://www.linuxtricks.fr/syndication/rss/news/0                              "~linuxtrick-blog"
+https://www.nextinpact.com/rss/news.xml                                        "~nextinpact"
 ----------------------------DIVERS
 https://www.brothers-brick.com/feed/                                           "~brothers-brick"
 https://www.commitstrip.com/fr/feed/                                           "~commitstrip"
