@@ -3,24 +3,41 @@ general {
         interval = 5
 }
 
-order += "wireless wlp0s29u1u5"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "disk /"
+order += "load"
+order += "memory"
 order += "tztime date"
 order += "tztime hour"
 
-wireless wlp0s29u1u5 {
-        format_up = "  wifi %quality  "
-        format_down = "  wifi down  "
+wireless _first_ {
+        format_up = " W: (%quality at %essid) %ip "
+        format_down = " W: down "
 }
 
-battery 0 {
-        format = "  %status %percentage  "
-        format_down = "No battery"
-        status_chr = "CHR"
-        status_bat = "BAT"
-        status_unk = "UNK"
-        status_full = "FULL"
-        path = "/sys/class/power_supply/BAT%d/uevent"
-        low_threshold = 10
+ethernet _first_ {
+        format_up = " E: %ip (%speed) "
+        format_down = " E: down "
+}
+
+battery all {
+        format = " %status %percentage %remaining "
+}
+
+disk "/" {
+        format = " %avail "
+}
+
+load {
+        format = " %1min "
+}
+
+memory {
+        format = " %used / %available "
+        threshold_degraded = "1G"
+        format_degraded = " MEMORY < %available "
 }
 
 tztime date {
@@ -30,3 +47,4 @@ tztime date {
 tztime hour {
         format = "  %H:%M  "
 }
+
