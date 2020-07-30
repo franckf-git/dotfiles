@@ -27,8 +27,8 @@ alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
 alias www="w3m https://franckf.gitlab.io/startpage/"
 
-alias upg="sudo dnf upgrade-minimal --refresh && flatpak update -y"
-alias upgf="sudo dnf upgrade --refresh && flatpak update -y"
+alias upgm="sudo dnf upgrade-minimal --refresh && flatpak update -y"
+alias upg="sudo dnf upgrade --refresh && flatpak update -y"
 
 # clean rename
 renameclean () {
