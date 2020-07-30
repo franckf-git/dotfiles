@@ -18,6 +18,10 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute        exec pactl set-sink-mute 0 toggle
 
+# brightness controls
+bindsym XF86MonBrightnessUp   exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+
 # screenshot
 bindsym Print                exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Téléchargements'
 
@@ -44,9 +48,6 @@ bindsym $win+Delete          kill
 
 # change focus
 bindsym $win+Tab             focus next
-
-# switch to workspace with urgent window automatically
-for_window [urgent=latest]   focus
 
 # default layout
 workspace_layout             default
@@ -144,11 +145,10 @@ bindsym $win+Shift+r restart
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # in startup
-#exec xfce4-power-manager
-#exec xinput set-prop "ETPS/2 Elantech Touchpad" 309 1
-exec i3-msg 'workspace firefox  ; exec firefox                    ; workspace $ws1'
-exec i3-msg 'workspace ranger   ; exec gnome-terminal -- ranger   ; workspace $ws1'
-exec i3-msg 'workspace newsboat ; exec gnome-terminal -- newsboat ; workspace $ws1'
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 0
+exec sleep 5s && i3-msg 'workspace "chromium" ; exec chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ '
+exec i3-msg 'workspace "ranger"   ; exec gnome-terminal -- ranger '
+exec i3-msg 'workspace "newsboat" ; exec gnome-terminal -- newsboat '
 
 ######################################################
 # Decorations
