@@ -30,6 +30,8 @@ alias www="w3m https://franckf.gitlab.io/startpage/"
 alias upgm="sudo dnf upgrade-minimal --refresh && flatpak update -y"
 alias upg="sudo dnf upgrade --refresh && flatpak update -y"
 
+alias hdmiclone="xrandr --output HDMI-1 --same-as eDP-1 --mode 1920x1080"
+
 # clean rename
 renameclean () {
 for i in $(ls)
