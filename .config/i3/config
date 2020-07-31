@@ -145,7 +145,7 @@ bindsym $win+Shift+r restart
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # in startup
-exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 0
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec sleep 5s && i3-msg 'workspace "chromium" ; exec chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ '
 exec i3-msg 'workspace "ranger"   ; exec gnome-terminal -- ranger '
 exec i3-msg 'workspace "newsboat" ; exec gnome-terminal -- newsboat '
