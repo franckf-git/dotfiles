@@ -187,7 +187,7 @@ client.placeholder      $background  $background  $text       $background  $back
 client.background       $text
 
 # small border - hidden if alone
-for_window [class=".*"] border pixel 4
+for_window [class=".*"] border pixel 2
 hide_edge_borders smart
 
 ######################################################
