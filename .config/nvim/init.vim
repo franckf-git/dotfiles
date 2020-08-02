@@ -55,8 +55,8 @@ set number
 set relativenumber
 
 " Colorscheme
-"colors spacevim
 colors gruvbox
+"colors spacevim
 "colors solarized
 "colors monokai
 "colors morning
@@ -68,18 +68,18 @@ set laststatus=2
 set statusline=                                                "clear the statusline
 set statusline+=%<\                                            "cut at start
 set statusline+=\ %m                                           "modified flag
-set statusline+=\ 📂\ %F                                       "full path name
+set statusline+=\ @>%F                                         "full path name
 set statusline+=\ %h                                           "help file flag
 set statusline+=\ %r                                           "read only flag
 set statusline+=\ %w                                           "windows flag
 set statusline+=%=                                             "right separator
 set statusline+=\ %p%%                                         "percentage of document
-set statusline+=\ Ln\ %l/%L                                    "cursor line/total lines
-set statusline+=\ Col\ %c                                      "cursor column
-set statusline+=\ 📝\ %{&fileencoding?&fileencoding:&encoding} "fileencoding
+set statusline+=\ LIN>%l/%L                                    "cursor line/total lines
+set statusline+=\ COL>%c                                       "cursor column
+set statusline+=\ ENC>%{&fileencoding?&fileencoding:&encoding} "fileencoding
 set statusline+=\[%{&fileformat}\]
-set statusline+=\ 📄\ %y                                       "filetype
-set statusline+=\ 🕑\ %{strftime(\"%H:%M\")}                   "time
+set statusline+=\ TYP>%y                                       "filetype
+set statusline+=\ %{strftime(\"%H:%M\")}                       "time
 set statusline+=\                                              "end space
 
 " Always show current position
