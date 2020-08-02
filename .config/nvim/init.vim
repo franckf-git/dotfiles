@@ -81,15 +81,8 @@ set cursorline
 " EXPLORER
 """""""""""""""""""""""""""
 
-" No banner
-let g:netrw_banner = 0
-
-" Better view in netrw explorer
+" Tree view in netrw explorer
 let g:netrw_liststyle = 3
-
-" For netrw explorer open in horizontal split
-"let g:netrw_browse_split = 2
-"let g:netrw_altv = 1
 
 " Width of the directory explorer
 let g:netrw_winsize = 20
