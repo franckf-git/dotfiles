@@ -171,8 +171,8 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 """""""""""""""""""""""""""
 
 " Close all files
-nnoremap <C-q> :xall<CR>
-inoremap <C-q> <Esc>:xall<CR>
+nnoremap <C-d> :xall<CR>
+inoremap <C-d> <Esc>:xall<CR>
 
 " Web preview
 map <Leader>w :! w3m %<CR>
