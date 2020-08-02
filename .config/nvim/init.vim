@@ -2,20 +2,6 @@
 " GENERALS
 """""""""""""""""""""""""""
 
-" Shortcuts Index
-" Control + b    open explorer
-" Control + o    open new file
-" Control + s    save file
-" Control + c    copy to system clipboard
-" Control + v    paste from system clipboard
-" Control + f    search
-" Control + h    search and replace
-" Control + t    new tab
-" Control + n    next tab
-" Control + p    previous tab
-" Control + q    close all files
-" , + w          preview in w3m
-
 " Sets how many lines of history
 set history=500
 
@@ -39,9 +25,6 @@ let mapleader = ","
 " Transform ; to : for mistakes and SPACE to : for your health
 map ; :
 map <SPACE> :
-
-" Open terminal
-nnoremap <C-e> :edit term://zsh<CR>
 
 " Escape terminal
 tnoremap <Esc> <C-\><C-n>
@@ -98,11 +81,6 @@ set cursorline
 " EXPLORER
 """""""""""""""""""""""""""
 
-"o - Open file/directory in new horizontal split
-"v - Open file/directory in new vertical split
-"t - Open file/directory in new tab
-"p - Preview file without (moving the cursor from netrw)
-
 " No banner
 let g:netrw_banner = 0
 
@@ -122,21 +100,9 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
-" Open explorer
-nnoremap <C-b> :Lexplore <CR>
-inoremap <C-b> <Esc>:Lexplore <CR>
-
 """""""""""""""""""""""""""
 " SPLITS
 """""""""""""""""""""""""""
-
-"Move between splits                              ctrl+w ← ↑ → ↓
-"Max out the width of the current split           ctrl+w |
-"Max out the height of the current split          ctrl+w _
-"Normalize all split sizes                        ctrl+w =
-"Swap top/bottom or left/right split              ctrl+w R
-"Close every window but the current one           ctrl+w o
-"Swap windows                                     ctrl+w H
 
 set splitbelow
 set splitright
@@ -144,14 +110,6 @@ set splitright
 """""""""""""""""""""""""""
 " TABS
 """""""""""""""""""""""""""
-
-" Display tabs
-nnoremap <C-n> :tabnext<CR>
-nnoremap <C-p> :tabprevious<CR>
-
-" Newtab
-nnoremap <C-t> :tabnew<CR>
-inoremap <C-t> <Esc>:tabnew<CR>
 
 " Always display the tabline
 set showtabline=2
@@ -188,12 +146,6 @@ set incsearch
 " Ignore case when searching
 set ignorecase
 
-" Search
-nnoremap <C-f> :g//<Left>
-
-" Search and replace
-nnoremap <C-h> :%s///g<Left><Left><Left>
-
 """""""""""""""""""""""""""
 " CODING HELPS
 """""""""""""""""""""""""""
@@ -218,25 +170,10 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 " KEYS MAPPING
 """""""""""""""""""""""""""
 
-" Open new file
-nnoremap <C-o> :tabedit . <CR>
-inoremap <C-o> <Esc>:tabedit . <CR>
-
-" Save file
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>
-
-" Copy to system clipboard
-vnoremap <C-c> "+y
-map <Leader>y "*y
-
-" Paste from system clipboard
-inoremap <C-v> <Esc>"+p
-map <Leader>p "*p
-
 " Close all files
 nnoremap <C-q> :xall<CR>
 inoremap <C-q> <Esc>:xall<CR>
 
 " Web preview
 map <Leader>w :! w3m %<CR>
+
