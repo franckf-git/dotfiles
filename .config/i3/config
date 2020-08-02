@@ -131,6 +131,21 @@ bindsym $win+Shift+Right      move container to workspace next ; workspace next
 workspace_auto_back_and_forth yes
 
 ######################################################
+# Multi-monitors
+######################################################
+
+exec xrandr --output HDMI1 --auto --right-of eDP-1
+
+# Moving workspaces between screens 
+bindsym $win+Prior move workspace to output right
+bindsym $win+Next  move workspace to output left
+
+# Assign workspaces to screen
+workspace 7 output HDMI-1
+workspace 8 output HDMI-1
+workspace 9 output HDMI-1
+
+######################################################
 # Programs
 ######################################################
 
