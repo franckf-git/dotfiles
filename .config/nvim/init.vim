@@ -167,6 +167,9 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 nnoremap <C-d> :xall<CR>
 inoremap <C-d> <Esc>:xall<CR>
 
+" Copy visual selection
+vnoremap <C-c> "+y
+
 " Web preview
 map <Leader>w :! w3m %<CR>
 
