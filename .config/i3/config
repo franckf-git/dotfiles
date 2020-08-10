@@ -26,7 +26,7 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym Print                exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/$USER/Téléchargements'
 
 # start a terminal
-bindsym $win+Return          exec gnome-terminal -- zsh
+bindsym $win+Return          exec gnome-terminal
 
 # power
 bindsym $win+Ctrl+Delete     exec poweroff
@@ -161,9 +161,9 @@ bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i
 
 # in startup
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
-exec sleep 5s && i3-msg 'workspace "chromium" ; exec chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ '
-exec i3-msg 'workspace "ranger"   ; exec gnome-terminal -- ranger '
-exec i3-msg 'workspace "newsboat" ; exec gnome-terminal -- newsboat '
+exec sleep 1s && i3-msg 'workspace "chromium" ; exec chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ '
+exec i3-msg 'workspace "ranger"   ; exec urxvt -e ranger '
+exec i3-msg 'workspace "newsboat" ; exec urxvt -e newsboat '
 
 ######################################################
 # Decorations
@@ -198,7 +198,7 @@ hide_edge_borders smart
 bindsym $win+b               bar mode toggle
 
 bar {
-        font pango:JetBrains Mono 8
+        font pango:JetBrains Mono 12
         status_command       i3status
         position             top
         modifier             none
