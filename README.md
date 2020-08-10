@@ -6,9 +6,9 @@
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=fr)
 - [uMatrix](https://chrome.google.com/webstore/detail/umatrix/ogfcmafjalglgifnmanfmnieipoejdcf?hl=fr)
 - [Dark Theme](https://chrome.google.com/webstore/detail/material-simple-dark-grey/ookepigabmicjpgfnmncjiplegcacdbm)
-- [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en-US)### [Firefox](https://www.mozilla.org/fr/firefox/all/)
+- [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en-US)
 
-### Firefox
+### [Firefox](https://www.mozilla.org/fr/firefox/all/)
 
 - [Dark Reader](https://addons.mozilla.org/fr/firefox/addon/darkreader/)
 - [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin)
