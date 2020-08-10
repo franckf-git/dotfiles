@@ -17,6 +17,16 @@
 
 ## [VScodium ](https://github.com/VSCodium/vscodium) Extensions
 
+VSCodium use the OpenVSX marketplace - it is fine but still miss some extensions. [see](https://github.com/VSCodium/vscodium/blob/master/DOCS.md#extensions-marketplace)
+To get back to the MS Marketplace edit `/usr/share/codium/resources/app/product.json` and edit gallery :
+
+```json
+"extensionsGallery": {
+    "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+    "itemUrl": "https://marketplace.visualstudio.com/items"
+}
+```
+
 ```bash
 codium --install-extension chenxsan.vscode-standardjs
 codium --install-extension coenraads.bracket-pair-colorizer-2
