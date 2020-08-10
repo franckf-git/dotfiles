@@ -29,6 +29,9 @@ map <SPACE> :
 " Escape terminal
 tnoremap <Esc> <C-\><C-n>
 
+" No swap file
+set noswapfile
+
 """""""""""""""""""""""""""
 " INTERFACE
 """""""""""""""""""""""""""
@@ -99,13 +102,6 @@ set wildmenu
 
 set splitbelow
 set splitright
-
-"""""""""""""""""""""""""""
-" TABS
-"""""""""""""""""""""""""""
-
-" Always display the tabline
-set showtabline=2
 
 """""""""""""""""""""""""""
 " INDENTATION
