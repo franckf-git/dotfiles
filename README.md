@@ -15,7 +15,7 @@
 - [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
 - [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/?src=search)
 
-## VScodium Extensions
+## [VScodium ](https://github.com/VSCodium/vscodium) Extensions
 
 ```bash
 codium --install-extension chenxsan.vscode-standardjs
