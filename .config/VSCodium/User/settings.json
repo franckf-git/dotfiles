@@ -31,5 +31,6 @@
     "liveServer.settings.donotVerifyTags": true,
     "editor.fontFamily": "Fira Code",
     "terminal.integrated.fontFamily": "Fira Code",
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.fontLigatures": true
 }
