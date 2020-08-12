@@ -11,7 +11,7 @@
 set $win Mod4
 
 # font for window titles
-font pango:JetBrains Mono 8
+font pango:Fira Code 8
 
 # volume controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
@@ -198,7 +198,7 @@ hide_edge_borders smart
 bindsym $win+b               bar mode toggle
 
 bar {
-        font pango:JetBrains Mono 12
+        font pango:Fira Code 12
         status_command       i3status
         position             top
         modifier             none

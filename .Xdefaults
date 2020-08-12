@@ -3,7 +3,7 @@
 *scrollBar:         false
 *internalBorder:    10
 *cursorBlink:       true
-*.font:             xft:JetBrains Mono:size=16
+*.font:             xft:Fira Code:size=16
 
 ! Police settings for X11
 Xft*antialias: true

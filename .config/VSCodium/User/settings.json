@@ -29,7 +29,7 @@
     "editor.formatOnSave": true,
     "workbench.startupEditor": "newUntitledFile",
     "liveServer.settings.donotVerifyTags": true,
-    "terminal.integrated.automationShell.linux": "/usr/bin/zsh",
-    "editor.fontFamily": "JetBrains Mono",
-    "terminal.integrated.fontFamily": "JetBrains Mono"
+    "editor.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "Fira Code",
+    "vsicons.dontShowNewVersionMessage": true
 }
