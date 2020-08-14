@@ -24,9 +24,13 @@ let mapleader = ","
 
 " Transform ; to : for mistakes and SPACE to : for your health
 map ; :
-map <SPACE> :
+"map <SPACE> :
 
-" Escape terminal
+" Easier change mode (or ^c)
+imap jj <Esc>
+nmap <Space> i
+
+" Escape terminal (or ^z - fg)
 tnoremap <Esc> <C-\><C-n>
 
 " No swap file
@@ -41,13 +45,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors gruvbox
-"colors spacevim
-"colors solarized
-"colors monokai
-"colors morning
-"colors blue
-"colors koehler
+colors materialbox
 
 " Always show status bar
 set laststatus=2
