@@ -31,7 +31,6 @@ To get back to the MS Marketplace edit `/usr/share/codium/resources/app/product.
 codium --install-extension chenxsan.vscode-standardjs
 codium --install-extension coenraads.bracket-pair-colorizer-2
 codium --install-extension digitalbrainstem.javascript-ejs-support
-codium --install-extension formulahendry.auto-rename-tag
 codium --install-extension visualstudioexptteam.vscodeintellicode
 codium --install-extension vscode-icons-team.vscode-icons
 codium --install-extension xabikos.javascriptsnippets

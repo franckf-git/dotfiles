@@ -30,7 +30,9 @@
     "workbench.startupEditor": "newUntitledFile",
     "liveServer.settings.donotVerifyTags": true,
     "editor.fontFamily": "Fira Code",
-    "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "JetBrains Mono",
     "vsicons.dontShowNewVersionMessage": true,
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 1,
+    "editor.renameOnType": true
 }
