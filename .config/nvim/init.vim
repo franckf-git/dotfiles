@@ -45,7 +45,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors materialbox
+colors dracula
 
 " Always show status bar
 set laststatus=2
@@ -166,4 +166,10 @@ vnoremap <C-c> "+y
 
 " Web preview
 map <Leader>w :! w3m %<CR>
+
+"""""""""""""""""""""""""""
+" SNIPPETS
+"""""""""""""""""""""""""""
+
+runtime snippets.vim
 
