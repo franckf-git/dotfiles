@@ -138,8 +138,10 @@ set ignorecase
 """""""""""""""""""""""""""
 
 " Show invisible characters with :set list
-set nolist
-set listchars+=space:␣
+set list
+set listchars+=space:՟
+set listchars+=trail:՞
+set listchars+=tab:⁗⁗
 
 " Highlight match parentheses
 set showmatch
@@ -148,7 +150,7 @@ set matchtime=3
 " Close the open parentheses
 inoremap ( ()<Esc>:let leavechar=")"<CR>i
 inoremap [ []<Esc>:let leavechar="]"<CR>i
-inoremap { {<CR><BS>}<Esc>ko
+inoremap { {}<Esc>:let leavechar="}"<CR>i
 inoremap < <><Esc>:let leavechar=">"<CR>i
 inoremap " ""<Esc>:let leavechar='"'<CR>i
 inoremap ' ''<Esc>:let leavechar="'"<CR>i
