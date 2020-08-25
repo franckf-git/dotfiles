@@ -165,6 +165,7 @@ exec sleep 1s && i3-msg 'workspace "chromium" ; exec chromium-browser --password
 exec i3-msg 'workspace "ranger"   ; exec urxvt -e ranger '
 exec i3-msg 'workspace "newsboat" ; exec urxvt -e newsboat '
 exec unclutter -idle 5
+exec light -U 100
 
 ######################################################
 # Decorations
