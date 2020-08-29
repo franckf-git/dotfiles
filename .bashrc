@@ -15,7 +15,7 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-export PS1="\n[\u@\H \[$(tput sgr0)\]\[\033[38;5;12m\]\w\[$(tput sgr0)\]] \A \n\\$ \[$(tput sgr0)\]"
+export PS1="\n\t \u@\H \w \n\\$ "
 
 # User specific aliases and functions
 alias backup="rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/BACKUP/"
