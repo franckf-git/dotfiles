@@ -19,19 +19,16 @@ set scrolloff=15
 " Dialogue asking if you wish to save
 set confirm
 
-" Map the leader key
-let mapleader = ","
-
 " Transform ; to : for mistakes and SPACE to : for your health
 map ; :
-"map <SPACE> :
+map <Space> :
 
 " Easier change mode (or ^c)
 imap jj <Esc>
-nmap <Space> i
+nmap <Space><Space> i
 
 " Escape terminal (or ^z - fg)
-tnoremap <Esc> <C-\><C-n>
+tmap <Esc> <C-\><C-n>
 
 " No swap file
 set noswapfile
@@ -138,7 +135,7 @@ set ignorecase
 """""""""""""""""""""""""""
 
 " Show invisible characters with :set list
-set list
+set nolist
 set listchars+=space:՟
 set listchars+=trail:՞
 set listchars+=tab:⁗⁗
@@ -154,20 +151,18 @@ inoremap { {}<Esc>:let leavechar="}"<CR>i
 inoremap < <><Esc>:let leavechar=">"<CR>i
 inoremap " ""<Esc>:let leavechar='"'<CR>i
 inoremap ' ''<Esc>:let leavechar="'"<CR>i
+inoremap ` ``<Esc>:let leavechar="`"<CR>i
 
 """""""""""""""""""""""""""
 " KEYS MAPPING
 """""""""""""""""""""""""""
 
 " Close all files
-nnoremap <C-d> :xall<CR>
-inoremap <C-d> <Esc>:xall<CR>
+nmap <C-d> :xall<CR>
+imap <C-d> <Esc>:xall<CR>
 
 " Copy visual selection
-vnoremap <C-c> "+y
-
-" Web preview
-map <Leader>w :! w3m %<CR>
+vmap <C-c> "+y
 
 """""""""""""""""""""""""""
 " SNIPPETS
