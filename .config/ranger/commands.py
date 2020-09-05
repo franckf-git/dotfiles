@@ -15,6 +15,27 @@ import os
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
 
+class mvdir(Command):
+    """:mvdir <dirname>
+
+    Creates a directory with the name <dirname> and move all mark files in it.
+    """
+
+    def execute(self):
+        from os.path import join, expanduser, lexists
+        from os import makedirs
+
+        dirname = join(self.fm.thisdir.path, expanduser(self.rest(1)))
+        if not lexists(dirname):
+            makedirs(dirname)
+            filenames = [f.relative_path for f in self.fm.thistab.get_selection()]
+            for file in filenames:
+                self.fm.execute_command(["mv", file, dirname])
+        else:
+            self.fm.notify("file/directory exists!", bad=True)
+
+    def tab(self, tabnum):
+        return self._tab_directory_content()
 
 # Any class that is a subclass of "Command" will be integrated into ranger as a
 # command.  Try typing ":my_edit<ENTER>" in ranger!
