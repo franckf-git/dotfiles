@@ -3,6 +3,7 @@
     email = efydd.artio@tuta.io
 [core]
     editor = "nvim"
+    tool = "nvim -d"
 [color]
     ui = auto
 [format]
