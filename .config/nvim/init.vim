@@ -33,6 +33,10 @@ tmap <Esc> <C-\><C-n>
 " No swap file
 set noswapfile
 
+" Folds
+set nofoldenable
+set foldmethod=indent
+
 """""""""""""""""""""""""""
 " INTERFACE
 """""""""""""""""""""""""""
