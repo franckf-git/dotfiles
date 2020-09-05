@@ -15,7 +15,7 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-export PS1="\n\t \u@\H \w \n\\$ "
+export PS1="\n \A \w\n "
 
 # User specific aliases and functions
 alias backup="rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/BACKUP/"
@@ -24,6 +24,8 @@ alias vimdiff='nvim -d'
 alias neovim='nvim -p'
 alias vim='nvim -p'
 alias vi='nvim -p'
+
+alias :q='exit'
 
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
