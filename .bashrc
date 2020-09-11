@@ -27,6 +27,8 @@ alias vi='nvim -p'
 
 alias :q='exit'
 
+alias ydl='youtube-dl --write-auto-sub --add-metadata -ic'
+
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
 alias www="w3m https://franckf.gitlab.io/startpage/"
