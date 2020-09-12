@@ -17,8 +17,8 @@ URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 ! resize-font
-URxvt.keysym.C-k:   font-size:increase
-URxvt.keysym.C-j:   font-size:decrease
+URxvt.keysym.C-equal:      resize-font:bigger
+URxvt.keysym.C-parenright: resize-font:smaller
 
 ! Colorscheme https://terminal.sexy
 
@@ -26,7 +26,7 @@ URxvt.keysym.C-j:   font-size:decrease
 ! special
 *.foreground:   #e9e9e9
 *.background:   #222222
-*.cursorColor:  #babdb6
+*.cursorColor:  #d20606
 
 ! black
 *.color0:       #2e3436
