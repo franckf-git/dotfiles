@@ -1,0 +1,17 @@
+rofi.fullscreen: true
+rofi.color-enabled: true
+rofi.color-window: #222,#222,#e9e9e9
+rofi.color-normal: #222,#e9e9e9,#222,#d20606,#e9e9e9
+rofi.color-active: #222,#e9e9e9,#222,#222,#e9e9e9
+rofi.color-urgent: #222,#e9e9e9,#222,#222,#e9e9e9
+
+rofi.font: Fira Code 14
+rofi.eh: 1
+rofi.line-margin: 20
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines: 3
+rofi.width: 100
+rofi.padding: 200
+rofi.bw: 0
+rofi.show-icons: true
