@@ -37,6 +37,11 @@ codium --install-extension xabikos.javascriptsnippets
 codium --install-extension ecmel.vscode-html-css
 codium --install-extension ritwickdey.liveserver
 codium --install-extension aaron-bond.better-comments
+# potentials
+codium --install-extension jakob101.relativepath
+codium --install-extension streetsidesoftware.code-spell-checker
+codium --install-extension wallabyjs.quokka-vscode
+codium --install-extension ms-vscode.vscode-typescript-tslint-plugin
 
 # as root
 echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
