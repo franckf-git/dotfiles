@@ -34,5 +34,6 @@
     "vsicons.dontShowNewVersionMessage": true,
     "editor.fontLigatures": true,
     "window.zoomLevel": 1,
-    "editor.renameOnType": true
+    "editor.renameOnType": true,
+    "editor.lineNumbers": "off"
 }
