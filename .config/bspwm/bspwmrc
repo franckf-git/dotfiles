@@ -1,18 +1,31 @@
 #!/usr/bin/sh
 
+# autostart
 sxhkd &
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &
+urxvt -e ranger &
+urxvt -e newsboat &
+chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ &
+unclutter -idle 5 &
+light -U 90 &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+# multi-monitor
+bspc monitor eDP      -d 1 2 3 4 5 6 7 ranger newsboat chromium
+bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 ranger newsboat chromium
 
+# borders style
 bspc config border_width         2
-bspc config window_gap          12
-
-bspc config split_ratio          0.52
+bspc config window_gap           0
+bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# mouse and windows
+bspc config pointer_modifier     mod4
+bspc config pointer_action1      move
+bspc config pointer_action2      resize_side
+
+# assign program to desktop
+bspc rule -a ranger              desktop='^8'
+bspc rule -a newsboat            desktop='^9'
+bspc rule -a Chromium-browser    desktop='^10'
