@@ -29,7 +29,7 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     light -U 5
 
-super + ctrl + delete
+super + ctrl + Delete
     poweroff
 super + ctrl + r
     reboot

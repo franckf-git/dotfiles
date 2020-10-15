@@ -10,8 +10,8 @@ unclutter -idle 5 &
 light -U 90 &
 
 # multi-monitor
-bspc monitor eDP      -d 1 2 3 4 5 6 7 ranger newsboat chromium
-bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 ranger newsboat chromium
+bspc monitor eDP      -d ranger newsboat chromium 4 5 6 7
+bspc monitor HDMI-A-0 -d 8 9 10
 
 # borders style
 bspc config border_width         2
@@ -26,6 +26,6 @@ bspc config pointer_action1      move
 bspc config pointer_action2      resize_side
 
 # assign program to desktop
-bspc rule -a ranger              desktop='^8'
-bspc rule -a newsboat            desktop='^9'
-bspc rule -a Chromium-browser    desktop='^10'
+bspc rule -a ranger              desktop='^1'
+bspc rule -a Urxvt               desktop='^2'
+bspc rule -a Chromium-browser    desktop='^3'
