@@ -44,7 +44,7 @@ super + shift + {e,r}
 
 # close and kill
 super + Delete
-	bspc node -k
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + f
@@ -63,8 +63,14 @@ super + Tab
 	bspc node -f next.local
 
 # focus between desktop
-super + {_,shift + }{Left,Right}
-	bspc {desktop -f,node -d} {prev,next}
+super + {Left,Right}
+	bspc desktop -f {prev,next}
+
+super + shift + Left
+	bspc node -d prev && bspc desktop -f prev
+
+super + shift + Right
+	bspc node -d next && bspc desktop -f next
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
