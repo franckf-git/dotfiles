@@ -18,9 +18,9 @@ macro w set browser "w3m"; open-in-browser ; set browser "chromium-browser --pas
 macro v set browser "i3 exec mpv"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
 
 # download video [, + t]
-macro t set browser "gnome-terminal -- youtube-dl --write-auto-sub --add-metadata -ic"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
+macro t set browser "gnome-terminal -- youtube-dl --write-auto-sub --add-metadata -ic -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
 
 #                         fg       bg      attribute
-color listfocus           default  red     bold
-color listfocus_unread    default  red     bold
+color listfocus           default  black   bold
+color listfocus_unread    default  black   bold
 color info                white    black   bold

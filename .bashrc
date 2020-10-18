@@ -27,7 +27,7 @@ alias vi='nvim -p'
 
 alias :q='exit'
 
-alias ydl='youtube-dl --write-auto-sub --add-metadata -ic'
+alias ydl='youtube-dl --write-auto-sub --add-metadata -ic -f "bestvideo[height<=720]+bestaudio/best[height<=720]"'
 
 alias ll="ls -lash"
 alias ddg="web_search duckduckgo"
