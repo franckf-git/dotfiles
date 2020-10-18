@@ -185,16 +185,16 @@ runtime snippets.vim
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-actions'
+Plug 'iamcco/coc-actions'
 Plug 'neoclide/coc-git'
 Plug 'neoclide/coc-snippets'
-Plug 'neoclide/coc-spell-checker'
+Plug 'iamcco/coc-spell-checker'
 Plug 'neoclide/coc-html'
 Plug 'neoclide/coc-css'
 Plug 'neoclide/coc-emmet'
 Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-json'
-Plug 'neoclide/coc-ts-server'
+Plug 'neoclide/coc-tsserver'
 Plug 'pangloss/vim-javascript'
 
 " Initialize plugin system
