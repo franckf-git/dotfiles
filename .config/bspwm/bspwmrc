@@ -2,6 +2,7 @@
 
 # autostart
 sxhkd &
+feh --bg-center ~/Images/1598861883876.png &
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &
 urxvt -e ranger &
 urxvt -e newsboat &
