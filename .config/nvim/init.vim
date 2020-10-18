@@ -46,7 +46,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors dracula
+colors gruvbox
 
 " Always show status bar
 set laststatus=2
@@ -173,4 +173,33 @@ vmap <C-c> "+y
 """""""""""""""""""""""""""
 
 runtime snippets.vim
+
+"""""""""""""""""""""""""""
+" PLUGINS
+"""""""""""""""""""""""""""
+
+" Install vimplug
+" sh -c 'curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+" Specify a directory for plugins
+call plug#begin('~/.config/nvim/autoload/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-actions'
+Plug 'neoclide/coc-git'
+Plug 'neoclide/coc-snippets'
+Plug 'neoclide/coc-spell-checker'
+Plug 'neoclide/coc-html'
+Plug 'neoclide/coc-css'
+Plug 'neoclide/coc-emmet'
+Plug 'neoclide/coc-eslint'
+Plug 'neoclide/coc-json'
+Plug 'neoclide/coc-ts-server'
+Plug 'pangloss/vim-javascript'
+
+" Initialize plugin system
+call plug#end()
+
+" Install Plugins
+" nvim -c 'PlugInstall | q'
 
