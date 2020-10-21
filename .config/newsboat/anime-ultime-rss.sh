@@ -1,10 +1,10 @@
 #! /bin/sh
 # check new entry at anime-ultime.net and convert to rss
 # in ~/.config/newsboat/urls add :
-# filter:~/.config/newsboat/anime-ultime-rss.sh:http://anime-ultime.net
-
-url="http://www.anime-ultime.net/index-0-1"
-entries=$(curl $url | grep left | cut -d'"' -f6)
+# exec:~/.config/newsboat/anime-ultime-rss.sh
+baseurl="http://www.anime-ultime.net"
+url="$baseurl/index-0-1"
+entries=$(curl $url | grep left | cut -d'"' -f6 | sed '$ d')
 # -f11 for title
 
 cat <<EOF
@@ -18,13 +18,13 @@ cat <<EOF
 
 EOF
 {
-    for i in "${entries[@]}"; do
+for news in $entries ; do
         echo "    <item>"
-        echo "      <title>$i</title>"
-        echo "      <link>$url/$i</link>"
+        echo "      <title>$news</title>"
+        echo "      <link>$baseurl/$news</link>"
         echo "    </item>"
     done
-    echo '  </channel>'
-    echo '</rss>'
+    echo "  </channel>"
+    echo "</rss>"
 }
 
