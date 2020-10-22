@@ -28,3 +28,6 @@ for news in $entries ; do
     echo "</rss>"
 }
 
+# TODO
+# add genre (anime, drama, ...)
+# add episode number
