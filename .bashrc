@@ -110,16 +110,17 @@ hotfix () {
     esac
 }
 
-
+DAYDATE=$(date +"%A %d %B")
 CONNECT=$(ip a | grep "state UP" | cut -d":" -f2)
 BATSTATE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state | cut -d " " -f20)
 BATPERCENTAGE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | cut -d " " -f15)
 BATTIME=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep time | cut -d " " -f14-15)
-DAYDATE=$(date +"%A %d %B")
+WEATHER=$(curl -s http://wttr.in/?format=%C+%t+%p+%w+%m)
 
 echo "\
+ date > $DAYDATE
  web >$CONNECT
  battery > $BATPERCENTAGE $BATSTATE $BATTIME
- date > $DAYDATE \
+ weather > $WEATHER \
 "
 
