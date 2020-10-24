@@ -5,6 +5,7 @@
 baseurl=""
 url="https://scantrad-union.com/"
 entries=$(curl $url | grep text-truncate)
+today=$(date +"%a %d %b %Y 01:00:00 +0000")
 
 IFS=$'\n'
 cat <<EOF
@@ -24,6 +25,7 @@ EOF
         echo "    <item>"
         echo "      <title>$title</title>"
         echo "      <link>$urlnews</link>"
+        echo "      <pubDate>$today</puDate>"
         echo "    </item>"
     done
     echo "  </channel>"
