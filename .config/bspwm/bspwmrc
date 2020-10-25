@@ -2,7 +2,7 @@
 
 # autostart
 sxhkd &
-feh --bg-center ~/Images/wallpaper.png &
+feh --bg-center ~/.config/themes/wallpaper.png &
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &
 urxvt -e ranger &
 sleep 5s && bspc desktop -f '^2' && urxvt -e newsboat &
