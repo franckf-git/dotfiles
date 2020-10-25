@@ -6,6 +6,8 @@
 url="https://scantrad-union.com/"
 today=$(date +"%a %d %b %Y 01:00:00 +0000")
 
+cd ~/.config/newsboat
+
 # get the actuals published scans
 curl $url | sed -n '/<a class="text-truncate"/,/span>/p' | grep -v mangadex > today.html
 
@@ -52,4 +54,6 @@ unset IFS
 
 rm yesterday.html
 mv today.html yesterday.html
+
+cd ~/
 
