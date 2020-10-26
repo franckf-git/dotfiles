@@ -39,7 +39,7 @@ alias upg="sudo dnf upgrade --refresh && flatpak update -y"
 alias usbup="udisksctl mount -b /dev/sda1"
 alias usbdown="udisksctl unmount -b /dev/sda1"
 
-alias hdmiclone="xrandr --output HDMI-1 --same-as eDP-1 --mode 1920x1080"
+alias hdmiclone="xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080"
 
 # clean rename
 renameclean () {
