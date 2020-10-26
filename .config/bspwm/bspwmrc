@@ -1,16 +1,27 @@
 #!/usr/bin/sh
 
 # autostart
+# keybinding
 sxhkd &
+# wallpaper
 feh --bg-center ~/.config/themes/wallpaper.png &
-xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &
-urxvt -e ranger &
-sleep 5s && bspc desktop -f '^2' && urxvt -e newsboat &
-chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ &
-unclutter -idle 5 &
+# low brightness
 light -U 90 &
-xsetroot -cursor_name left_ptr &
+# clone monitor
 xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080 &
+# touchpad
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &
+# hide cursor
+unclutter -idle 5 &
+# fix cursor
+xsetroot -cursor_name left_ptr &
+# programs
+# 1 file manager
+urxvt -e ranger &
+# 2 rss feed
+sleep 5s && bspc desktop -f '^2' && urxvt -e newsboat &
+# 3 web browser
+chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ &
 
 # multi-monitor
 bspc monitor eDP      -d 1 2 3 4 5 6 7 8 9 10
