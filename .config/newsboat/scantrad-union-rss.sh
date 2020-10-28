@@ -9,10 +9,10 @@ today=$(date +"%a %d %b %Y 01:00:00 +0000")
 cd ~/.config/newsboat
 
 # get the actuals published scans
-curl $url | sed -n '/<a class="text-truncate"/,/span>/p' | grep -v mangadex > today.html
+curl $url | sed -n '/<a class="text-truncate"/,/span>/p' | grep -v mangadex > today-scantrad.html
 
 # get tags of news scans
-newsscans=$(diff today.html yesterday.html | grep '^< ' | sed 's/< </\n/g')
+newsscans=$(diff today-scantrad.html yesterday-scantrad.html | grep '^< ' | sed 's/< </\n/g')
 
 # uniques news scans
 entries=$(echo "$newsscans" | grep "text-truncate")
@@ -52,8 +52,8 @@ echo "</rss>"
 
 unset IFS
 
-rm yesterday.html
-mv today.html yesterday.html
+rm yesterday-scantrad.html
+mv today-scantrad.html yesterday-scantrad.html
 
 cd ~/
 
