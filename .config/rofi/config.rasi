@@ -1,0 +1,11 @@
+configuration {
+    theme:              "~/.config/rofi/themes/gruvbox.rasi";
+    font:               "Fira Code 14";
+    width:              50;
+    eh:                 1;
+    bw:                 3;
+    lines:              10;
+    sidebar-mode:       false;
+    location:           0;
+    separator-style:    none;
+}
