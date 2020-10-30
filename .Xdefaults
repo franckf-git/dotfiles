@@ -23,8 +23,9 @@ URxvt.keysym.C-parenright: resize-font:smaller
 ! Colorscheme https://terminal.sexy
  
 ! special
-*.foreground:   #ebdbb2
+*.foreground:   #e9e9e9
 *.background:   #282828
+*.cursorColor:  #e9e9e9
 
 ! black
 *.color0:       #282828
