@@ -20,6 +20,7 @@ super + shift + r
 super + shift + e
     bspc quit
 
+# volume keys
 XF86AudioRaiseVolume
     pactl set-sink-volume alsa_output.pci-0000_07_00.6.analog-stereo +5%
 XF86AudioLowerVolume
@@ -27,11 +28,13 @@ XF86AudioLowerVolume
 XF86AudioMute
     pactl set-sink-mute alsa_output.pci-0000_07_00.6.analog-stereo toggle
 
+# brightness keys
 XF86MonBrightnessUp
     light -A 5
 XF86MonBrightnessDown
     light -U 5
 
+# system power
 super + ctrl + Delete
     poweroff
 super + ctrl + r
