@@ -102,6 +102,12 @@ set wildmenu
 set splitbelow
 set splitright
 
+" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+
 """""""""""""""""""""""""""
 " INDENTATION
 """""""""""""""""""""""""""
@@ -120,6 +126,10 @@ set smartindent
 
 " Allow backspacing in insert mode
 set backspace=indent,eol,start
+
+" Indent in Visual mode
+vmap < <gv
+vmap > >gv
 
 """""""""""""""""""""""""""
 " SEARCHING
@@ -157,6 +167,8 @@ inoremap " ""<Esc>:let leavechar='"'<CR>i
 inoremap ' ''<Esc>:let leavechar="'"<CR>i
 inoremap ` ``<Esc>:let leavechar="`"<CR>i
 
+command! FixWhitespace :%s/\s\+$//e
+
 """""""""""""""""""""""""""
 " KEYS MAPPING
 """""""""""""""""""""""""""
@@ -167,6 +179,31 @@ imap <C-d> <Esc>:xall<CR>
 
 " Copy visual selection
 vmap <C-c> "+y
+
+" Search will center on the line it's found in
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Case errors prof
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
+" Tabs
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 """""""""""""""""""""""""""
 " SNIPPETS
