@@ -233,6 +233,7 @@ Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-json'
 Plug 'neoclide/coc-tsserver'
 Plug 'pangloss/vim-javascript'
+Plug 'Yggdroot/indentLine'
 
 " Initialize plugin system
 call plug#end()
