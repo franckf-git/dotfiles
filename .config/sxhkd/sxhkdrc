@@ -13,9 +13,12 @@ super + {v,Down}
 super + q
     rofi -modi drun -show drun -sidebar-mode -show-icons -drun-icon-theme
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+# reload sxhkd and bspwm config
+super + shift + r
+    killall sxhkd && bspc wm -r
+# quit bspwm
+super + shift + e
+    bspc quit
 
 XF86AudioRaiseVolume
     pactl set-sink-volume alsa_output.pci-0000_07_00.6.analog-stereo +5%
@@ -37,10 +40,6 @@ super + ctrl + r
 #
 # bspwm hotkeys
 #
-
-# quit/restart bspwm
-super + shift + {e,r}
-	bspc {quit,wm -r}
 
 # close and kill
 super + Delete
