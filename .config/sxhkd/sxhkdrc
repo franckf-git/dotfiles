@@ -61,8 +61,8 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the next/previous node in the current desktop
-super + Tab
-	bspc node -f next.local
+super {_,shift +} Tab
+    bspc node -f {next.local,prev.local}
 
 # focus between desktop
 super + {Left,Right}
