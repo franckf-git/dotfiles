@@ -18,7 +18,7 @@ export PATH
 export PS1="\n \A \w\n "
 
 # User specific aliases and functions
-alias backup="udisksctl mount -b /dev/sda1 && gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/"} /home/$USER /run/media/$USER/BACKUP/ && sleep 10s && udisksctl unmount -b /dev/sda1"
+alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/",".config/Ankama"} /home/$USER /run/media/$USER/BACKUP/"
 
 alias vimdiff='nvim -d'
 alias neovim='nvim -p'
