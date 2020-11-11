@@ -7,7 +7,7 @@ super + Return
 	urxvt
 
 # program launcher
-super + {v,Down} 
+super + {space,Down} 
     rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme
 super + q
     rofi -modi drun   -show drun   -sidebar-mode -show-icons -drun-icon-theme
