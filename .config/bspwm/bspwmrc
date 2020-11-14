@@ -16,7 +16,7 @@ unclutter -idle 5 &
 # fix cursor
 xsetroot -cursor_name left_ptr &
 # weather
-sleep 5s && curl -s http://wttr.in/?format=%C+%t+%p+%w+%m > ~/.weather
+sleep 5s && curl -s http://wttr.in/poitiers?format=%C+%t+%p+%w+%m > ~/.weather
 # programs
 # 1 file manager
 urxvt -e ranger &
