@@ -33,7 +33,7 @@
     "terminal.integrated.fontFamily": "JetBrains Mono",
     "vsicons.dontShowNewVersionMessage": true,
     "editor.fontLigatures": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "editor.renameOnType": true,
-    "editor.lineNumbers": "off"
+    "editor.lineNumbers": "relative"
 }
