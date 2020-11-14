@@ -13,3 +13,5 @@
     difw = diff --color-words
     st = status
     ll = log --graph --decorate --oneline
+[diff]
+    tool = "nvim -d"
