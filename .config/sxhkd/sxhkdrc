@@ -6,6 +6,10 @@
 super + Return
 	urxvt
 
+# use fish_config and fish_update_completions at first launch
+super + shift + Return
+	urxvt -e fish
+
 # program launcher
 super + {space,Down} 
     rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme

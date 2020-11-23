@@ -125,6 +125,3 @@ echo "\
  weather > $WEATHER \
 "
 
-# use fish_config and fish_update_completions at first launch
-exec fish
-
