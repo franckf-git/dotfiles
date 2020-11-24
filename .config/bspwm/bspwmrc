@@ -23,7 +23,7 @@ urxvt -e ranger &
 # 2 rss feed
 sleep 5s && bspc desktop -f '^2' && urxvt -e newsboat &
 # 3 web browser
-chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ &
+sleep 3s && bspc desktop -f '^3' && chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ &
 
 # multi-monitor
 bspc monitor eDP      -d 1 2 3 4 5 6 7 8 9 10
@@ -40,5 +40,3 @@ bspc config pointer_modifier     mod4
 bspc config pointer_action1      move
 bspc config pointer_action2      resize_side
 
-# assign program to desktop
-bspc rule -a Chromium-browser    desktop='^3'
