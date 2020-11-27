@@ -1,27 +1,36 @@
-set fish_greeting ""
+
+set -l DAYDATE (date +" %A %d %B")
+set -l CONNECT (ip a | grep "state UP" | cut -d" " -f2 | sed 's/.$//g')
+set -l BATSTATE (upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state | cut -d " " -f20)
+set -l BATPERCENTAGE (upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | cut -d " " -f15)
+set -l BATTIME (upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep time | cut -d " " -f14-15)
+set -l WEATHER (cat ~/.weather)
+set -g returnline '
+'
+set fish_greeting $DAYDATE $returnline $CONNECT $returnline $BATPERCENTAGE $BATSTATE $BATTIME $returnline $WEATHER
 
 ### PROMPT ###
-# This was the 'sashimi' prompt from oh-my-fish.
 function fish_prompt
   set -l last_status $status
-  set -l cyan (set_color -o 98be65)
-  set -l yellow (set_color -o yellow)
-  set -g red (set_color -o 98be65)
-  set -g blue (set_color -o blue)
-  set -l green (set_color -o green)
-  set -g normal (set_color magenta)
+  set -l cyan   (set_color -o 689d6a)
+  set -l yellow (set_color -o d79921)
+  set -g red    (set_color -o cc241d)
+  set -g blue   (set_color -o 458588)
+  set -l green  (set_color -o 98971a)
+  set -g normal (set_color -o ebdbb2)
 
   set -l ahead (_git_ahead)
   set -g whitespace ' '
+  set -g returnline '
+  '
 
   if test $last_status = 0
-    set initial_indicator "$green◆"
-    set status_indicator "$normal❯$cyan❯$green❯"
+    set initial_indicator "$normal◆"
   else
-    set initial_indicator "$red✖ $last_status"
-    set status_indicator "$red❯$red❯$red❯"
+    set initial_indicator "$red✖"
   end
-  set -l cwd $cyan(basename (prompt_pwd))
+  set -l time (date "+%H:%M")
+  set -l cwd $cyan(prompt_pwd)
 
   if [ (_git_branch_name) ]
     if test (_git_branch_name) = 'master'
@@ -32,7 +41,7 @@ function fish_prompt
       set git_info "$normal git:($blue$git_branch$normal)"
     end
     if [ (_is_git_dirty) ]
-      set -l dirty "$yellow ✗"
+      set -l dirty "$red ✗"
       set git_info "$git_info$dirty"
     end
   end
@@ -41,7 +50,7 @@ function fish_prompt
     echo The last command took (math "$CMD_DURATION/1000") seconds.
   end
 
-  echo -n -s $initial_indicator $whitespace $cwd $git_info $whitespace $ahead $status_indicator $whitespace
+  echo -n -s $initial_indicator $whitespace $time $whitespace $cwd $git_info $whitespace $ahead $status_indicator $whitespace $returnline
 end
 
 function _git_ahead
@@ -70,27 +79,6 @@ end
 
 function _is_git_dirty
   echo (command git status -s --ignore-submodules=dirty ^/dev/null)
-end
-
-function fish_mode_prompt
-  switch $fish_bind_mode
-    case default
-      set_color --bold red
-      echo '(N) '
-    case insert
-      set_color --bold green
-      echo '(I) '
-    case replace_one
-      set_color --bold green
-      echo '(R) '
-    case visual
-      set_color --bold brmagenta
-      echo '(V) '
-    case '*'
-      set_color --bold red
-      echo '(?) '
-  end
-  set_color normal
 end
 ### END OF PROMPT ###
 
@@ -122,18 +110,4 @@ alias hdmiclone="xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080"
 alias fullgit="git add --all && git commit -v -a && git push -v"
 
 alias toprod="git checkout master && git merge --no-ff developpement && git push -v && git checkout developpement"
-
-#DAYDATE=$(date +"%A %d %B")
-#CONNECT=$(ip a | grep "state UP" | cut -d":" -f2)
-#BATSTATE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state | cut -d " " -f20)
-#BATPERCENTAGE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | cut -d " " -f15)
-#BATTIME=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep time | cut -d " " -f14-15)
-#WEATHER=$(cat ~/.weather)
-#
-#echo "\
-# date > $DAYDATE
-# web >$CONNECT
-# battery > $BATPERCENTAGE $BATSTATE $BATTIME
-# weather > $WEATHER \
-#"
 
