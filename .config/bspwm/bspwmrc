@@ -9,6 +9,7 @@ bash ~/.config/polybar/launch.sh
 feh --bg-center ~/.config/themes/wallpaper.png &
 # low brightness
 light -U 90 &
+sleep 5s && light -A 5 &
 # clone monitor
 xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080 &
 # touchpad
