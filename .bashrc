@@ -42,6 +42,8 @@ alias usbdown="udisksctl unmount -b /dev/sda1"
 
 alias hdmiclone="xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080"
 
+alias journal="nvim ~/Documents/$(date +%F-%a)"
+
 # clean rename
 renameclean () {
 for i in $(ls)
