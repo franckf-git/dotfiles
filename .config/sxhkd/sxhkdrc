@@ -15,7 +15,9 @@ super + {space,Down}
 super + q
     rofi -modi drun   -show drun   -sidebar-mode -show-icons -drun-icon-theme
 super + s
-    rifle "$(find . -type f ! -path './.cache/*' ! -path './.npm/*' ! -path '*/node_modules/*' | rofi -dmenu)"
+    rifle "$(find . -type f ! -path './.cache/*' ! -path './.npm/*' ! -path '*/node_modules/*' | rofi -i -dmenu)"
+super + o
+    gnome-terminal --tab -e "bash -c 'cd $(find . -type d | rofi -i -dmenu) ; exec fish -i'"
 
 # reload sxhkd and bspwm config
 super + shift + r
