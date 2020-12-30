@@ -4,9 +4,8 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	urxvt -e fish
 
-# use fish_config and fish_update_completions at first launch
 super + shift + Return
 	urxvt -e fish
 
@@ -15,6 +14,8 @@ super + {space,Down}
     rofi -modi window -show window -sidebar-mode -show-icons -drun-icon-theme
 super + q
     rofi -modi drun   -show drun   -sidebar-mode -show-icons -drun-icon-theme
+super + s
+    rifle "$(find . | rofi -dmenu)"
 
 # reload sxhkd and bspwm config
 super + shift + r
