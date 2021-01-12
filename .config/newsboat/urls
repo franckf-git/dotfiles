@@ -4,15 +4,6 @@ https://lel.koneko-scantrad.fr/feeds/rss/                                      "
 exec:~/.config/newsboat/anime-ultime-rss.sh                                    "~anime-ultime"
 exec:~/.config/newsboat/scantrad-union-rss.sh                                  "~scantrad-union"
 https://www.wakfu.com/fr/mmorpg/rss.xml                                        "~wakfu"
-----------------------------ISSUES
-https://gitlab.com/franckf/carnet-de-suivi/-/issues.atom?state=opened
-https://gitlab.com/franckf/dotfiles/-/issues.atom?state=opened
-https://gitlab.com/franckf/quick-scripts/-/issues.atom?state=opened
-https://gitlab.com/franckf/reference-javascript/-/issues.atom?state=opened
-https://gitlab.com/franckf/reference-css/-/issues.atom?state=opened
-https://gitlab.com/franckf/rtfm/-/issues.atom?state=opened
-https://gitlab.com/franckf/startpage/-/issues.atom?state=opened
-https://gitlab.com/franckf/working-on/-/issues.atom?state=opened
 ----------------------------TECH
 https://www.lemonde.fr/rss/une.xml                                             "~le-monde"
 https://motherboard.vice.com/en_us/rss                                         "~motherboard/us"
@@ -39,6 +30,7 @@ https://www.comptoirsecu.fr/feed/all.xml                                       "
 http://feeds.feedburner.com/Cpu-Programmes                                     "~cpu"
 http://frenchspin.fr/feed/                                                     "~frenchspin"
 https://feed.ausha.co/BxW2S9Mex0Vb                                             "~artisan-dev"
+https://changelog.com/jsparty/feed                                             "~js-party"
 ----------------------------YOUTUBE
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ   "~linuxtricks"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ   "~level1techs"
@@ -54,3 +46,12 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCW5YeuERMmlnqo4oq8vwUpg   "
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmCLlnZfSe93AoSGc03l7eA   "~savun"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg   "~wolfgang"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ   "~freecode"
+----------------------------ISSUES
+https://gitlab.com/franckf/carnet-de-suivi/-/issues.atom?state=opened
+https://gitlab.com/franckf/dotfiles/-/issues.atom?state=opened
+https://gitlab.com/franckf/quick-scripts/-/issues.atom?state=opened
+https://gitlab.com/franckf/reference-javascript/-/issues.atom?state=opened
+https://gitlab.com/franckf/reference-css/-/issues.atom?state=opened
+https://gitlab.com/franckf/rtfm/-/issues.atom?state=opened
+https://gitlab.com/franckf/startpage/-/issues.atom?state=opened
+https://gitlab.com/franckf/working-on/-/issues.atom?state=opened
