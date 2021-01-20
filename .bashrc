@@ -17,6 +17,12 @@ export PATH
 
 export PS1="\n \A \w\n "
 
+# vi mode
+set -o vi
+bind "set show-mode-in-prompt on"
+bind "set vi-ins-mode-string \1\2\1\2"
+bind "set vi-cmd-mode-string \1\2 [cmd]\1\2"
+
 # User specific aliases and functions
 alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/",".config/Ankama"} /home/$USER /run/media/$USER/BACKUP/"
 
