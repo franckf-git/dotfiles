@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=VSCodium with Node SDK
+GenericName=Codium Node
+Exec=FLATPAK_ENABLE_SDK_EXT=node14 flatpak run com.vscodium.codium
+Terminal=false
+Icon=vscodium
+Type=Application
