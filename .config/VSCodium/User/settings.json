@@ -15,7 +15,6 @@
     "html.format.indentInnerHtml": true,
     "explorer.confirmDelete": false,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.iconTheme": "vscode-icons",
     "files.watcherExclude": {
         "**/.git/objects/**": true,
@@ -24,16 +23,13 @@
     },
     "explorer.confirmDragAndDrop": false,
     "html.format.wrapLineLength": 0,
-    "liveServer.settings.donotShowInfoMsg": true,
     "update.mode": "none",
     "editor.formatOnSave": true,
     "workbench.startupEditor": "newUntitledFile",
-    "liveServer.settings.donotVerifyTags": true,
     "editor.fontFamily": "Fira Code",
-    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontFamily": "Fira Code",
     "vsicons.dontShowNewVersionMessage": true,
     "editor.fontLigatures": true,
     "window.zoomLevel": 0,
-    "editor.renameOnType": true,
     "editor.lineNumbers": "relative"
 }
