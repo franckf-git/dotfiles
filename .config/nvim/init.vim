@@ -32,6 +32,7 @@ tmap <Esc> <C-\><C-n>
 
 " No swap file
 set noswapfile
+set nobackup
 
 " Folds
 set nofoldenable
@@ -42,6 +43,7 @@ set foldmethod=indent
 """""""""""""""""""""""""""
 
 " Show relative lines number
+set signcolumn=yes
 set number
 set relativenumber
 
@@ -148,11 +150,7 @@ set ignorecase
 " CODING HELPS
 """""""""""""""""""""""""""
 
-" Show invisible characters with :set list
-set nolist
-set listchars+=space:՟
-set listchars+=trail:՞
-set listchars+=tab:⁗⁗
+set list
 
 " Highlight match parentheses
 set showmatch
@@ -210,33 +208,4 @@ vnoremap K :m '<-2<CR>gv=gv
 """""""""""""""""""""""""""
 
 runtime snippets.vim
-
-"""""""""""""""""""""""""""
-" PLUGINS
-"""""""""""""""""""""""""""
-
-" Install vimplug
-" sh -c 'curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-" Specify a directory for plugins
-call plug#begin('~/.config/nvim/autoload/plugged')
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'iamcco/coc-actions'
-Plug 'neoclide/coc-git'
-Plug 'neoclide/coc-snippets'
-Plug 'iamcco/coc-spell-checker'
-Plug 'neoclide/coc-html'
-Plug 'neoclide/coc-css'
-Plug 'neoclide/coc-emmet'
-Plug 'neoclide/coc-eslint'
-Plug 'neoclide/coc-json'
-Plug 'neoclide/coc-tsserver'
-Plug 'pangloss/vim-javascript'
-
-" Initialize plugin system
-call plug#end()
-
-" Install Plugins
-" nvim -c 'PlugInstall | q'
 
