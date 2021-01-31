@@ -1,6 +1,6 @@
 [user]
     name = franckf
-    email = efydd.artio@tuta.io
+    email = 
 [core]
     editor = "nvim"
     tool = "nvim -d"

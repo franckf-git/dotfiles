@@ -2,7 +2,7 @@
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
-MiscBordersDefault=FALSE
+MiscBordersDefault=TRUE
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
@@ -25,7 +25,7 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
-MiscShowUnsafePasteDialog=TRUE
+MiscShowUnsafePasteDialog=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 FontName=Fira Code 12
 CellWidthScale=1,200000
@@ -34,3 +34,4 @@ ColorCursor=#ebebdbdbb2b2
 ColorForeground=#ebebdbdbb2b2
 ColorBackground=#222222222222
 ColorPalette=#282828282828;#cccc24241d1d;#989897971a1a;#d7d799992121;#454585858888;#b1b162628686;#68689d9d6a6a;#a8a899998484;#929283837474;#fbfb49493434;#b8b8bbbb2626;#fafabdbd2f2f;#8383a5a59898;#d3d386869b9b;#8e8ec0c07c7c;#ebebdbdbb2b2
+

@@ -41,6 +41,7 @@ alias ddg="web_search duckduckgo"
 alias www="w3m https://franckf.gitlab.io/startpage/"
 
 alias upgm="sudo dnf upgrade-minimal --refresh && flatpak update -y"
+alias upgs="sudo dnf upgrade --security --refresh && flatpak update -y"
 alias upg="sudo dnf upgrade --refresh && flatpak update -y"
 
 alias usbup="udisksctl mount -b /dev/sda1"
@@ -50,7 +51,9 @@ alias hdmiclone="xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080"
 
 alias journal="nvim ~/Documents/$(date +%F-%a)md"
 
-# clean rename
+alias mychromium="chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/"
+alias myvscodium="FLATPAK_ENABLE_SDK_EXT=node14 flatpak run com.vscodium.codium"
+
 renameclean () {
 for i in $(ls)
   do
