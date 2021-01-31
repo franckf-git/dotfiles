@@ -4,10 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvt -e fish
-
-super + shift + Return
-	urxvt -e fish
+	gnome-terminal
 
 # program launcher
 super + {space,Down} 
@@ -17,7 +14,7 @@ super + q
 super + s
     rifle "$(find . -type f ! -path './.cache/*' ! -path './.npm/*' ! -path '*/node_modules/*' | rofi -i -dmenu)"
 super + o
-    gnome-terminal --tab -e "bash -c 'cd $(find . -type d | rofi -i -dmenu) ; exec fish -i'"
+    gnome-terminal --tab -e "bash -c 'cd $(find . -type d | rofi -i -dmenu)'"
 
 # reload sxhkd and bspwm config
 super + shift + r
