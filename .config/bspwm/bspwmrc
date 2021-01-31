@@ -19,14 +19,14 @@ unclutter -idle 5 &
 # fix cursor
 xsetroot -cursor_name left_ptr &
 # weather
-sleep 5s && curl -s http://wttr.in/poitiers?format=%C+%t+%p+%w+%m > ~/.weather
+#sleep 5s && curl -s http://wttr.in/poitiers?format=%C+%t+%p+%w+%m > ~/.weather
 # programs
 # 1 file manager
-urxvt -e ranger &
-# 2 rss feed
-sleep 5s && bspc desktop -f '^2' && urxvt -e newsboat &
-# 3 web browser
-sleep 3s && bspc desktop -f '^3' && chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ &
+gnome-terminal -- ranger &
+# 2 web browser
+sleep 3s && bspc desktop -f '^2' && chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/ &
+# 3 rss feed
+sleep 5s && bspc desktop -f '^3' && gnome-terminal -- newsboat &
 
 # multi-monitor
 bspc monitor eDP      -d 1 2 3 4 5 6 7 8 9 10
