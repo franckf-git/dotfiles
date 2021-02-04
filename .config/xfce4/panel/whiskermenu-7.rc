@@ -1,5 +1,5 @@
 favorites=exo-file-manager.desktop,exo-terminal-emulator.desktop,private-chromium-browser.desktop,vscodium-node.desktop
-recent=exo-file-manager.desktop,private-chromium-browser.desktop,firefox.desktop,org.keepassxc.KeePassXC.desktop,vscodium-node.desktop,xfce-session-settings.desktop,exo-terminal-emulator.desktop,com.vscodium.codium.desktop,com.github.unrud.VideoDownloader.desktop,xfce-display-settings.desktop
+recent=xfce-wm-settings.desktop,com.vscodium.codium.desktop,vscodium-node.desktop,exo-file-manager.desktop,xfce4-power-manager-settings.desktop,xfce-session-settings.desktop,gnumeric.desktop,private-chromium-browser.desktop,exo-terminal-emulator.desktop,firefox.desktop
 button-icon=xfce4_xicon1
 button-single-row=false
 show-button-title=true

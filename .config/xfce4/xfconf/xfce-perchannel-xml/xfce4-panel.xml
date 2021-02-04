@@ -74,7 +74,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance12395;chromium.instance16853;chromium.instance1927;chromium.instance1953;chromium.instance1963;chromium.instance1971;chromium.instance1984;chromium.instance1994;chromium.instance1998;chromium.instance2003;chromium.instance20505;chromium.instance2170;chromium.instance2186;chromium.instance2210;chromium.instance2230;chromium.instance2293;chromium.instance2352;chromium.instance5588;chromium.instance6102;chromium.instance6441;chromium.instance9235"/>
+      <property name="mpris-players" type="string" value="chromium.instance12395;chromium.instance13039;chromium.instance16853;chromium.instance17629;chromium.instance1927;chromium.instance1951;chromium.instance1953;chromium.instance1963;chromium.instance1971;chromium.instance1984;chromium.instance1994;chromium.instance1998;chromium.instance2001;chromium.instance2003;chromium.instance20505;chromium.instance2170;chromium.instance2186;chromium.instance2210;chromium.instance2223;chromium.instance2230;chromium.instance2289;chromium.instance2293;chromium.instance2352;chromium.instance2629;chromium.instance5588;chromium.instance6102;chromium.instance6441;chromium.instance9235"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
