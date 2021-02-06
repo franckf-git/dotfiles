@@ -12,7 +12,7 @@
   <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_NEVER"/>
   <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_LONG"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,224,50,50,741,50,50,79,50,80"/>
+  <property name="last-details-view-column-widths" type="string" value="50,224,50,50,652,50,50,88,50,160"/>
   <property name="last-separator-position" type="int" value="177"/>
   <property name="last-show-hidden" type="bool" value="true"/>
 </channel>
