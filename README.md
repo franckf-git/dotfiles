@@ -28,6 +28,16 @@ To get back to the MS Marketplace edit `/usr/share/codium/resources/app/product.
 ```
 
 ```bash
+# reset
+bracket-pair-colorizer-2
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+golang.go
+ritwickdey.liveserver
+visualstudioexptteam.vscodeintellicode
+vscode-icons-team.vscode-icons
+vscodevim.vim
+#
 codium --install-extension chenxsan.vscode-standardjs
 codium --install-extension coenraads.bracket-pair-colorizer-2
 codium --install-extension digitalbrainstem.javascript-ejs-support
@@ -46,6 +56,7 @@ codium --install-extension vincaslt.highlight-matching-tag
 codium --install-extension luongnd.edge
 codium --install-extension dbaeumer.vscode-eslint
 codium --install-extension esbenp.prettier-vscode
+
 
 # as root
 echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
