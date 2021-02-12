@@ -7,6 +7,7 @@ browser                         "chromium-browser --password-store=basic --incog
 
 bind-key j next articlelist
 bind-key k prev articlelist
+external-url-viewer "urlview"
 
 # open with small web browser [, + s]
 macro s set browser "surf -dgNpis -a a"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
