@@ -8,16 +8,3 @@ browser                         "chromium-browser --password-store=basic --incog
 bind-key j next articlelist
 bind-key k prev articlelist
 external-url-viewer "urlview"
-
-# open with small web browser [, + s]
-macro s set browser "surf -dgNpis -a a"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
-
-# open with terminal web browser [, + w]
-macro w set browser "w3m"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
-
-# see video in mpv [, + v]
-macro v set browser "xfce4-terminal --execute mpv"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
-
-# download video [, + t]
-macro t set browser "cd ~/Vidéos && xfce4-terminal --execute youtube-dl --write-auto-sub --add-metadata -ic -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"; open-in-browser ; set browser "chromium-browser --password-store=basic --incognito %u"
-
