@@ -2,7 +2,7 @@ delete-read-articles-on-quit    yes
 max-items                       50
 keep-articles-days              30
 auto-reload                     yes
-download-path                   "/home/$USER/Téléchargemnts/%h/%n"
+download-path                   "/home/$USER/Téléchargements/%h/%n"
 browser                         "chromium-browser --password-store=basic --incognito %u"
 
 bind-key j next articlelist
