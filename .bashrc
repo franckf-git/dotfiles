@@ -51,6 +51,8 @@ alias hdmiclone="xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080"
 
 alias journal="nvim ~/Documents/$(date +%F-%a)md"
 
+alias ndone="notify-send --urgency=critical '⚠' 'commande terminée'"
+
 alias mychromium="chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/"
 alias myvscodium="FLATPAK_ENABLE_SDK_EXT=node14,golang flatpak run com.vscodium.codium"
 
