@@ -124,3 +124,40 @@ hotfix () {
     esac
 }
 
+processing-scans () {
+
+cd ~/Téléchargements
+renameclean 2> /dev/null
+
+nomdossier=$(date +%m%d-%H%M)
+listescans=$(ls | egrep '*.zip')
+
+mkdir $nomdossier
+cd $nomdossier
+mkdir faits
+
+for scan in $listescans
+do
+    mv ~/Téléchargements/$scan faits/
+    cd faits/
+    unzip $scan
+    nom=$(basename $scan .zip)
+    mv $scan ~/Sauvegardes/scans-done
+    renameclean
+
+    for image in $(ls)
+    do
+        mv $image ../"$nom"_"$image"
+    done
+    cd ../
+done
+
+convert *.* "$nomdossier".pdf
+mv "$nomdossier".pdf ~/Images
+cd ~/Téléchargements
+rm -Rf $nomdossier
+
+echo "#####"
+echo "$listescans"
+
+}
