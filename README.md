@@ -17,49 +17,31 @@
 
 ## [VScodium ](https://github.com/VSCodium/vscodium) Extensions
 
-VSCodium use the OpenVSX marketplace - it is fine but still miss some extensions. [see](https://github.com/VSCodium/vscodium/blob/master/DOCS.md#extensions-marketplace)
-To get back to the MS Marketplace edit `/usr/share/codium/resources/app/product.json` and edit gallery :
-
-```json
-"extensionsGallery": {
-    "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
-    "itemUrl": "https://marketplace.visualstudio.com/items"
-}
+```bash
+flatpak install flathub com.vscodium.codium
+flatpak install flathub org.freedesktop.Sdk.Extension.golang org.freedesktop.Sdk.Extension.node14
 ```
 
 ```bash
-# reset
-bracket-pair-colorizer-2
-dbaeumer.vscode-eslint
-esbenp.prettier-vscode
-golang.go
-ritwickdey.liveserver
-visualstudioexptteam.vscodeintellicode
-vscode-icons-team.vscode-icons
-vscodevim.vim
-#
-codium --install-extension chenxsan.vscode-standardjs
-codium --install-extension coenraads.bracket-pair-colorizer-2
-codium --install-extension digitalbrainstem.javascript-ejs-support
-codium --install-extension visualstudioexptteam.vscodeintellicode
-codium --install-extension vscode-icons-team.vscode-icons
-codium --install-extension xabikos.javascriptsnippets
-codium --install-extension ecmel.vscode-html-css
-codium --install-extension ritwickdey.liveserver
-codium --install-extension aaron-bond.better-comments
+flatpak run com.vscodium.codium --install-extension bracket-pair-colorizer-2
+flatpak run com.vscodium.codium --install-extension dbaeumer.vscode-eslint
+flatpak run com.vscodium.codium --install-extension esbenp.prettier-vscode
+flatpak run com.vscodium.codium --install-extension golang.go
+flatpak run com.vscodium.codium --install-extension ritwickdey.liveserver
+flatpak run com.vscodium.codium --install-extension vscode-icons-team.vscode-icons
+flatpak run com.vscodium.codium --install-extension vscodevim.vim
+
+# visualstudioexptteam.vscodeintellicode # pas dans vscodium
 # potentials
-codium --install-extension jakob101.relativepath
-codium --install-extension streetsidesoftware.code-spell-checker
-codium --install-extension wallabyjs.quokka-vscode
-codium --install-extension ms-vscode.vscode-typescript-tslint-plugin
-codium --install-extension vincaslt.highlight-matching-tag
-codium --install-extension luongnd.edge
-codium --install-extension dbaeumer.vscode-eslint
-codium --install-extension esbenp.prettier-vscode
-
-
-# as root
-echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
-sysctl -p
+chenxsan.vscode-standardjs
+digitalbrainstem.javascript-ejs-support
+ecmel.vscode-html-css
+jakob101.relativepath
+luongnd.edge
+ms-vscode.vscode-typescript-tslint-plugin
+streetsidesoftware.code-spell-checker
+vincaslt.highlight-matching-tag
+wallabyjs.quokka-vscode
+xabikos.javascriptsnippets
 ```
 
