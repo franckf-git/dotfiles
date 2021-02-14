@@ -24,7 +24,7 @@ flatpak install flathub org.freedesktop.Sdk.Extension.golang org.freedesktop.Sdk
 ```
 
 ```bash
-flatpak run com.vscodium.codium --install-extension bracket-pair-colorizer-2
+flatpak run com.vscodium.codium --install-extension coenraads.bracket-pair-colorizer-2
 flatpak run com.vscodium.codium --install-extension dbaeumer.vscode-eslint
 flatpak run com.vscodium.codium --install-extension esbenp.prettier-vscode
 flatpak run com.vscodium.codium --install-extension golang.go
