@@ -44,6 +44,7 @@ set foldmethod=indent
 
 " Show relative lines number
 set signcolumn=yes
+set colorcolumn=80
 set number
 set relativenumber
 
