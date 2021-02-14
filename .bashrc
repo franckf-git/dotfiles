@@ -64,7 +64,7 @@ done
 
 prename 'y/A-Z\ /a-z-/' *
 prename 's/\[//g' *
-prename 's/[^a-z0-9-.]/-/g' *
+prename 's/\]//g' *
 prename 's/ajia-no-scantrad-//' *
 prename 's/ajia-rs--//' *
 prename 's/koneko-scantrad-//g' *
@@ -82,6 +82,13 @@ prename 's/shp--//g' *
 prename 's/shp-//g' *
 prename 's/stu--//' *
 prename 's/yorokobe--//' *
+prename 's/neo-scantrad--partenaire--//g' *
+prename 's/gs-//g' *
+prename 's/nation-//g' *
+prename 's/-----/-/g' *
+prename 's/----/-/g' *
+prename 's/---/-/g' *
+prename 's/--/-/g' *
 }
 
 alias fullgit="git add --all && git commit -v -a && git push -v"
@@ -143,7 +150,7 @@ do
     unzip $scan
     nom=$(basename $scan .zip)
     mv $scan ~/Sauvegardes/scans-done
-    renameclean
+    renameclean 2> /dev/null
 
     for image in $(ls)
     do
