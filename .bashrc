@@ -68,6 +68,7 @@ prename 's/\]//g' *
 prename 's/ajia-no-scantrad-//' *
 prename 's/ajia-rs--//' *
 prename 's/koneko-scantrad-//g' *
+prename 's/koneko-scantrad//g' *
 prename 's/mangaqc-franco-//' *
 prename 's/mns--//' *
 prename 's/mns-//' *
@@ -81,6 +82,7 @@ prename 's/schlag--//g' *
 prename 's/shp--//g' *
 prename 's/shp-//g' *
 prename 's/stu--//' *
+prename 's/stu-//' *
 prename 's/yorokobe--//' *
 prename 's/neo-scantrad--partenaire--//g' *
 prename 's/gs-//g' *
