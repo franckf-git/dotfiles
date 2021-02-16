@@ -174,3 +174,46 @@ echo "#####"
 echo "$listescans"
 
 }
+
+dotfiler () {
+list="
+.bashrc
+.urlview
+.config/autostart/newsboat.desktop
+.config/autostart/private-chromium-browser.desktop
+.config/autostart/ranger.desktop
+.config/git/config
+.config/mpv/mpv.conf
+.config/newsboat/anime-ultime-rss.sh
+.config/newsboat/config
+.config/newsboat/dl.sh
+.config/newsboat/scantrad-union-rss.sh
+.config/newsboat/urls
+.config/nvim/colors/dracula.vim
+.config/nvim/colors/github.vim
+.config/nvim/colors/gotham.vim
+.config/nvim/colors/gruvbox.vim
+.config/nvim/colors/monokai.vim
+.config/nvim/colors/solarized.vim
+.config/nvim/colors/spacevim.vim
+.config/nvim/init.vim
+.config/nvim/snippets.vim
+.config/ranger/commands.py
+.config/ranger/commands_full.py
+.config/ranger/rc.conf
+.config/ranger/rifle.conf
+.config/ranger/scope.sh
+.config/themes/wallpaper.png
+.config/xfce4/terminal/terminalrc
+"
+
+listtab=($list)
+
+for dotfile in ${listtab[@]}
+    do
+        cp "$HOME/$dotfile" "$HOME/Documents/Projects/dotfiles/$dotfile"
+    done
+
+cd ~/Documents/Projects/dotfiles/
+git diff
+}
