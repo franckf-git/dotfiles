@@ -77,6 +77,7 @@ prename 's/mns-rs--//' *
 prename 's/mns-tnt--//' *
 prename 's/monster-no-scantrad-//' *
 prename 's/rs--//' *
+prename 's/rs-//' *
 prename 's/ryozanpaku-//g' *
 prename 's/schlag--//g' *
 prename 's/shp--//g' *
@@ -85,12 +86,15 @@ prename 's/stu--//' *
 prename 's/stu-//' *
 prename 's/yorokobe--//' *
 prename 's/neo-scantrad--partenaire--//g' *
+prename 's/neo-scantrad-partenaire-//g' *
 prename 's/gs-//g' *
 prename 's/nation-//g' *
 prename 's/-----/-/g' *
 prename 's/----/-/g' *
 prename 's/---/-/g' *
 prename 's/--/-/g' *
+prename 's/_/-/g' *
+prename "s/'/-/g" *
 }
 
 alias fullgit="git add --all && git commit -v -a && git push -v"
