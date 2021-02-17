@@ -95,6 +95,7 @@ prename 's/---/-/g' *
 prename 's/--/-/g' *
 prename 's/_/-/g' *
 prename "s/'/-/g" *
+prename 's/,//g' *
 }
 
 alias fullgit="git add --all && git commit -v -a && git push -v"
