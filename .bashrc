@@ -181,6 +181,7 @@ list="
 .bashrc
 .urlview
 .config/autostart/newsboat.desktop
+.config/autostart/remap-keys.desktop
 .config/autostart/private-chromium-browser.desktop
 .config/autostart/ranger.desktop
 .config/git/config
