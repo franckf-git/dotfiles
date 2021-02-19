@@ -78,7 +78,7 @@ handle_extension() {
             exit 1;;
 
         # JSON
-        json)
+        json|csv)
             cat "${FILE_PATH}" && exit 5
             exit 1;;
 
