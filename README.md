@@ -21,6 +21,10 @@
 ```bash
 flatpak install flathub com.vscodium.codium
 flatpak install flathub org.freedesktop.Sdk.Extension.golang org.freedesktop.Sdk.Extension.node14
+
+# as root
+echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
+sysctl -p
 ```
 
 ```bash
