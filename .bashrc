@@ -54,7 +54,7 @@ alias journal="nvim ~/Documents/journal/$(date +%F-%a)md"
 alias ndone="notify-send --urgency=critical '⚠' 'commande terminée'"
 
 alias mychromium="chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/"
-alias myvscodium="FLATPAK_ENABLE_SDK_EXT=node14,golang flatpak run com.vscodium.codium"
+alias myvscodium="FLATPAK_ENABLE_SDK_EXT=node14,golang flatpak run com.vscodium.codium ."
 
 renameclean () {
 for i in $(ls)
