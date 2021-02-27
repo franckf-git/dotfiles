@@ -16,6 +16,7 @@ export PATH
 # export SYSTEMD_PAGER=
 
 export PS1="\n \A \w\n "
+export MANPAGER="nvim -c 'set ft=man' - "
 
 # vi mode
 set -o vi
