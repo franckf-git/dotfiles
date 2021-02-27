@@ -18,6 +18,8 @@ https://fedoramagazine.org/feed/                                               "
 https://blog.centos.org/feed/                                                  "~centos"
 https://github.com/VSCodium/vscodium/releases.atom                             "~vscodium"
 https://blog.golang.org/feed.atom                                              "~golang"
+https://www.linuxjobs.fr/rss                                                   "~linuxjobs"
+https://forums.fedora-fr.org/extern.php?action=feed&type=rss                   "~forum-fedora-fr"
 ----------------------------DIVERS
 https://www.commitstrip.com/fr/feed/                                           "~commitstrip"
 https://www.xkcd.com/rss.xml                                                   "~xkcd"
