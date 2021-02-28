@@ -85,6 +85,10 @@ settings.json
     "vsicons.dontShowNewVersionMessage": true,
     "editor.fontLigatures": true,
     "window.zoomLevel": 0,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.minimap.enabled": false
 }
 ```
