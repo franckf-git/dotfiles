@@ -57,7 +57,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors gruvbox
+colors synthwave
 
 " Always show status bar
 set laststatus=2

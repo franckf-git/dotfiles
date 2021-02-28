@@ -200,6 +200,7 @@ list="
 .config/nvim/colors/monokai.vim
 .config/nvim/colors/solarized.vim
 .config/nvim/colors/spacevim.vim
+.config/nvim/colors/synthwave.vim
 .config/nvim/init.vim
 .config/nvim/snippets.vim
 .config/ranger/commands.py
