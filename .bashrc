@@ -32,6 +32,8 @@ alias neovim='nvim -p'
 alias vim='nvim -p'
 alias vi='nvim -p'
 
+alias ..='cd ..'
+
 alias :q='exit'
 
 alias ydl='youtube-dl --write-auto-sub --add-metadata -ic -f "bestvideo[height<=720]+bestaudio/best[height<=720]"'
