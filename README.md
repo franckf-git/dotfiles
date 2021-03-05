@@ -63,7 +63,7 @@ settings.json
     "editor.renderControlCharacters": true,
     "workbench.editor.showIcons": false,
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Solarized Light",
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
@@ -84,11 +84,12 @@ settings.json
     "terminal.integrated.fontFamily": "Fira Code",
     "vsicons.dontShowNewVersionMessage": true,
     "editor.fontLigatures": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.lineNumbers": "relative",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "go.gopath": "~/.go/"
 }
 ```
