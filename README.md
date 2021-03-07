@@ -36,8 +36,8 @@ flatpak run com.vscodium.codium --install-extension ritwickdey.liveserver
 flatpak run com.vscodium.codium --install-extension vscode-icons-team.vscode-icons
 flatpak run com.vscodium.codium --install-extension vscodevim.vim
 
-# visualstudioexptteam.vscodeintellicode # pas dans vscodium
-# potentials
+# visualstudioexptteam.vscodeintellicode # pas dans vscodium mais utile seulement pour py, JS et TS
+# potentials (js/ts only)
 chenxsan.vscode-standardjs
 digitalbrainstem.javascript-ejs-support
 ecmel.vscode-html-css
