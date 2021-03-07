@@ -28,26 +28,31 @@ sysctl -p
 ```
 
 ```bash
+# basics
 flatpak run com.vscodium.codium --install-extension coenraads.bracket-pair-colorizer-2
-flatpak run com.vscodium.codium --install-extension dbaeumer.vscode-eslint
 flatpak run com.vscodium.codium --install-extension esbenp.prettier-vscode
-flatpak run com.vscodium.codium --install-extension golang.go
-flatpak run com.vscodium.codium --install-extension ritwickdey.liveserver
 flatpak run com.vscodium.codium --install-extension vscode-icons-team.vscode-icons
 flatpak run com.vscodium.codium --install-extension vscodevim.vim
+streetsidesoftware.code-spell-checker
 
-# visualstudioexptteam.vscodeintellicode # pas dans vscodium mais utile seulement pour py, JS et TS
-# potentials (js/ts only)
+# golang
+flatpak run com.vscodium.codium --install-extension golang.go
+
+# html
+flatpak run com.vscodium.codium --install-extension ritwickdey.liveserver
+vincaslt.highlight-matching-tag
+ecmel.vscode-html-css
+luongnd.edge
+
+# JS/TS
+flatpak run com.vscodium.codium --install-extension dbaeumer.vscode-eslint
+jakob101.relativepath
 chenxsan.vscode-standardjs
 digitalbrainstem.javascript-ejs-support
-ecmel.vscode-html-css
-jakob101.relativepath
-luongnd.edge
 ms-vscode.vscode-typescript-tslint-plugin
-streetsidesoftware.code-spell-checker
-vincaslt.highlight-matching-tag
 wallabyjs.quokka-vscode
 xabikos.javascriptsnippets
+# visualstudioexptteam.vscodeintellicode # pas dans vscodium mais utile seulement pour py, JS et TS
 ```
 
 settings.json
