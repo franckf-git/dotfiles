@@ -199,6 +199,7 @@ handle_mime() {
 
         # Video and audio
         video/* | audio/*)
+            ffprobe "${FILE_PATH}" 2>&1 | grep -A90 'Metadata:' && exit 5
             mediainfo "${FILE_PATH}" && exit 5
             exiftool "${FILE_PATH}" && exit 5
             exit 1;;
