@@ -68,7 +68,7 @@ settings.json
     "editor.renderControlCharacters": true,
     "workbench.editor.showIcons": false,
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Solarized Light",
+    "workbench.colorTheme": "Red",
     "html.format.endWithNewline": true,
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
@@ -95,6 +95,9 @@ settings.json
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.minimap.enabled": false,
+    "gopls": {
+        "ui.completion.usePlaceholders": true
+      },
     "go.gopath": "~/.go/"
 }
 ```
