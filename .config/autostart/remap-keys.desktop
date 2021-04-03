@@ -3,7 +3,7 @@ Encoding=UTF-8
 Type=Application
 Name=remap-keys
 Comment=
-Exec=xmodmap -e "keycode 49 = Return"
+Exec=xmodmap -e "keycode 49 = Return" && xmodmap -e "keycode 66 = Escape"
 OnlyShowIn=XFCE;
 RunHook=0
 StartupNotify=false
