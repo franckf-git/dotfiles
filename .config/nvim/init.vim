@@ -57,7 +57,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors synthwave
+colors xcodedark
 
 " Always show status bar
 set laststatus=2

@@ -202,6 +202,11 @@ list="
 .config/nvim/colors/solarized.vim
 .config/nvim/colors/spacevim.vim
 .config/nvim/colors/synthwave.vim
+.config/nvim/colors/xcodedarkhc.vim
+.config/nvim/colors/xcodedark.vim
+.config/nvim/colors/xcodelighthc.vim
+.config/nvim/colors/xcodelight.vim
+.config/nvim/colors/xcodewwdc.vim
 .config/nvim/init.vim
 .config/nvim/snippets.vim
 .config/ranger/commands.py
