@@ -1,3 +1,4 @@
+exec:~/.config/newsboat/todos-rss.sh                                  "~todos"
 ----------------------------MANGA
 https://scantrad.fr/rss                                                        "~scantrad"
 https://lel.koneko-scantrad.fr/feeds/rss/                                      "~koneko-scantrad"

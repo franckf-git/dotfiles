@@ -193,6 +193,7 @@ list="
 .config/newsboat/config
 .config/newsboat/dl.sh
 .config/newsboat/scantrad-union-rss.sh
+.config/newsboat/todos-rss.sh
 .config/newsboat/urls
 .config/nvim/colors/dracula.vim
 .config/nvim/colors/github.vim
