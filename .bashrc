@@ -59,6 +59,8 @@ alias ndone="notify-send --urgency=critical '⚠' 'commande terminée'"
 alias mychromium="chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/"
 alias myvscodium="FLATPAK_ENABLE_SDK_EXT=node14,golang flatpak run com.vscodium.codium ."
 
+alias gitcomment='for i in $(ls) ; do echo "$i $(git log --oneline $i)" ; done'
+
 renameclean () {
 for i in $(ls)
   do
