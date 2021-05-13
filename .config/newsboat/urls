@@ -1,4 +1,3 @@
-exec:~/.config/newsboat/todos-rss.sh                                  "~todos"
 ----------------------------MANGA
 https://scantrad.fr/rss                                                        "~scantrad"
 https://lel.koneko-scantrad.fr/feeds/rss/                                      "~koneko-scantrad"
@@ -29,10 +28,7 @@ https://www.viedemerde.fr/rss                                                  "
 https://www.blog-libre.org/feed/                                               "~blog-libre"
 ----------------------------REDDIT
 https://www.reddit.com/r/devops/.rss                                           "~r/devops"
-https://www.reddit.com/r/sysadmin/.rss                                         "~r/sysadmin"
 https://www.reddit.com/r/golang/.rss                                           "~r/golang"
-https://www.reddit.com/r/node/.rss                                             "~r/node"
-https://www.reddit.com/r/commandline/.rss                                      "~r/commandline"
 ----------------------------PODCAST
 https://www.nolimitsecu.fr/feed/                                               "~no-limit-secu"
 https://www.comptoirsecu.fr/feed/all.xml                                       "~comptoir-secu"
@@ -41,7 +37,6 @@ http://frenchspin.fr/feed/                                                     "
 https://feed.ausha.co/BxW2S9Mex0Vb                                             "~artisan-dev"
 https://changelog.com/jsparty/feed                                             "~js-party"
 https://changelog.com/gotime/feed                                              "~go-time"
-https://devtheory.fr/podcast                                                   "~devtheory"
 ----------------------------YOUTUBE
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ   "~linuxtricks"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ   "~level1techs"
