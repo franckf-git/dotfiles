@@ -224,9 +224,9 @@ listtab=($list)
 
 for dotfile in ${listtab[@]}
     do
-        cp "$HOME/$dotfile" "$HOME/Documents/Projects/dotfiles/$dotfile"
+        cp "$HOME/$dotfile" "$HOME/Projects/dotfiles/$dotfile"
     done
 
-cd ~/Documents/Projects/dotfiles/
+cd ~/Projects/dotfiles/
 git diff
 }
