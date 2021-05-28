@@ -57,7 +57,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors xcodedark
+colors gruvbox
 
 " Always show status bar
 set laststatus=2
@@ -89,6 +89,7 @@ set mouse=a
 
 " Show current line in LineNbr bar
 set cursorline
+set cursorcolumn
 
 """""""""""""""""""""""""""
 " EXPLORER
