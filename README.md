@@ -32,8 +32,6 @@ sysctl -p
 flatpak run com.vscodium.codium --install-extension coenraads.bracket-pair-colorizer-2
 flatpak run com.vscodium.codium --install-extension esbenp.prettier-vscode
 flatpak run com.vscodium.codium --install-extension vscode-icons-team.vscode-icons
-flatpak run com.vscodium.codium --install-extension vscodevim.vim
-streetsidesoftware.code-spell-checker
 
 # golang
 flatpak run com.vscodium.codium --install-extension golang.go
@@ -56,48 +54,48 @@ xabikos.javascriptsnippets
 ```
 
 settings.json
+
 ```json
 {
-    "files.autoSave": "onFocusChange",
-    "editor.renderWhitespace": "boundary",
-    "editor.wordWrap": "on",
-    "window.menuBarVisibility": "toggle",
-    "editor.mouseWheelZoom": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.tabCompletion": "on",
-    "editor.renderControlCharacters": true,
-    "workbench.editor.showIcons": false,
-    "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Red",
-    "html.format.endWithNewline": true,
-    "html.format.indentHandlebars": true,
-    "html.format.indentInnerHtml": true,
-    "explorer.confirmDelete": false,
-    "editor.suggestSelection": "first",
-    "workbench.iconTheme": "vscode-icons",
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/*/**": true
-    },
-    "explorer.confirmDragAndDrop": false,
-    "html.format.wrapLineLength": 0,
-    "update.mode": "none",
-    "editor.formatOnSave": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.fontFamily": "Fira Code",
-    "terminal.integrated.fontFamily": "Fira Code",
-    "vsicons.dontShowNewVersionMessage": true,
-    "editor.fontLigatures": true,
-    "window.zoomLevel": 1,
-    "editor.lineNumbers": "relative",
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.minimap.enabled": false,
-    "gopls": {
-        "ui.completion.usePlaceholders": true
-      },
-    "go.gopath": "~/.go/"
+  "files.autoSave": "onFocusChange",
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "on",
+  "window.menuBarVisibility": "toggle",
+  "editor.mouseWheelZoom": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.tabCompletion": "on",
+  "editor.renderControlCharacters": true,
+  "workbench.editor.showIcons": false,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Monokai",
+  "html.format.endWithNewline": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "explorer.confirmDelete": false,
+  "editor.suggestSelection": "first",
+  "workbench.iconTheme": "vscode-icons",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+  "explorer.confirmDragAndDrop": false,
+  "html.format.wrapLineLength": 0,
+  "update.mode": "none",
+  "editor.formatOnSave": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "Fira Code",
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 1,
+  "editor.lineNumbers": "relative",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 ```
