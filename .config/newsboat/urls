@@ -1,5 +1,5 @@
 ----------------------------MANGA
-https://scantrad.net/rss                                                        "~scantrad"
+https://scantrad.net/rss                                                       "~scantrad"
 https://lel.koneko-scantrad.fr/feeds/rss/                                      "~koneko-scantrad"
 exec:~/.config/newsboat/scantrad-union-rss.sh                                  "~scantrad-union"
 exec:~/.config/newsboat/anime-ultime-rss.sh                                    "~anime-ultime"
