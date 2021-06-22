@@ -176,6 +176,9 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 inoremap ` ``<Esc>:let leavechar="`"<CR>i
 
 command! FixWhitespace :%s/\s\+$//e
+command! GoRun  :!go run %
+command! GoTest :!go test
+command! GoFmt  :!gofmt -w %
 
 """""""""""""""""""""""""""
 " KEYS MAPPING
