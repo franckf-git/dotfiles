@@ -25,7 +25,7 @@ bind "set vi-ins-mode-string \1\2\1\2"
 bind "set vi-cmd-mode-string \1\2 [cmd]\1\2"
 
 # User specific aliases and functions
-alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={"Vidéos/",".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/",".config/Ankama","Sauvegardes/videos"} /home/$USER /run/media/$USER/BACKUP/"
+alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors /home/$USER /run/media/$USER/BACKUP/"
 
 alias vimdiff='nvim -d'
 alias neovim='nvim -p'
