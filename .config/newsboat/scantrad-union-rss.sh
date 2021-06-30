@@ -9,18 +9,17 @@ today=$(date +"%a %d %b %Y 01:00:00 +0000")
 cd ~/.config/newsboat
 
 # get the actuals published scans
-curl -s $url | grep dernierschapitres | sed 's/<\/div>/\n/g' | grep carteinfos | grep -v _blank > raw-get
+curl -s $url | grep -v _blank | grep -A 1 text-truncate | sed ':a;N;$!ba;s/\n<a href//g' | grep -v "^--$" > raw-get
 
 for publish in $(cat raw-get | sed 's/ /-/g')
 do
-    title=$(echo $publish | cut -d">" -f3 | sed '1s/...$//' )
-    epnum=$(echo $publish | cut -d">" -f6 | sed '1s/......$//' )
-    link=$(echo $publish | cut -d'"' -f6 )
+    title=$(echo $publish | cut -d'>' -f2 | sed '1s/...$//' )
+    epnum=$(echo $publish | cut -d'>' -f5 | sed '1s/......$//' )
+    link=$(echo $publish | cut -d'"' -f4 )
     echo "$title£$epnum£$link" >> today-urls
 done
 
-# get tags of news scans
-entries=$(diff today-urls yesterday-urls)
+entries=$(diff today-urls yesterday-urls | grep "<" | sed 's/^< //')
 
 # build rss XML
 IFS=$'\n'
