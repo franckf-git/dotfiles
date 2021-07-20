@@ -38,6 +38,9 @@ set nobackup
 set nofoldenable
 set foldmethod=indent
 
+" Save on each command who lose focus
+set autowrite
+
 if has("autocmd")
   " When editing a file, always jump to the last cursor position
   autocmd BufReadPost *
