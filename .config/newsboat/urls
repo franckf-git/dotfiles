@@ -3,7 +3,7 @@ https://scantrad.net/rss                                                       "
 https://lel.koneko-scantrad.fr/feeds/rss/                                      "~koneko-scantrad"
 exec:~/.config/newsboat/scantrad-union-rss.sh                                  "~scantrad-union"
 exec:~/.config/newsboat/anime-ultime-rss.sh                                    "~anime-ultime"
-https://www.wakfu.com/fr/mmorpg/rss.xml
+https://www.wakfu.com/fr/mmorpg/rss.xml                                        #~wakfu
 ----------------------------TECH
 https://www.lemonde.fr/rss/une.xml                                             "~le-monde"
 https://motherboard.vice.com/en_us/rss                                         "~motherboard/us"
