@@ -6,9 +6,9 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:$HOME/.go/bin:" ]]
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:$HOME/go/bin:" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:$HOME/.go/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$HOME/go/bin:$PATH"
 fi
 export PATH
 
@@ -18,48 +18,22 @@ export PATH
 export PS1="\n \A \w\n "
 export MANPAGER="nvim -c 'set ft=man' - "
 
-# vi mode
-set -o vi
-bind "set show-mode-in-prompt on"
-bind "set vi-ins-mode-string \1\2\1\2"
-bind "set vi-cmd-mode-string \1\2 [cmd]\1\2"
-
 # User specific aliases and functions
 alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors /home/$USER /run/media/$USER/BACKUP/"
 
-alias vimdiff='nvim -d'
-alias neovim='nvim -p'
-alias vim='nvim -p'
-alias vi='nvim -p'
+alias vi="nvim -p"
 
-alias ..='cd ..'
-
-alias :q='exit'
-
-alias ydl='youtube-dl --write-auto-sub --add-metadata -ic'
-alias ydla='youtube-dl --extract-audio -f bestaudio/best'
+alias ydl="youtube-dl --write-auto-sub --add-metadata -ic"
+alias ydla="youtube-dl --extract-audio -f bestaudio/best"
 
 alias ll="ls -lash"
-alias ddg="web_search duckduckgo"
-alias www="w3m https://franckf.gitlab.io/startpage/"
 
-alias upgm="sudo dnf upgrade-minimal --refresh && flatpak update -y"
-alias upgs="sudo dnf upgrade --security --refresh && flatpak update -y"
-alias upg="sudo dnf upgrade --refresh && flatpak update -y"
+alias upg="flatpak update --assumeyes && sudo rpm-ostree upgrade"
 
-alias usbup="udisksctl mount -b /dev/sda1"
-alias usbdown="udisksctl unmount -b /dev/sda1"
-
-alias hdmiclone="xrandr --output HDMI-A-0 --same-as eDP --mode 1920x1080"
-
-alias journal="nvim ~/Documents/journal/$(date +%F-%a)md"
-
-alias ndone="notify-send --urgency=critical '⚠' 'commande terminée'"
-
-alias mychromium="chromium-browser --password-store=basic --incognito https://franckf.gitlab.io/startpage/"
-alias myvscodium="FLATPAK_ENABLE_SDK_EXT=node14,golang flatpak run com.vscodium.codium ."
+alias codium="FLATPAK_ENABLE_SDK_EXT=golang /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/codium --file-forwarding com.vscodium.codium --no-sandbox --new-window ."
 
 alias gitcomment='for i in $(ls) ; do echo "$i $(git log --oneline $i)" ; done'
+alias fullgit="git add --all && git commit -v -a && git push -v"
 
 renameclean () {
 for i in $(ls)
@@ -103,48 +77,7 @@ prename "s/'/-/g" *
 prename 's/,//g' *
 }
 
-alias fullgit="git add --all && git commit -v -a && git push -v"
-
-alias toprod="git checkout master && git merge --no-ff developpement && git push -v && git checkout developpement"
-
-feature () {
-    case $1 in
-          new)    git pull && \
-                  sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
-                  git commit -am "ouverture feature $2 - $3" && \
-                  git push origin master --tags && \
-                  git checkout -b feature/"$2" master  ;;
-          push)   git push -u origin feature/"$2"      ;;
-          end)    git checkout master && \
-                  git merge --no-ff feature/"$2" && \
-                  git tag $(grep version package.json | cut -d'"' -f4) && \
-                  git push origin master --tags && \
-                  git branch -d feature/"$2" && \
-                  git push origin :feature/"$2" ;;
-          *) echo "usage: feature [new] BRANCH TAG or [push] BRANCH or [end] BRANCH" ;;
-    esac
-}
-
-hotfix () {
-    case $1 in
-          new)    git pull && \
-                  sed -i 's/"version": ".*",/"version": "'"$3"'",/' package.json && \
-                  git commit -am "ouverture hotfix $2 - $3" && \
-                  git push origin master --tags && \
-                  git checkout -b hotfix/"$2" master  ;;
-          push)   git push -u origin hotfix/"$2"      ;;
-          end)    git checkout master && \
-                  git merge --no-ff hotfix/"$2" && \
-                  git tag $(grep version package.json | cut -d'"' -f4) && \
-                  git push origin master --tags && \
-                  git branch -d hotfix/"$2" && \
-                  git push origin :hotfix/"$2" ;;
-          *) echo "usage: hotfix [new] BRANCH TAG or [push] BRANCH or [end] BRANCH" ;;
-    esac
-}
-
 processing-scans () {
-
 cd ~/Téléchargements
 renameclean 2> /dev/null
 
@@ -163,7 +96,6 @@ do
     nom=$(basename $scan .zip)
     mv $scan ~/Sauvegardes/scans-done
     renameclean 2> /dev/null
-
     for image in $(ls)
     do
         mv $image ../"$nom"_"$image"
@@ -175,58 +107,7 @@ convert *.* "$nomdossier".pdf
 mv "$nomdossier".pdf ~/Images
 cd ~/Téléchargements
 rm -Rf $nomdossier
-
 echo "#####"
 echo "$listescans"
-
 }
 
-dotfiler () {
-list="
-.bashrc
-.urlview
-.config/autostart/newsboat.desktop
-.config/autostart/remap-keys.desktop
-.config/autostart/private-chromium-browser.desktop
-.config/autostart/ranger.desktop
-.config/git/config
-.config/mpv/mpv.conf
-.config/newsboat/anime-ultime-rss.sh
-.config/newsboat/config
-.config/newsboat/dl.sh
-.config/newsboat/scantrad-union-rss.sh
-.config/newsboat/urls
-.config/nvim/colors/dracula.vim
-.config/nvim/colors/github.vim
-.config/nvim/colors/gotham.vim
-.config/nvim/colors/gruvbox.vim
-.config/nvim/colors/monokai.vim
-.config/nvim/colors/solarized.vim
-.config/nvim/colors/spacevim.vim
-.config/nvim/colors/synthwave.vim
-.config/nvim/colors/xcodedarkhc.vim
-.config/nvim/colors/xcodedark.vim
-.config/nvim/colors/xcodelighthc.vim
-.config/nvim/colors/xcodelight.vim
-.config/nvim/colors/xcodewwdc.vim
-.config/nvim/init.vim
-.config/nvim/snippets.vim
-.config/ranger/commands.py
-.config/ranger/commands_full.py
-.config/ranger/rc.conf
-.config/ranger/rifle.conf
-.config/ranger/scope.sh
-.config/themes/wallpaper.png
-.config/xfce4/terminal/terminalrc
-"
-
-listtab=($list)
-
-for dotfile in ${listtab[@]}
-    do
-        cp "$HOME/$dotfile" "$HOME/Projects/dotfiles/$dotfile"
-    done
-
-cd ~/Projects/dotfiles/
-git diff
-}
