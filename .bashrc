@@ -78,7 +78,7 @@ prename 's/,//g' *
 }
 
 processing-scans () {
-cd ~/Téléchargements
+cd ~/Downloads
 renameclean 2> /dev/null
 
 nomdossier=$(date +%m%d-%H%M)
@@ -90,7 +90,7 @@ mkdir faits
 
 for scan in $listescans
 do
-    mv ~/Téléchargements/$scan faits/
+    mv ~/Downloads/$scan faits/
     cd faits/
     unzip $scan
     nom=$(basename $scan .zip)
@@ -104,8 +104,8 @@ do
 done
 
 convert *.* "$nomdossier".pdf
-mv "$nomdossier".pdf ~/Images
-cd ~/Téléchargements
+mv "$nomdossier".pdf ~/Pictures
+cd ~/Downloads
 rm -Rf $nomdossier
 echo "#####"
 echo "$listescans"
