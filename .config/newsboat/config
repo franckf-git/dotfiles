@@ -2,9 +2,8 @@ delete-read-articles-on-quit    yes
 max-items                       50
 keep-articles-days              30
 auto-reload                     yes
-download-path                   "/home/$USER/Téléchargements/%h/%n"
-browser                         "chromium-browser --password-store=basic --incognito %u"
+browser                         "flatpak run org.chromium.Chromium %u"
 
 bind-key j next articlelist
 bind-key k prev articlelist
-external-url-viewer "urlview"
+external-url-viewer "~/.config/newsboat/downloader-for-newsboat"
