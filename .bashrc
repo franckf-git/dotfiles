@@ -30,6 +30,9 @@ alias ll="ls -lash"
 
 alias upg="flatpak update --assumeyes && sudo rpm-ostree upgrade"
 
+alias mpv="flatpak run io.mpv.Mpv"
+alias pdf="flatpak run org.gnome.Evince"
+alias eog="flatpak run org.gnome.eog"
 alias codium="FLATPAK_ENABLE_SDK_EXT=golang /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/codium --file-forwarding com.vscodium.codium --no-sandbox --new-window ."
 
 alias gitcomment='for i in $(ls) ; do echo "$i $(git log --oneline $i)" ; done'
