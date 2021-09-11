@@ -90,7 +90,7 @@ mkdir faits
 
 for scan in $listescans
 do
-    mv ~/Downloads/$scan faits/
+    mv ~/Téléchargements/$scan faits/
     cd faits/
     unzip $scan
     nom=$(basename $scan .zip)
@@ -104,8 +104,8 @@ do
 done
 
 convert *.* "$nomdossier".pdf
-mv "$nomdossier".pdf ~/Pictures
-cd ~/Downloads
+mv "$nomdossier".pdf ~/Images
+cd ~/Téléchargements
 rm -Rf $nomdossier
 echo "#####"
 echo "$listescans"
