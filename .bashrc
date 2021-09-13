@@ -78,7 +78,7 @@ prename 's/,//g' *
 }
 
 processing-scans () {
-cd ~/Downloads
+cd ~/Téléchargements
 renameclean 2> /dev/null
 
 nomdossier=$(date +%m%d-%H%M)
