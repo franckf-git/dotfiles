@@ -15,6 +15,10 @@ import os
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
 
+class fullgit(Command):
+    def execute(self):
+        self.fm.execute_command("git add --all && git commit -v -a && git push -v")
+
 class mvdir(Command):
     """:mvdir <dirname>
 
