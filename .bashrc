@@ -23,14 +23,13 @@ alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recurs
 
 alias vi="nvim -p"
 
-alias ydl="youtube-dl --write-auto-sub --add-metadata -ic"
-alias ydla="youtube-dl --extract-audio -f bestaudio/best"
+alias ydl="/home/work/.config/newsboat/yt-dlp --write-auto-sub --add-metadata -ic"
+alias ydla="/home/work/.config/newsboat/yt-dlp --extract-audio -f bestaudio/best"
 
 alias ll="ls -lash"
 
 alias upg="sudo dnf upgrade && flatpak update --assumeyes"
 
-alias codium="FLATPAK_ENABLE_SDK_EXT=golang /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/codium --file-forwarding com.vscodium.codium --no-sandbox --new-window ."
 alias newsboat="newsboat 2>> /dev/null"
 
 alias gitcomment='for i in $(ls) ; do echo "$i $(git log --oneline $i)" ; done'
