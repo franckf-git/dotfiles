@@ -16,16 +16,20 @@
 - [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
 - [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/?src=search)
 
-## [VScodium ](https://github.com/VSCodium/vscodium) Extensions
+## [VScodium ](https://github.com/VSCodium/vscodium)
+
+### Install
 
 ```bash
 flatpak install flathub com.vscodium.codium
 flatpak install flathub org.freedesktop.Sdk.Extension.golang org.freedesktop.Sdk.Extension.node14
 
-# as root
+# if a lot a files, aka npm packages, as root
 echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
 sysctl -p
 ```
+
+### Extensions
 
 ```bash
 # basics
@@ -56,7 +60,7 @@ flatpak run com.vscodium.codium --install-extension xabikos.javascriptsnippets
 # visualstudioexptteam.vscodeintellicode # pas dans vscodium mais utile seulement pour py, JS et TS
 ```
 
-settings.json
+### settings.json
 
 ```json
 {
@@ -102,3 +106,8 @@ settings.json
   }
 }
 ```
+
+### FlatSeal
+
+Variables: `FLATPAK_ENABLE_SDK_EXT=golang`
+
