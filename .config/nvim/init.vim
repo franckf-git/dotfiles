@@ -187,10 +187,6 @@ command! GoFmt  :!gofmt -w %
 " KEYS MAPPING
 """""""""""""""""""""""""""
 
-" Close all files
-nmap <C-d> :xall<CR>
-imap <C-d> <Esc>:xall<CR>
-
 " Copy visual selection
 vmap <C-c> "+y
 
