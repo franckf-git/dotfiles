@@ -15,20 +15,19 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-export PS1="\n \A \w\n "
-export MANPAGER="nvim -c 'set ft=man' - "
+#export PS1="\n \A \w\n "
 
 # User specific aliases and functions
 alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/","Vidéos","Sauvegardes/videos"} /home/$USER /run/media/$USER/BACKUP/"
 
 alias vi="nvim -p"
 
-alias ydl="/home/work/.config/newsboat/yt-dlp --write-auto-sub --add-metadata -ic"
-alias ydla="/home/work/.config/newsboat/yt-dlp --extract-audio -f bestaudio/best"
+alias  ydl="yt-dlp --write-auto-sub --add-metadata -ic"
+alias aydl="yt-dlp --extract-audio -f bestaudio/best"
 
 alias ll="ls -lash"
 
-alias upg="sudo dnf upgrade && flatpak update --assumeyes"
+alias upg="rpm-ostree upgrade && flatpak -y update"
 
 alias newsboat="newsboat 2>> /dev/null"
 
