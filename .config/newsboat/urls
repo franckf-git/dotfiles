@@ -23,9 +23,12 @@ https://www.cert.ssi.gouv.fr/feed/                                             "
 https://www.commitstrip.com/fr/feed/                                           "~commitstrip"
 https://www.xkcd.com/rss.xml                                                   "~xkcd"
 https://www.monkeyuser.com/feed.xml                                            "~monkey"
+https://notalwaysright.com/newest/feed/
+https://gitlab.e.foundation/e/os/releases/-/tags?format=atom
 https://clientsfromhell.net/feed/                                              "~clients-from-hell"
 https://www.viedemerde.fr/rss                                                  "~vdm"
 https://www.blog-libre.org/feed/                                               "~blog-libre"
+https://blog.otso.fr/rss.xml
 #----------------------------REDDIT
 #https://www.reddit.com/r/devops/.rss                                           "~r/devops"
 #https://www.reddit.com/r/golang/.rss                                           "~r/golang"
@@ -39,6 +42,7 @@ https://changelog.com/jsparty/feed                                             "
 https://changelog.com/gotime/feed                                              "~go-time"
 https://changelog.com/shipit/feed                                              "~shipit"
 ----------------------------YOUTUBE
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwI-JbGNsojunnHbFAc0M4Q   "~arte"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKPGD9T00eS_l--D_DRTUQ   "~linuxtricks"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ   "~level1techs"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg   "~distrotube"
