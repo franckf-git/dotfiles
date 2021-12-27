@@ -41,18 +41,18 @@ flatpak run com.vscodium.codium --install-extension golang.go
 
 # html
 flatpak run com.vscodium.codium --install-extension ritwickdey.liveserver
-vincaslt.highlight-matching-tag
-ecmel.vscode-html-css
-luongnd.edge
+flatpak run com.vscodium.codium --install-extension vincaslt.highlight-matching-tag
+flatpak run com.vscodium.codium --install-extension ecmel.vscode-html-css
+flatpak run com.vscodium.codium --install-extension luongnd.edge
 
 # JS/TS
 flatpak run com.vscodium.codium --install-extension dbaeumer.vscode-eslint
-jakob101.relativepath
-chenxsan.vscode-standardjs
-digitalbrainstem.javascript-ejs-support
-ms-vscode.vscode-typescript-tslint-plugin
-wallabyjs.quokka-vscode
-xabikos.javascriptsnippets
+flatpak run com.vscodium.codium --install-extension jakob101.relativepath
+flatpak run com.vscodium.codium --install-extension chenxsan.vscode-standardjs
+flatpak run com.vscodium.codium --install-extension digitalbrainstem.javascript-ejs-support
+flatpak run com.vscodium.codium --install-extension ms-vscode.vscode-typescript-tslint-plugin
+flatpak run com.vscodium.codium --install-extension wallabyjs.quokka-vscode
+flatpak run com.vscodium.codium --install-extension xabikos.javascriptsnippets
 # visualstudioexptteam.vscodeintellicode # pas dans vscodium mais utile seulement pour py, JS et TS
 ```
 
@@ -70,7 +70,7 @@ settings.json
   "editor.renderControlCharacters": true,
   "workbench.editor.showIcons": false,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Monokai Dimmed",
   "html.format.endWithNewline": true,
   "html.format.indentHandlebars": true,
   "html.format.indentInnerHtml": true,
