@@ -1,11 +1,6 @@
 delete-read-articles-on-quit    yes
-max-items                       50
-keep-articles-days              30
-auto-reload                     yes
 browser                         "epiphany %u &"
 
-bind-key j next articlelist
-bind-key k prev articlelist
-external-url-viewer "~/.config/newsboat/downloader-for-newsboat"
+external-url-viewer "~/.config/newsboat/dl-yt-podcast"
 
-include /usr/share/doc/newsboat/contrib/colorschemes/nord
+include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
