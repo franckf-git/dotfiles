@@ -6,23 +6,33 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:$HOME/go/bin:" ]]
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:$HOME/go/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-#export PS1="\n \A \w\n "
+export PS1="\n \A \w\n "
 
 # User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then
+			. "$rc"
+		fi
+	done
+fi
+
+unset rc
+
 alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/","Vidéos","Sauvegardes/videos"} /home/$USER /run/media/$USER/BACKUP/"
 
 alias vi="nvim -p"
 
-alias  ydl="yt-dlp --write-auto-sub --add-metadata -ic"
+alias ydl="yt-dlp --write-auto-sub --add-metadata -ic"
 alias aydl="yt-dlp --extract-audio -f bestaudio/best"
 
 alias ll="ls -lash"
