@@ -16,6 +16,15 @@
 - [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
 - [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/?src=search)
 
+#### Flatpak version - hardware acceleration
+
+```bash
+flatpak install org.freedesktop.Platform.GStreamer.gstreamer-vaapi
+flatpak install org.freedesktop.Platform.ffmpeg-full
+```
+
+`about:config #=> media.ffmpeg.vaapi.enabled=true`
+
 ## [VScodium ](https://github.com/VSCodium/vscodium)
 
 ### Install
