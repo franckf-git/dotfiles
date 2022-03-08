@@ -48,6 +48,7 @@ flatpak run com.vscodium.codium --install-extension vscode-icons-team.vscode-ico
 flatpak run com.vscodium.codium --install-extension aaron-bond.better-comments
 flatpak run com.vscodium.codium --install-extension vscodevim.vim
 flatpak run com.vscodium.codium --install-extension humao.rest-client
+flatpak run com.vscodium.codium --install-extension GitLab.gitlab-workflow
 
 # golang
 flatpak run com.vscodium.codium --install-extension golang.go
