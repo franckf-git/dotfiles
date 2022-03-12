@@ -1,5 +1,5 @@
 delete-read-articles-on-quit    yes
-browser                         "epiphany %u &"
+browser                         epiphany
 refresh-on-startup              yes
 external-url-viewer "~/.config/newsboat/utils/dl-yt-podcast"
 include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
