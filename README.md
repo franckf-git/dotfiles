@@ -77,20 +77,17 @@ flatpak run com.vscodium.codium --install-extension xabikos.javascriptsnippets
   "files.autoSave": "onFocusChange",
   "editor.renderWhitespace": "boundary",
   "editor.wordWrap": "on",
-  "window.menuBarVisibility": "toggle",
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.tabCompletion": "on",
   "editor.renderControlCharacters": true,
   "workbench.editor.showIcons": false,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Monokai",
   "html.format.endWithNewline": true,
   "html.format.indentHandlebars": true,
   "html.format.indentInnerHtml": true,
   "explorer.confirmDelete": false,
   "editor.suggestSelection": "first",
-  "workbench.iconTheme": "vscode-icons",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -101,24 +98,11 @@ flatpak run com.vscodium.codium --install-extension xabikos.javascriptsnippets
   "update.mode": "none",
   "editor.formatOnSave": true,
   "workbench.startupEditor": "newUntitledFile",
-  "editor.fontFamily": "Fira Code",
-  "terminal.integrated.fontFamily": "Fira Code",
-  "vsicons.dontShowNewVersionMessage": true,
-  "editor.fontLigatures": true,
-  "window.zoomLevel": 1,
   "editor.lineNumbers": "relative",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "go.testOnSave": true,
+  "window.zoomLevel": 0,
   "editor.minimap.enabled": false,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "redhat.telemetry.enabled": false,
-  "go.testOnSave": true
+  "window.menuBarVisibility": "toggle"
 }
 ```
 
