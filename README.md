@@ -84,7 +84,7 @@ flatpak run com.vscodium.codium --install-extension xabikos.javascriptsnippets
   "editor.renderControlCharacters": true,
   "workbench.editor.showIcons": false,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Monokai",
   "html.format.endWithNewline": true,
   "html.format.indentHandlebars": true,
   "html.format.indentInnerHtml": true,
@@ -113,7 +113,12 @@ flatpak run com.vscodium.codium --install-extension xabikos.javascriptsnippets
   "editor.minimap.enabled": false,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "go.testOnSave": true
 }
 ```
 
