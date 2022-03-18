@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=chrome
+Exec=toolbox run -c google google-chrome-stable
