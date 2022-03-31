@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=chromium-umatrix
+Exec=flatpak run org.chromium.Chromium --profile-directory="Default"
