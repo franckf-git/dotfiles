@@ -1,3 +1,4 @@
+articlelist-format " %f %t"
 delete-read-articles-on-quit    yes
 browser                         epiphany
 refresh-on-startup              yes
