@@ -3,4 +3,10 @@ delete-read-articles-on-quit    yes
 browser                         epiphany
 refresh-on-startup              yes
 external-url-viewer "~/.config/newsboat/utils/dl-yt-podcast"
-include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
+macro v set browser mpv ; open-in-browser ; set browser epiphany
+
+include /usr/share/doc/newsboat/contrib/colorschemes/commander
+# commander
+# inkpot
+# nord
+# simple
