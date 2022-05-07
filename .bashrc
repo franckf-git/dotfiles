@@ -28,7 +28,7 @@ fi
 
 unset rc
 
-alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/","Vidéos","Sauvegardes/videos","Musique",".config/Ankama"} /home/$USER /run/media/$USER/BACKUP/"
+alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/","Vidéos","Sauvegardes/videos","Images/a-lire","Musique",".config/Ankama"} /home/$USER /run/media/$USER/BACKUP/"
 
 alias vi="nvim -p"
 
@@ -37,14 +37,22 @@ alias aydl="yt-dlp --extract-audio -f bestaudio/best"
 
 alias ll="ls -lash"
 
-alias upg="rpm-ostree upgrade && flatpak -y update"
+alias www="w3m https://franckf.gitlab.io/startpage/"
+
+alias upg="rpm-ostree upgrade && flatpak update -y"
 
 alias newsboat="newsboat 2>> /dev/null"
 alias fn="newsboat 2>> /dev/null"
 alias fr="ranger"
 
 alias gitcomment='for i in $(ls) ; do echo "$i $(git log --oneline $i)" ; done'
-alias fullgit="git add --all && git commit -v -a && git push -v"
+alias fullgit="git add --all && git commit -v -a && git push && git push --tags"
+
+alias fl="expr $RANDOM % $(ls |wc -l)"
+
+fs () {
+find ~/ -name *$1* 2> /dev/null
+}
 
 renameclean () {
 for i in $(ls)
