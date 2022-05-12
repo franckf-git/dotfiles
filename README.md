@@ -41,17 +41,16 @@ sysctl -p
 ### Extensions
 
 ```bash
+# top
+flatpak run com.vscodium.codium --install-extension golang.go
+flatpak run com.vscodium.codium --install-extension vscodevim.vim
+
 # basics
-flatpak run com.vscodium.codium --install-extension coenraads.bracket-pair-colorizer-2
 flatpak run com.vscodium.codium --install-extension esbenp.prettier-vscode
 flatpak run com.vscodium.codium --install-extension vscode-icons-team.vscode-icons
 flatpak run com.vscodium.codium --install-extension aaron-bond.better-comments
-flatpak run com.vscodium.codium --install-extension vscodevim.vim
 flatpak run com.vscodium.codium --install-extension humao.rest-client
 flatpak run com.vscodium.codium --install-extension GitLab.gitlab-workflow
-
-# golang
-flatpak run com.vscodium.codium --install-extension golang.go
 
 # html
 flatpak run com.vscodium.codium --install-extension ritwickdey.liveserver
