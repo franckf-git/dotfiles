@@ -109,3 +109,8 @@ flatpak run com.vscodium.codium --install-extension xabikos.javascriptsnippets
 
 Variables: `FLATPAK_ENABLE_SDK_EXT=golang`
 
+### Disable upgrade
+
+```
+flatpak mask vscodium
+```
