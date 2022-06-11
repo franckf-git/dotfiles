@@ -60,7 +60,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors gruvbox
+colors synthwave
 
 " Always show status bar
 set laststatus=2
@@ -103,6 +103,9 @@ let g:netrw_liststyle = 3
 
 " Width of the directory explorer
 let g:netrw_winsize = 20
+
+" No banner
+let g:netrw_banner = 0
 
 " Search down into subfolders
 set path+=**
@@ -179,9 +182,9 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 inoremap ` ``<Esc>:let leavechar="`"<CR>i
 
 command! FixWhitespace :%s/\s\+$//e
-command! GoRun  :!go run %
-command! GoTest :!go test
-command! GoFmt  :!gofmt -w %
+" command! GoRun  :!go run %
+" command! GoTest :!go test
+" command! GoFmt  :!gofmt -w %
 
 """""""""""""""""""""""""""
 " KEYS MAPPING
@@ -214,3 +217,15 @@ nnoremap <silent> <S-t> :tabnew<CR>
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Map leader to comma
+let mapleader = ","
+map <leader>r :GoRun %<CR>
+map <leader>i :GoInfo <CR>
+map <leader>e :Lexplore <CR>
+map <leader>t :tabnew . <CR>
+" make run ?
+
+" INSTALL PLUGINS
+" git clone https://github.com/fatih/vim-go.git ~/.local/share/nvim/site/pack/plugins/start/vim-go
+
