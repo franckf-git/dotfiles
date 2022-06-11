@@ -28,7 +28,7 @@ fi
 
 unset rc
 
-alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/","Vidéos","Sauvegardes/videos","Images/a-lire","Musique",".config/Ankama"} /home/$USER /run/media/$USER/BACKUP/"
+alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recursive --links --perms --times --owner --group --devices --specials --verbose --human-readable --copy-dirlinks --delete-before --stats --ignore-errors --exclude={".local/share/containers",".cache/",".var/app/org.gnome.Boxes/",".local/share/gnome-boxes/","Vidéos","Sauvegardes/videos","Images","Musique",".config/Ankama"} /home/$USER /run/media/$USER/BACKUP/"
 
 alias vi="nvim -p"
 
@@ -45,6 +45,7 @@ alias newsboat="newsboat 2>> /dev/null"
 alias fn="newsboat 2>> /dev/null"
 alias fr="ranger"
 
+alias current="cd ~/go/src/gitlab.com/franckf/reference-go/snippets/elasticsearch && ll"
 alias gitcomment='for i in $(ls) ; do echo "$i $(git log --oneline $i)" ; done'
 alias fullgit="git add --all && git commit -v -a && git push && git push --tags"
 
@@ -63,30 +64,30 @@ done
 prename 'y/A-Z\ /a-z-/' *
 prename 's/\[//g' *
 prename 's/\]//g' *
-prename 's/ajia-no-scantrad-//' *
-prename 's/ajia-rs--//' *
-prename 's/koneko-scantrad-//g' *
-prename 's/koneko-scantrad//g' *
-prename 's/mangaqc-franco-//' *
-prename 's/mns--//' *
-prename 's/mns-//' *
-prename 's/mns-ps--//g' *
-prename 's/mns-rs--//' *
-prename 's/mns-tnt--//' *
-prename 's/monster-no-scantrad-//' *
-prename 's/rs--//' *
-prename 's/rs-//' *
-prename 's/ryozanpaku-//g' *
-prename 's/schlag--//g' *
-prename 's/shp--//g' *
-prename 's/shp-//g' *
-prename 's/stu--//' *
-prename 's/stu-//' *
-prename 's/yorokobe--//' *
-prename 's/neo-scantrad--partenaire--//g' *
-prename 's/neo-scantrad-partenaire-//g' *
-prename 's/gs-//g' *
-prename 's/nation-//g' *
+prename 's/^ajia-no-scantrad-//' *
+prename 's/^ajia-rs--//' *
+prename 's/^koneko-scantrad-//g' *
+prename 's/^koneko-scantrad//g' *
+prename 's/^mangaqc-franco-//' *
+prename 's/^mns--//' *
+prename 's/^mns-//' *
+prename 's/^mns-ps--//g' *
+prename 's/^mns-rs--//' *
+prename 's/^mns-tnt--//' *
+prename 's/^monster-no-scantrad-//' *
+prename 's/^rs--//' *
+prename 's/^rs-//' *
+prename 's/^ryozanpaku-//g' *
+prename 's/^schlag--//g' *
+prename 's/^shp--//g' *
+prename 's/^shp-//g' *
+prename 's/^stu--//' *
+prename 's/^stu-//' *
+prename 's/^yorokobe--//' *
+prename 's/^neo-scantrad--partenaire--//g' *
+prename 's/^neo-scantrad-partenaire-//g' *
+prename 's/^gs-//g' *
+prename 's/^nation-//g' *
 prename 's/-----/-/g' *
 prename 's/----/-/g' *
 prename 's/---/-/g' *
