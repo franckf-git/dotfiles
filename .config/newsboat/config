@@ -1,11 +1,11 @@
-articlelist-format " %f %t"
+articlelist-format              " %f %t"
 delete-read-articles-on-quit    yes
-browser                         epiphany
+browser                         firefox
 refresh-on-startup              yes
-external-url-viewer "~/.config/newsboat/utils/dl-yt-podcast"
-macro v set browser mpv ; open-in-browser ; set browser epiphany
-
-include /usr/share/doc/newsboat/contrib/colorschemes/commander
+confirm-mark-feed-read          no
+external-url-viewer             "~/.config/newsboat/utils/dl-yt-podcast"
+macro v set browser mpv ; open-in-browser ; set browser firefox
+include                         /usr/share/doc/newsboat/contrib/colorschemes/inkpot
 # commander
 # inkpot
 # nord
