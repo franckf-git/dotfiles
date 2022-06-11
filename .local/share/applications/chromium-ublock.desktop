@@ -2,3 +2,4 @@
 Type=Application
 Name=chromium-ublock
 Exec=flatpak run org.chromium.Chromium --profile-directory="Profile 2"
+Icon=org.chromium.Chromium

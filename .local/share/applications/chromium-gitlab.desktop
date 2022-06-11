@@ -2,3 +2,4 @@
 Type=Application
 Name=chromium-gitlab
 Exec=flatpak run org.chromium.Chromium --profile-directory="Profile 1"
+Icon=org.chromium.Chromium
