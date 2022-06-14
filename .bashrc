@@ -56,6 +56,13 @@ find ~/ -name *$1* 2> /dev/null
 }
 
 renameclean () {
+
+if [[ $(pwd) = "/var/home/user" ]]
+then
+    echo "not in home - dummy"
+    return
+fi
+
 for i in $(ls)
   do
   mv $i $(echo $i | iconv --from-code=UTF-8 --to-code=ASCII//TRANSLIT)
