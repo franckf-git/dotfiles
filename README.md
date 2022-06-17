@@ -112,5 +112,5 @@ Variables: `FLATPAK_ENABLE_SDK_EXT=golang`
 ### Disable upgrade
 
 ```
-flatpak mask vscodium
+flatpak mask com.vscodium.codium
 ```
