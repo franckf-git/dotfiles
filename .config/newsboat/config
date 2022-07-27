@@ -1,10 +1,13 @@
 articlelist-format              " %f %t"
 delete-read-articles-on-quit    yes
-browser                         firefox
+browser                         "firefox %u &"
 refresh-on-startup              yes
 confirm-mark-feed-read          no
 external-url-viewer             "~/.config/newsboat/utils/dl-yt-podcast"
-macro v set browser mpv ; open-in-browser ; set browser firefox
+macro v set browser "mpv %u" ; open-in-browser ; set browser firefox
+macro o set browser "firefox %u &" ; open-in-browser ; set browser firefox
+macro p set browser "cd ~/Téléchargements && flatpak run org.chromium.Chromium --headless --disable-gpu --print-to-pdf=$(date +%m%d-%H%M%S).pdf %u"; open-in-browser ; set browser firefox
+macro q set browser "echo %u >> ~/queue" ; open-in-browser ; set browser firefox
 include                         /usr/share/doc/newsboat/contrib/colorschemes/inkpot
 # commander
 # inkpot
