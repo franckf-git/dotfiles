@@ -60,7 +60,7 @@ set number
 set relativenumber
 
 " Colorscheme
-colors synthwave
+colors gruvbox
 
 " Always show status bar
 set laststatus=2
@@ -85,7 +85,7 @@ set statusline+=\                                              "end space
 set ruler
 
 " Always wrap long lines
-set wrap
+set nowrap
 
 " Enable mouse cursor
 set mouse=a
@@ -221,7 +221,7 @@ vnoremap K :m '<-2<CR>gv=gv
 " Map leader to comma
 let mapleader = ","
 map <leader>r :GoRun %<CR>
-map <leader>i :GoInfo <CR>
+map <leader>i :GoDoc <CR>
 map <leader>e :Lexplore <CR>
 map <leader>t :tabnew . <CR>
 " make run ?
