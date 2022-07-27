@@ -114,3 +114,10 @@ Variables: `FLATPAK_ENABLE_SDK_EXT=golang`
 ```
 flatpak mask com.vscodium.codium
 ```
+
+## [vim-go](https://github.com/fatih/vim-go)
+
+go for nvim:
+```
+git clone https://github.com/fatih/vim-go.git ~/.local/share/nvim/site/pack/plugins/start/vim-go
+```
