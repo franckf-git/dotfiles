@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""
 
 " Sets how many lines of history
-set history=500
+set history=50
 
 " Enable syntax highlighting
 syntax enable
@@ -53,9 +53,13 @@ endif
 " INTERFACE
 """""""""""""""""""""""""""
 
+" Small wraping
+set textwidth=79
+set colorcolumn=79
+set formatoptions+=t
+
 " Show relative lines number
 set signcolumn=yes
-set colorcolumn=80
 set number
 set relativenumber
 
@@ -85,7 +89,9 @@ set statusline+=\                                              "end space
 set ruler
 
 " Always wrap long lines
-set nowrap
+set wrap linebreak
+" Or not
+"set nowrap
 
 " Enable mouse cursor
 set mouse=a
@@ -182,9 +188,17 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 inoremap ` ``<Esc>:let leavechar="`"<CR>i
 
 command! FixWhitespace :%s/\s\+$//e
-" command! GoRun  :!go run %
-" command! GoTest :!go test
-" command! GoFmt  :!gofmt -w %
+command! GoRun  :!go run %
+command! GoTest :!go test
+command! GoFmt  :!gofmt -w %
+
+" Map leader to comma
+let mapleader = ","
+map <leader>r :GoRun %<CR>
+map <leader>i :GoDoc <CR>
+map <leader>e :Lexplore <CR>
+map <leader>t :tabnew . <CR>
+" make run ?
 
 """""""""""""""""""""""""""
 " KEYS MAPPING
@@ -217,14 +231,6 @@ nnoremap <silent> <S-t> :tabnew<CR>
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-" Map leader to comma
-let mapleader = ","
-map <leader>r :GoRun %<CR>
-map <leader>i :GoDoc <CR>
-map <leader>e :Lexplore <CR>
-map <leader>t :tabnew . <CR>
-" make run ?
 
 " INSTALL PLUGINS
 " git clone https://github.com/fatih/vim-go.git ~/.local/share/nvim/site/pack/plugins/start/vim-go

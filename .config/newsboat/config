@@ -8,7 +8,7 @@ macro v set browser "mpv %u" ; open-in-browser ; set browser firefox
 macro o set browser "firefox %u &" ; open-in-browser ; set browser firefox
 macro p set browser "cd ~/Téléchargements && flatpak run org.chromium.Chromium --headless --disable-gpu --print-to-pdf=$(date +%m%d-%H%M%S).pdf %u"; open-in-browser ; set browser firefox
 macro q set browser "echo %u >> ~/queue" ; open-in-browser ; set browser firefox
-include                         /usr/share/doc/newsboat/contrib/colorschemes/inkpot
+include /usr/share/doc/newsboat/contrib/colorschemes/inkpot
 # commander
 # inkpot
 # nord

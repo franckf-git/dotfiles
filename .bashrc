@@ -15,7 +15,8 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-export PS1="\n \A \w\n "
+#export PS1="\n \A \w\n "
+export PS1="> "
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
@@ -32,20 +33,20 @@ alias backup="udisksctl mount -b /dev/sda1 ; gio trash --empty && rsync --recurs
 
 alias vi="nvim -p"
 
-alias ydl="yt-dlp --write-auto-sub --add-metadata -ic"
+alias ydl="nice -n 16 yt-dlp --write-auto-sub --add-metadata -ic"
 alias aydl="yt-dlp --extract-audio -f bestaudio/best"
 
 alias ll="ls -lash"
 
 alias www="w3m https://franckf.gitlab.io/startpage/"
 
-alias upg="rpm-ostree upgrade && flatpak update -y"
+alias upg="rpm-ostree upgrade && flatpak update"
 
 alias newsboat="newsboat 2>> /dev/null"
 alias fn="newsboat 2>> /dev/null"
 alias fr="ranger"
 
-alias current="cd ~/go/src/gitlab.com/franckf/reference-opendata/energy-vienne && vi ."
+alias current="cd ~/go/src/gitlab.com/franckf/ && vi ."
 alias gitcomment='for i in $(ls) ; do echo "$i $(git log --oneline $i)" ; done'
 alias fullgit="git add --all && git commit -v -a && git push && git push --tags"
 
@@ -55,7 +56,11 @@ fs () {
 find ~/ -name *$1* 2> /dev/null
 }
 
-renameclean () {
+fcc () {
+curl cht.sh/go/$1+$2+$3
+}
+
+frc () {
 
 if [[ $(pwd) = "/var/home/user" ]]
 then
@@ -96,9 +101,9 @@ prename "s/'/-/g" *
 prename 's/,//g' *
 }
 
-processing-scans () {
+fm () {
 cd ~/Téléchargements
-renameclean 2> /dev/null
+frc 2> /dev/null
 
 nomdossier=$(date +%m%d-%H%M)
 listescans=$(ls | egrep '*.zip')
@@ -112,10 +117,11 @@ do
     mv ~/Téléchargements/$scan faits/
     cd faits/
     unzip $scan
+    mv $scan ~/Sauvegardes/scans-done/
     nom=$(basename $scan .zip)
-    mv $scan ~/Sauvegardes/scans-done
+
     renameclean 2> /dev/null
-    for image in $(ls)
+    for image in $(ls | egrep -v '*.zip')
     do
         mv $image ../"$nom"_"$image"
     done
