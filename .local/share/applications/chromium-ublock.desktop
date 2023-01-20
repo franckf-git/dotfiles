@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
 Name=chromium-ublock
-Exec=flatpak run org.chromium.Chromium --profile-directory="Profile 2"
+Exec=flatpak run org.chromium.Chromium --profile-directory="Profile 1"
 Icon=org.chromium.Chromium

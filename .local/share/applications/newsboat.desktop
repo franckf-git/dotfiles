@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=newsboat
-Comment=rss reader
-Terminal=true
-Exec=toolbox run newsboat

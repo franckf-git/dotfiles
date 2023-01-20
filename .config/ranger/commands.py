@@ -15,10 +15,6 @@ import os
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
 
-class fullgit(Command):
-    def execute(self):
-        self.fm.execute_command("git add --all && git commit -v -a && git push -v")
-
 class mvdir(Command):
     """:mvdir <dirname>
 
@@ -40,6 +36,7 @@ class mvdir(Command):
 
     def tab(self, tabnum):
         return self._tab_directory_content()
+
 
 # Any class that is a subclass of "Command" will be integrated into ranger as a
 # command.  Try typing ":my_edit<ENTER>" in ranger!
